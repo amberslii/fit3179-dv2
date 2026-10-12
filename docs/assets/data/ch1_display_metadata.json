@@ -1,0 +1,41 @@
+{
+  "source_sha256": "6e3371be611620418b3bbf1fd93d180828f4ab8591c228e244f3faeed1dc2dff",
+  "production_total_aud_million": 30698,
+  "groups": [
+    {
+      "name": "Processed food",
+      "color": "#315b45"
+    },
+    {
+      "name": "Dairy",
+      "color": "#536434"
+    },
+    {
+      "name": "Clothing",
+      "color": "#3d5e75"
+    },
+    {
+      "name": "Toiletries",
+      "color": "#80513d"
+    },
+    {
+      "name": "Household cleaning",
+      "color": "#66536c"
+    },
+    {
+      "name": "Household goods",
+      "color": "#365f60"
+    },
+    {
+      "name": "Furniture",
+      "color": "#645241"
+    },
+    {
+      "name": "Household appliances",
+      "color": "#796032"
+    }
+  ],
+  "category_count": 18,
+  "source": "ABS Product Details, T1 Summary, FY2023–24",
+  "labels_note": "Display labels are abbreviated; original IOPC descriptions remain in tooltips and accessible data table."
+}

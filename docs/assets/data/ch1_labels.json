@@ -1,0 +1,92 @@
+[
+  {
+    "iopc": "11700010",
+    "display_label": "Bread & rolls*",
+    "full_label": "Bread and bread rolls (excl dough)"
+  },
+  {
+    "iopc": "11700040",
+    "display_label": "Meat pies",
+    "full_label": "Meat pies"
+  },
+  {
+    "iopc": "11820010",
+    "display_label": "Chocolate confectionery*",
+    "full_label": "Chocolate confectionery (excl chocolate coated biscuits and white chocolate)"
+  },
+  {
+    "iopc": "11320010",
+    "display_label": "Ice cream & frozen confections",
+    "full_label": "Ice cream and frozen confections"
+  },
+  {
+    "iopc": "11330020",
+    "display_label": "Cultured milk products*",
+    "full_label": "Sour cream, yoghurt and other cultured milk products"
+  },
+  {
+    "iopc": "11330050",
+    "display_label": "Butter",
+    "full_label": "Butter"
+  },
+  {
+    "iopc": "11330060",
+    "display_label": "Cheese & curd",
+    "full_label": "Cheese and curd"
+  },
+  {
+    "iopc": "13400080",
+    "display_label": "Knitted / crocheted clothing",
+    "full_label": "Knitted or crocheted wearing apparel"
+  },
+  {
+    "iopc": "13510200",
+    "display_label": "Other clothing*",
+    "full_label": "Clothing (excl knitted or crocheted)"
+  },
+  {
+    "iopc": "18500010",
+    "display_label": "Soap, perfumes & toiletries",
+    "full_label": "Soap, perfumes and toiletry products"
+  },
+  {
+    "iopc": "18510180",
+    "display_label": "Laundry products (incl bleach)",
+    "full_label": "Laundry products (incl bleach)"
+  },
+  {
+    "iopc": "18510190",
+    "display_label": "Cleaning compounds nec",
+    "full_label": "Cleaning compounds nec"
+  },
+  {
+    "iopc": "19120160",
+    "display_label": "Plastic tableware & utensils",
+    "full_label": "Plastic tableware and utensils"
+  },
+  {
+    "iopc": "25110090",
+    "display_label": "Wood furniture & upholstered seats",
+    "full_label": "Wooden furniture and upholstered seats"
+  },
+  {
+    "iopc": "25120190",
+    "display_label": "Metal furniture",
+    "full_label": "Metal furniture"
+  },
+  {
+    "iopc": "25130090",
+    "display_label": "Mattresses",
+    "full_label": "Mattresses"
+  },
+  {
+    "iopc": "24410030",
+    "display_label": "Domestic fridges & freezers",
+    "full_label": "Domestic refrigerators and freezers"
+  },
+  {
+    "iopc": "24410050",
+    "display_label": "Laundry & dishwashing appliances*",
+    "full_label": "Domestic clothes washing machines, drying cabinets, tumble driers and dishwashing machines"
+  }
+]
