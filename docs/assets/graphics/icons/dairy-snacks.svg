@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="160" height="140">
+<!-- Original editorial illustration: generic dairy-snacks; no commercial packaging or certification logo. -->
+<ellipse cx="80" cy="120" rx="56" ry="5" fill="#203d2e" opacity=".06"/>
+<g fill="none" stroke="#203d2e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path fill="#e3eadc" d="M40 34h55l10 14v52H32V48z"/><path d="M40 34v14h55V34M32 48h73"/><path stroke="#b24e2a" d="M51 62h34m-34 9h22"/><circle fill="#f8f7f0" cx="107" cy="97" r="15"/><circle fill="#e8cfc0" cx="126" cy="91" r="12"/><circle fill="#f8f7f0" cx="120" cy="108" r="12"/><path d="M104 94h6m13-6h5m-9 17h5"/></g>
+</svg>

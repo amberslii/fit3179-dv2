@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="160" height="140">
+<!-- Original editorial illustration: generic milk-powder; no commercial packaging or certification logo. -->
+<ellipse cx="80" cy="120" rx="56" ry="5" fill="#203d2e" opacity=".06"/>
+<g fill="none" stroke="#203d2e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path fill="#e3eadc" d="M46 27h57l7 13v64H40V40z"/><path d="M46 27v13h57V27M40 40h70"/><path fill="#f8f7f0" d="M61 63q13-18 26 0v19H61z"/><path d="M122 65v31m-10-31h20v10h-20z"/><path stroke="#b24e2a" d="M64 92h22"/></g>
+</svg>

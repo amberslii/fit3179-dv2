@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" width="160" height="140">
+<!-- Original editorial illustration: generic jobs; no commercial packaging or certification logo. -->
+<ellipse cx="80" cy="120" rx="56" ry="5" fill="#203d2e" opacity=".06"/>
+<g fill="none" stroke="#203d2e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle fill="#e3eadc" cx="61" cy="43" r="15"/><circle fill="#f8f7f0" cx="105" cy="52" r="12"/><path fill="#e3eadc" d="M34 102V83q0-21 27-21t27 21v19z"/><path d="M91 72q25-6 34 16v14H99"/><path stroke="#b24e2a" d="M48 87h25m-12-12v24"/></g>
+</svg>
