@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" fill="none">
+  <!-- Original generic product illustrations. Decorative; no brands, certification marks or data. -->
+  <path d="M24 139H736" stroke="#cbd4c2" stroke-width="1.5"/>
+  <g stroke="#365c47" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Bread loaf -->
+    <path d="M46 123V85C46 57 69 39 109 39S172 57 172 85V123Z" fill="#e6ddbf"/>
+    <path d="M70 73L83 60M99 71L112 58M127 73L140 60M46 110H172"/>
+    <!-- Milk carton -->
+    <path d="M228 48L247 26H279L298 48V123H228Z" fill="#e6ebdd"/>
+    <path d="M228 48H278L298 65M278 48V123M247 26L263 48"/>
+    <path d="M240 74H267V101H240Z" fill="#698064" stroke="none"/>
+    <!-- Personal-care pump bottle -->
+    <path d="M374 64H411C421 64 425 71 425 81V123H360V81C360 71 365 64 374 64Z" fill="#e5d7c8"/>
+    <path d="M381 64V44H404V64M392 44V30H428V39M373 88H412V109H373Z"/>
+    <!-- Cleaning bottle -->
+    <path d="M491 57H510V77L530 89V123H473V90L491 77Z" fill="#dce5dd"/>
+    <path d="M491 57V43H535L543 51H509M488 100H518M491 108H515"/>
+    <!-- Chair -->
+    <path d="M596 90V40C596 31 605 27 627 27S658 31 658 40V90" fill="#e6ddbf"/>
+    <path d="M584 90H670V103H584ZM597 103L591 139M657 103L663 139M610 42V75M627 42V75M644 42V75"/>
+  </g>
+</svg>
