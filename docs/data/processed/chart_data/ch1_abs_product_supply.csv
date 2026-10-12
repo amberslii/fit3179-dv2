@@ -1,0 +1,19 @@
+﻿iopc,iopc_description,iopg,research_group,category_specificity,australian_production,imports,supply_bp,local_production_share_of_total_supply_value,financial_year,monetary_unit,source_row,selection_status,caution_zh
+11700010,Bread and bread rolls (excl dough),1107,Processed food,more_specific,4394,180,4574,0.9606471359860078,2023-24,AUD million,184,priority,包含 bread 与 bread rolls；排除 dough，不能扩称全部 bakery products。
+11700040,Meat pies,1107,Processed food,more_specific,1280,27,1307,0.9793420045906657,2023-24,AUD million,185,priority,类别仍包含多种配方及规格，不是某一品牌肉派。
+11820010,Chocolate confectionery (excl chocolate coated biscuits and white chocolate),1108,Processed food,more_specific,3913,574,4487,0.8720748829953198,2023-24,AUD million,191,priority,排除 chocolate coated biscuits 与 white chocolate，不能标为全部 chocolate。
+11320010,Ice cream and frozen confections,1103,Dairy,broad_composite,3306,223,3529,0.936809294417682,2023-24,AUD million,158,caution,同时含 ice cream 和 frozen confections，不能把总额全部称为 dairy ice cream。
+11330020,"Sour cream, yoghurt and other cultured milk products",1103,Dairy,broad_composite,1869,36,1905,0.9811023622047244,2023-24,AUD million,160,caution,混合 sour cream、yoghurt 和 other cultured milk products，不能单独命名为 yoghurt。
+11330050,Butter,1103,Dairy,more_specific,1664,280,1944,0.8559670781893004,2023-24,AUD million,161,priority,仍是统计类别，不区分品牌、包装或澳洲原料比例。
+11330060,Cheese and curd,1103,Dairy,more_specific,3700,969,4669,0.7924609124009424,2023-24,AUD million,162,priority,含 cheese 与 curd，不能从总额识别 cheese 品种或家庭消费去向。
+13400080,Knitted or crocheted wearing apparel,1304,Clothing,broad_composite,106,1943,2049,0.05173255246461689,2023-24,AUD million,237,caution,按制作方式归类，包含不同衣物，不是特定款式或品牌。
+13510200,Clothing (excl knitted or crocheted),1305,Clothing,broad_composite,991,17577,18568,0.05337139164153382,2023-24,AUD million,240,caution,排除 knitted/crocheted，但其余服装仍很宽泛，不可称全部 clothing。
+18500010,"Soap, perfumes and toiletry products",1804,Toiletries,broad_composite,2304,6376,8680,0.2654377880184332,2023-24,AUD million,335,caution,同时包含 soap、perfumes、toiletry products；不能命名为 cosmetics-only 或 skincare。
+18510180,Laundry products (incl bleach),1804,Household cleaning,broad_composite,563,344,907,0.6207276736493936,2023-24,AUD million,337,caution,包含 bleach 和其他 laundry products；不能只称 laundry detergent，也不证明所有用途均为家庭。
+18510190,Cleaning compounds nec,1804,Household cleaning,broad_composite,815,926,1741,0.4681217690982194,2023-24,AUD million,338,caution,nec 是其他未另分类的集合；可能含非家庭用途，优先级低，不可命名为特定清洁剂。
+19120160,Plastic tableware and utensils,1901,Household goods,more_specific,1094,1167,2261,0.4838567005749668,2023-24,AUD million,355,priority,限定 plastic；同时含餐具与器具，且不区分家庭和商业用途。
+25110090,Wooden furniture and upholstered seats,2501,Furniture,broad_composite,2629,3579,6208,0.42348582474226804,2023-24,AUD million,594,caution,包含多种 furniture/seats，不是仅沙发，也未限定 household-only。
+25120190,Metal furniture,2501,Furniture,broad_composite,1053,1989,3042,0.34615384615384615,2023-24,AUD million,595,caution,涵盖多种 metal furniture，可能有办公及商业用途，不是家用家具专表。
+25130090,Mattresses,2501,Furniture,more_specific,861,206,1067,0.8069353327085286,2023-24,AUD million,596,priority,仍可能包含机构采购，不能把总供给当家庭零售销量。
+24410030,Domestic refrigerators and freezers,2404,Household appliances,more_specific,123,970,1093,0.11253430924062215,2023-24,AUD million,560,priority,同时含 refrigerators 和 freezers，不能拆成两个未经观测的金额。
+24410050,"Domestic clothes washing machines, drying cabinets, tumble driers and dishwashing machines",2404,Household appliances,broad_composite,33,1009,1042,0.03166986564299424,2023-24,AUD million,562,caution,合并 washing machines、drying cabinets、tumble driers、dishwashing machines，不能标为 washing machines-only。
