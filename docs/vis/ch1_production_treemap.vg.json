@@ -1,0 +1,236 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Treemap of production across a curated subset of 18 ABS IOPC categories, FY2023–24. Area represents A$ million, not all Australian manufacturing.",
+  "width": 900,
+  "height": 470,
+  "padding": 2,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "signals": [
+    {
+      "name": "selectedCategory",
+      "value": null,
+      "on": [
+        {
+          "events": "rect:click",
+          "update": "datum.iopc"
+        }
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "tree",
+      "url": "assets/data/ch1_production_tree.json",
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "australian_production",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "method": "squarify",
+          "ratio": 1.3,
+          "round": false,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "paddingInner": 0
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!datum.children"
+        },
+        {
+          "type": "window",
+          "sort": {
+            "field": "australian_production",
+            "order": "descending"
+          },
+          "ops": [
+            "rank"
+          ],
+          "as": [
+            "production_rank"
+          ]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "groupColor",
+      "type": "ordinal",
+      "domain": [
+        "Processed food",
+        "Dairy",
+        "Clothing",
+        "Toiletries",
+        "Household cleaning",
+        "Household goods",
+        "Furniture",
+        "Household appliances"
+      ],
+      "range": [
+        "#315b45",
+        "#536434",
+        "#3d5e75",
+        "#80513d",
+        "#66536c",
+        "#365f60",
+        "#645241",
+        "#796032"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "name": "categoryTile",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "groupColor",
+            "field": "research_group"
+          },
+          "stroke": {
+            "value": "#faf9f2"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "{'Category': datum.full_label, 'IOPC': datum.iopc, 'Australian production (A$ million)': format(datum.australian_production, ',.0f'), 'Share of selected production': format(datum.selected_production_share, '.1%'), 'Period': 'FY2023–24'}"
+          }
+        },
+        "hover": {
+          "stroke": {
+            "value": "#182f24"
+          },
+          "strokeWidth": {
+            "value": 2
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + (datum.production_rank <= 3 ? 8 : 12)"
+          },
+          "y": {
+            "signal": "datum.y0 + 12"
+          },
+          "text": {
+            "signal": "datum.display_label === 'Chocolate confectionery*' ? ['Chocolate', 'confectionery*'] : width < 540 && datum.display_label === 'Cheese & curd' ? ['Cheese', '& curd'] : datum.display_label"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontWeight": {
+            "signal": "datum.production_rank <= 3 ? 700 : 600"
+          },
+          "fontSize": {
+            "signal": "datum.production_rank <= 3 ? (width < 540 ? 13 : 16) : 13"
+          },
+          "fill": {
+            "value": "#ffffff"
+          },
+          "limit": {
+            "signal": "max(0, datum.x1-datum.x0-(datum.production_rank <= 3 ? 16 : 24))"
+          },
+          "opacity": {
+            "signal": "datum.x1-datum.x0 > (datum.production_rank <= 3 ? 75 : 100) && datum.y1-datum.y0 > (datum.production_rank <= 3 ? 85 : 55) ? 1 : 0"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "lineHeight": {
+            "value": 19
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "leaves"
+      },
+      "interactive": false,
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0 + (datum.production_rank <= 3 ? 8 : 12)"
+          },
+          "y": {
+            "signal": "datum.y0 + (datum.display_label === 'Chocolate confectionery*' || width < 540 && datum.display_label === 'Cheese & curd' ? 65 : 45)"
+          },
+          "text": {
+            "signal": "'A$' + format(datum.australian_production, ',.0f') + 'm'"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "signal": "datum.production_rank <= 3 ? 14 : 12"
+          },
+          "fill": {
+            "value": "#ffffff"
+          },
+          "limit": {
+            "signal": "max(0, datum.x1-datum.x0-(datum.production_rank <= 3 ? 16 : 24))"
+          },
+          "opacity": {
+            "signal": "datum.x1-datum.x0 > (datum.production_rank <= 3 ? 75 : 100) && datum.y1-datum.y0 > (datum.production_rank <= 3 ? 85 : 65) ? 1 : 0"
+          },
+          "fontWeight": {
+            "signal": "datum.production_rank <= 3 ? 600 : 400"
+          }
+        }
+      }
+    }
+  ]
+}

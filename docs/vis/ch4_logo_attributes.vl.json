@@ -1,0 +1,187 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "2022 report: attributes associated with the Australian Made logo. Independent responses, not purchasing reasons or measured performance. Fieldwork and sample size unreported.",
+  "width": 900,
+  "height": 340,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "data": {
+    "values": [
+      {
+        "statistic_id": "RM22_09",
+        "response_category": "Local jobs",
+        "value": 97.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_10",
+        "response_category": "Safe",
+        "value": 94.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_11",
+        "response_category": "High quality",
+        "value": 94.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_12",
+        "response_category": "Reliable",
+        "value": 93.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_13",
+        "response_category": "Ethical labour",
+        "value": 90.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_14",
+        "response_category": "Good value",
+        "value": 85.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_15",
+        "response_category": "Sustainable",
+        "value": 80.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_16",
+        "response_category": "Eco friendly",
+        "value": 80.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      },
+      {
+        "statistic_id": "RM22_17",
+        "response_category": "Clean & green",
+        "value": 77.0,
+        "source_url": "https://australianmade.com.au/media/toepf4tk/roy-morgan-research-2022.pdf",
+        "report_label_year": "2022"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "gridColor": "#d6dccf",
+      "labelColor": "#203d2e",
+      "titleColor": "#5c6960",
+      "labelFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "axisY": {
+      "labelLimit": 180
+    }
+  },
+  "encoding": {
+    "y": {
+      "field": "response_category",
+      "type": "nominal",
+      "sort": [
+        "Local jobs",
+        "Safe",
+        "High quality",
+        "Reliable",
+        "Ethical labour",
+        "Good value",
+        "Sustainable",
+        "Eco friendly",
+        "Clean & green"
+      ],
+      "title": null,
+      "axis": {
+        "labelPadding": 10
+      }
+    },
+    "x": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          105
+        ]
+      },
+      "axis": {
+        "values": [
+          0,
+          20,
+          40,
+          60,
+          80,
+          100
+        ]
+      },
+      "title": "Respondents (%)"
+    },
+    "tooltip": [
+      {
+        "field": "response_category",
+        "type": "nominal",
+        "title": "Published response"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Respondents (%)"
+      },
+      {
+        "field": "report_label_year",
+        "title": "Report label year"
+      },
+      {
+        "field": "statistic_id",
+        "title": "Audit record"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#23654b",
+        "height": 17
+      }
+    },
+    {
+      "transform": [
+        {
+          "calculate": "datum.value + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "color": "#203d2e",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}

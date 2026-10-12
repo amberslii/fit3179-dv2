@@ -1,0 +1,181 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "2025 recorded exports: TRIEC 1213 Dairy products processed, by State of Origin. AUD million FOB. Excludes imports and re-exports. Missing records are not zero. Simplified ABS ASGS 2021 boundaries; no factory locations.",
+  "width": 900,
+  "height": 540,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "data": {
+    "url": "assets/geo/abs_states_2021_display.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.state_code",
+      "from": {
+        "data": {
+          "url": "assets/data/ch3_dairy_state_exports.json"
+        },
+        "key": "state_code",
+        "fields": [
+          "state_name",
+          "value_aud_million",
+          "display_value",
+          "record_status",
+          "source_record_count"
+        ]
+      }
+    }
+  ],
+  "projection": {
+    "type": "mercator"
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axisY": {},
+    "legend": {
+      "labelColor": "#203d2e",
+      "titleColor": "#203d2e",
+      "titleFontWeight": "normal",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "invalid": null,
+        "stroke": "#829680",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.record_status === 'no_record_not_zero'",
+            "value": "#a7aaa4"
+          },
+          "field": "value_aud_million",
+          "type": "quantitative",
+          "scale": {
+            "type": "linear",
+            "domain": [
+              0,
+              2300
+            ],
+            "range": [
+              "#e5eddf",
+              "#195b42"
+            ]
+          },
+          "legend": {
+            "title": "Recorded exports (A$ million)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 260,
+            "values": [
+              0,
+              500,
+              1000,
+              1500,
+              2000,
+              2300
+            ],
+            "format": ",.0f"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state_name",
+            "title": "State of Origin"
+          },
+          {
+            "field": "display_value",
+            "title": "2025 recorded export value"
+          },
+          {
+            "field": "value_aud_million",
+            "type": "quantitative",
+            "format": ",.3f",
+            "title": "A$ million"
+          },
+          {
+            "field": "record_status",
+            "title": "Record status"
+          },
+          {
+            "field": "source_record_count",
+            "type": "quantitative",
+            "title": "Source records"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.properties.state_code !== 'ACT'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "properties.label_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "properties.label_lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "properties.state_code"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.properties.state_code === 'VIC'",
+            "value": "white"
+          },
+          "value": "#203d2e"
+        },
+        "tooltip": [
+          {
+            "field": "state_name",
+            "title": "State of Origin"
+          },
+          {
+            "field": "display_value",
+            "title": "2025 recorded export value"
+          },
+          {
+            "field": "value_aud_million",
+            "type": "quantitative",
+            "format": ",.3f",
+            "title": "A$ million"
+          },
+          {
+            "field": "record_status",
+            "title": "Record status"
+          },
+          {
+            "field": "source_record_count",
+            "type": "quantitative",
+            "title": "Source records"
+          }
+        ]
+      }
+    }
+  ]
+}

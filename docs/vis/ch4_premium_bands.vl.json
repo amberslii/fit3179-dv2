@@ -1,0 +1,201 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "2023 report: stated willingness to pay more for Australian-made products. Eight published bands total 99.4%; retain original values. Not observed payments. Fieldwork and sample size unreported.",
+  "width": 900,
+  "height": 340,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "data": {
+    "values": [
+      {
+        "statistic_id": "RM23_03",
+        "response_category": "Up to 5% more",
+        "value": 25.0,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 0,
+        "short_label": "Up to|5% more"
+      },
+      {
+        "statistic_id": "RM23_04",
+        "response_category": "6–10% more",
+        "value": 31.0,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 1,
+        "short_label": "6–10%|more"
+      },
+      {
+        "statistic_id": "RM23_05",
+        "response_category": "11–20% more",
+        "value": 12.0,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 2,
+        "short_label": "11–20%|more"
+      },
+      {
+        "statistic_id": "RM23_06",
+        "response_category": "21–30% more",
+        "value": 3.0,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 3,
+        "short_label": "21–30%|more"
+      },
+      {
+        "statistic_id": "RM23_07",
+        "response_category": "31–50% more",
+        "value": 1.4,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 4,
+        "short_label": "31–50%|more"
+      },
+      {
+        "statistic_id": "RM23_08",
+        "response_category": "More than 50% more",
+        "value": 1.0,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 5,
+        "short_label": "Over 50%|more"
+      },
+      {
+        "statistic_id": "RM23_09",
+        "response_category": "Not willing to pay more",
+        "value": 17.0,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 6,
+        "short_label": "Not willing|to pay more"
+      },
+      {
+        "statistic_id": "RM23_10",
+        "response_category": "Not sure",
+        "value": 9.0,
+        "source_url": "https://australianmade.com.au/media/ko5f5wmj/roy-morgan-research-2023.pdf",
+        "report_label_year": "2023",
+        "order": 7,
+        "short_label": "Not|sure"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Arial",
+    "axis": {
+      "domain": false,
+      "ticks": false,
+      "gridColor": "#d6dccf",
+      "labelColor": "#203d2e",
+      "titleColor": "#5c6960",
+      "labelFontSize": 12,
+      "titleFontWeight": "normal"
+    },
+    "axisY": {
+      "labelLimit": 180
+    }
+  },
+  "encoding": {
+    "x": {
+      "field": "short_label",
+      "type": "ordinal",
+      "sort": [
+        "Up to|5% more",
+        "6–10%|more",
+        "11–20%|more",
+        "21–30%|more",
+        "31–50%|more",
+        "Over 50%|more",
+        "Not willing|to pay more",
+        "Not|sure"
+      ],
+      "title": null,
+      "axis": {
+        "labelExpr": "split(datum.label, '|')",
+        "labelAngle": 0,
+        "labelLimit": 120,
+        "labelPadding": 12
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          35
+        ]
+      },
+      "title": "Respondents (%)"
+    },
+    "tooltip": [
+      {
+        "field": "response_category",
+        "type": "nominal",
+        "title": "Published response"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Respondents (%)"
+      },
+      {
+        "field": "report_label_year",
+        "title": "Report label year"
+      },
+      {
+        "field": "statistic_id",
+        "title": "Audit record"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#b24e2a"
+      },
+      "encoding": {
+        "y2": {
+          "datum": 0
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100,
+        "color": "#b24e2a",
+        "opacity": 1
+      }
+    },
+    {
+      "transform": [
+        {
+          "calculate": "datum.value + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -15,
+        "color": "#203d2e",
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ]
+}

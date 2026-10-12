@@ -1,0 +1,207 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 576,
+  "padding": {
+    "left": 0,
+    "right": 18,
+    "top": 8,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data/processed/chart_data/ch1_abs_product_supply.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "iopc": "string",
+        "australian_production": "number",
+        "imports": "number",
+        "supply_bp": "number",
+        "local_production_share_of_total_supply_value": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "lookup": "iopc",
+      "from": {
+        "data": {
+          "url": "assets/data/ch1_labels.json"
+        },
+        "key": "iopc",
+        "fields": [
+          "display_label"
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "tickColor": "#c6cec5",
+      "gridColor": "#e4e7de",
+      "labelColor": "#4c5a53",
+      "titleColor": "#4c5a53",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelPadding": 8,
+      "titlePadding": 14
+    },
+    "axisY": {
+      "grid": false,
+      "ticks": false,
+      "labelLimit": 265
+    },
+    "legend": {
+      "disable": true
+    }
+  },
+  "description": "Ordered local production share of total supply value (Australian Production / Supply BP). 0–1 proportion; not retail market share.",
+  "encoding": {
+    "y": {
+      "field": "display_label",
+      "type": "nominal",
+      "sort": {
+        "field": "local_production_share_of_total_supply_value",
+        "order": "descending"
+      },
+      "title": null
+    },
+    "x": {
+      "field": "local_production_share_of_total_supply_value",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          1
+        ]
+      },
+      "title": "Local production share of total supply value",
+      "axis": {
+        "values": [
+          0,
+          0.25,
+          0.5,
+          0.75,
+          1
+        ],
+        "format": ".0%"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "iopc_description",
+        "type": "nominal",
+        "title": "Exact ABS IOPC category"
+      },
+      {
+        "field": "iopc",
+        "type": "nominal",
+        "title": "IOPC"
+      },
+      {
+        "field": "australian_production",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Australian production (A$ million)"
+      },
+      {
+        "field": "imports",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Imports (A$ million)"
+      },
+      {
+        "field": "supply_bp",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Supply BP (A$ million)"
+      },
+      {
+        "field": "financial_year",
+        "type": "nominal",
+        "title": "Financial year"
+      },
+      {
+        "field": "local_production_share_of_total_supply_value",
+        "type": "quantitative",
+        "format": ".1%",
+        "title": "Local production / Supply BP"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "values": [
+          {
+            "reference": 0.5
+          }
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          3,
+          4
+        ],
+        "color": "#aaa995"
+      },
+      "encoding": {
+        "x": {
+          "field": "reference",
+          "type": "quantitative"
+        },
+        "y": {
+          "value": 0
+        },
+        "y2": {
+          "value": {
+            "expr": "height"
+          }
+        },
+        "tooltip": {
+          "value": "50%: equal production and import values within Supply BP"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#23654b",
+        "size": 95
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": {
+          "expr": "datum.local_production_share_of_total_supply_value < 0.15 ? 'left' : 'right'"
+        },
+        "dx": {
+          "expr": "datum.local_production_share_of_total_supply_value < 0.15 ? 9 : -9"
+        },
+        "color": "#263d32",
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "local_production_share_of_total_supply_value",
+          "type": "quantitative",
+          "format": ".1%"
+        }
+      }
+    }
+  ]
+}

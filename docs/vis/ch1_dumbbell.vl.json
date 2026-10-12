@@ -1,0 +1,184 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 700,
+  "height": 576,
+  "padding": {
+    "left": 0,
+    "right": 18,
+    "top": 8,
+    "bottom": 5
+  },
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data/processed/chart_data/ch1_abs_product_supply.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "iopc": "string",
+        "australian_production": "number",
+        "imports": "number",
+        "supply_bp": "number",
+        "local_production_share_of_total_supply_value": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "lookup": "iopc",
+      "from": {
+        "data": {
+          "url": "assets/data/ch1_labels.json"
+        },
+        "key": "iopc",
+        "fields": [
+          "display_label"
+        ]
+      }
+    },
+    {
+      "filter": "groupFilter === 'All categories' || datum.research_group === groupFilter"
+    }
+  ],
+  "config": {
+    "background": "transparent",
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "domain": false,
+      "tickColor": "#c6cec5",
+      "gridColor": "#e4e7de",
+      "labelColor": "#4c5a53",
+      "titleColor": "#4c5a53",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelPadding": 8,
+      "titlePadding": 14
+    },
+    "axisY": {
+      "grid": false,
+      "ticks": false,
+      "labelLimit": 265
+    },
+    "legend": {
+      "disable": true
+    }
+  },
+  "description": "Dumbbell chart: Australian production and imports in nominal A$ million, FY2023–24. Curated 18 IOPC categories; not retail sales.",
+  "params": [
+    {
+      "name": "groupFilter",
+      "value": "All categories"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "display_label",
+      "type": "nominal",
+      "sort": {
+        "field": "supply_bp",
+        "order": "descending"
+      },
+      "title": null
+    },
+    "tooltip": [
+      {
+        "field": "iopc_description",
+        "type": "nominal",
+        "title": "Exact ABS IOPC category"
+      },
+      {
+        "field": "iopc",
+        "type": "nominal",
+        "title": "IOPC"
+      },
+      {
+        "field": "australian_production",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Australian production (A$ million)"
+      },
+      {
+        "field": "imports",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Imports (A$ million)"
+      },
+      {
+        "field": "supply_bp",
+        "type": "quantitative",
+        "format": ",.0f",
+        "title": "Supply BP (A$ million)"
+      },
+      {
+        "field": "financial_year",
+        "type": "nominal",
+        "title": "Financial year"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#b8c1b6",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "australian_production",
+          "type": "quantitative",
+          "title": "Value (A$ million)",
+          "scale": {
+            "zero": true,
+            "nice": true
+          },
+          "axis": {
+            "format": ",.0f",
+            "tickCount": 5
+          }
+        },
+        "x2": {
+          "field": "imports"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 90,
+        "color": "#23654b",
+        "shape": "circle",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "australian_production",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 78,
+        "color": "#b24e2a",
+        "shape": "square",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "imports",
+          "type": "quantitative"
+        }
+      }
+    }
+  ]
+}
