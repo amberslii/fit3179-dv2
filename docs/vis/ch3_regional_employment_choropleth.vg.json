@@ -77,7 +77,7 @@
     },
     {
       "name": "chosen",
-      "update": "data('selected')[0]"
+      "update": "{type:'Feature',geometry:data('selected')[0].geometry,labelLines:data('selected')[0].labelLines,state:data('selected')[0].state,sharePct:data('selected')[0].sharePct,group:group}"
     },
     {
       "name": "bounds",
