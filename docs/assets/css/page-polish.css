@@ -1,0 +1,21 @@
+/* Publication shell and consistent takeaway emphasis; chart layouts stay intact. */
+.page-frame { margin-top: 24px; }
+.hero { padding-top: 40px; padding-bottom: 34px; }
+.hero h1 { font-weight: 700; max-width: 680px; margin-top: 0; }
+.hero-deck { max-width: 590px; }
+.hero-index a, .hero-index a:first-of-type { color: var(--foreground); font-weight: 500; }
+.hero-index a:hover { color: var(--foreground); text-decoration: underline; }
+#dv2-sources-and-value .sv-insight-state .sv-takeaway { font-weight: 700; color: #243440; }
+.credits-footer { display: grid; grid-template-columns: 1fr 1.35fr; gap: 20px 36px; padding: 28px 34px 22px; font-size: 13px; line-height: 1.65; }
+.credits-footer h2 { font-size: 20px; line-height: 1.35; font-weight: 700; margin: 0 0 12px; letter-spacing: 0; }
+.credits-footer p { font-size: inherit; line-height: inherit; margin: 0; }
+.credits-footer strong { color: var(--foreground); }
+.credits-sources nav { display: flex; flex-wrap: wrap; gap: 5px 18px; margin: 9px 0 13px; }
+.credits-sources a { color: var(--foreground); overflow-wrap: anywhere; }
+.credits-images summary { cursor: pointer; }
+.credits-images p { margin-top: 8px; }
+.credits-ai { grid-column: 1 / -1; border-top: 1px solid var(--border); padding-top: 14px; color: var(--muted-foreground); }
+@media (max-width: 700px) {
+  .page-frame { margin-top: 0; }
+  .credits-footer { grid-template-columns: 1fr; padding: 24px 18px; gap: 20px; }
+}
