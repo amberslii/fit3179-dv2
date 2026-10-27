@@ -61,7 +61,9 @@
     $('.jobs-selection-note').textContent=chosen.n===0?'The published total is zero; this does not prove there are no related jobs.':chosen.n<20?'Small published counts are affected by confidentiality adjustments. Compare with care.':'';
     root.querySelectorAll('[data-map-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mapView===state.mapView)));
     const high=rows.reduce((a,b)=>a.sharePct>=b.sharePct?a:b),large=rows.reduce((a,b)=>a.n>=b.n?a:b);
-    $('.comparison-examples').innerHTML=[[high,'Higher share'],[large,'More jobs']].map(([r,label])=>`<button type="button" data-compare="${r.id}" aria-pressed="${r.id===state.region}"><span><em>${label} · Locate ↗</em><span class="jobs-example-name">${r.name.replaceAll(' - ',' – ')}</span><small>Selected industries: ${fmt(r.n)} people</small></span><strong>${jobsPct(r.sharePct)}</strong></button>`).join('');
+    $('.jobs-insight').style.setProperty('--cat',g.color);
+    $('.jobs-insight-copy').innerHTML=`<p><strong>${high.name.replaceAll(' - ',' – ')}</strong> has the highest local share: <strong>${jobsPct(high.sharePct)}</strong> of all employment is in these selected industries.</p><p><strong>${large.name.replaceAll(' - ',' – ')}</strong> employs more people in these industries (<strong>${fmt(large.n)}</strong>), but they make up only <strong>${jobsPct(large.sharePct)}</strong> of its larger workforce.</p>`;
+    $('.comparison-examples').innerHTML=[[high,'Locate highest share'],[large,'Locate most jobs']].map(([r,label])=>`<button type="button" data-compare="${r.id}" aria-pressed="${r.id===state.region}" aria-label="${label}: ${r.name}">${label} ↗</button>`).join('');
     $('.comparison-examples').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{state.region=b.dataset.compare;state.mapView='regional';updateJobs();$('.choropleth').scrollIntoView({block:'center'});}));icons();
   }
   function productControls(){
