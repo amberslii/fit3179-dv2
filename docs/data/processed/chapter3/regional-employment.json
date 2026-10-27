@@ -1,0 +1,4318 @@
+[
+  {
+    "id": "101",
+    "name": "Capital Region",
+    "n": 927,
+    "total": 83771,
+    "sharePct": 1.1065881987800075,
+    "group": 0,
+    "labelLines": [
+      "Capital Region"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "102",
+    "name": "Central Coast",
+    "n": 549,
+    "total": 116787,
+    "sharePct": 0.47008656785429886,
+    "group": 0,
+    "labelLines": [
+      "Central Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "103",
+    "name": "Central West",
+    "n": 576,
+    "total": 91918,
+    "sharePct": 0.6266454883700691,
+    "group": 0,
+    "labelLines": [
+      "Central West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "104",
+    "name": "Coffs Harbour - Grafton",
+    "n": 224,
+    "total": 54999,
+    "sharePct": 0.407280132366043,
+    "group": 0,
+    "labelLines": [
+      "Coffs Harbour – Grafton"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "105",
+    "name": "Far West and Orana",
+    "n": 250,
+    "total": 49323,
+    "sharePct": 0.506862923990836,
+    "group": 0,
+    "labelLines": [
+      "Far West and Orana"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "106",
+    "name": "Hunter Valley exc Newcastle",
+    "n": 451,
+    "total": 116800,
+    "sharePct": 0.3861301369863014,
+    "group": 0,
+    "labelLines": [
+      "Hunter Valley exc",
+      "Newcastle"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "107",
+    "name": "Illawarra",
+    "n": 384,
+    "total": 113940,
+    "sharePct": 0.33701948393891523,
+    "group": 0,
+    "labelLines": [
+      "Illawarra"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "108",
+    "name": "Mid North Coast",
+    "n": 588,
+    "total": 77135,
+    "sharePct": 0.7622998638750244,
+    "group": 0,
+    "labelLines": [
+      "Mid North Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "109",
+    "name": "Murray",
+    "n": 390,
+    "total": 53408,
+    "sharePct": 0.7302276812462551,
+    "group": 0,
+    "labelLines": [
+      "Murray"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "110",
+    "name": "New England and North West",
+    "n": 280,
+    "total": 77640,
+    "sharePct": 0.36063884595569295,
+    "group": 0,
+    "labelLines": [
+      "New England and North",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "111",
+    "name": "Newcastle and Lake Macquarie",
+    "n": 646,
+    "total": 179684,
+    "sharePct": 0.3595200463035106,
+    "group": 0,
+    "labelLines": [
+      "Newcastle and Lake",
+      "Macquarie"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "112",
+    "name": "Richmond - Tweed",
+    "n": 780,
+    "total": 99420,
+    "sharePct": 0.7845503922751962,
+    "group": 0,
+    "labelLines": [
+      "Richmond – Tweed"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "113",
+    "name": "Riverina",
+    "n": 363,
+    "total": 74963,
+    "sharePct": 0.48423889118631863,
+    "group": 0,
+    "labelLines": [
+      "Riverina"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "114",
+    "name": "Southern Highlands and Shoalhaven",
+    "n": 338,
+    "total": 60308,
+    "sharePct": 0.5604563242024275,
+    "group": 0,
+    "labelLines": [
+      "Southern Highlands and",
+      "Shoalhaven"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "115",
+    "name": "Sydney - Baulkham Hills and Hawkesbury",
+    "n": 295,
+    "total": 90246,
+    "sharePct": 0.3268842940407331,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Baulkham Hills",
+      "and Hawkesbury"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "116",
+    "name": "Sydney - Blacktown",
+    "n": 838,
+    "total": 121594,
+    "sharePct": 0.6891787423721566,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Blacktown"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "117",
+    "name": "Sydney - City and Inner South",
+    "n": 1716,
+    "total": 618551,
+    "sharePct": 0.2774225569112329,
+    "group": 0,
+    "labelLines": [
+      "Sydney – City and Inner",
+      "South"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "118",
+    "name": "Sydney - Eastern Suburbs",
+    "n": 352,
+    "total": 98077,
+    "sharePct": 0.35890167929280054,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Eastern Suburbs"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "119",
+    "name": "Sydney - Inner South West",
+    "n": 1319,
+    "total": 155561,
+    "sharePct": 0.8478988949672476,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Inner South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "120",
+    "name": "Sydney - Inner West",
+    "n": 1643,
+    "total": 107140,
+    "sharePct": 1.5335075602016053,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Inner West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "121",
+    "name": "Sydney - North Sydney and Hornsby",
+    "n": 938,
+    "total": 231668,
+    "sharePct": 0.4048897560301811,
+    "group": 0,
+    "labelLines": [
+      "Sydney – North Sydney",
+      "and Hornsby"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "122",
+    "name": "Sydney - Northern Beaches",
+    "n": 440,
+    "total": 98335,
+    "sharePct": 0.44745004321960646,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Northern",
+      "Beaches"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "123",
+    "name": "Sydney - Outer South West",
+    "n": 704,
+    "total": 89499,
+    "sharePct": 0.7866009676085766,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Outer South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "124",
+    "name": "Sydney - Outer West and Blue Mountains",
+    "n": 678,
+    "total": 113163,
+    "sharePct": 0.5991357599215291,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Outer West and",
+      "Blue Mountains"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "125",
+    "name": "Sydney - Parramatta",
+    "n": 1222,
+    "total": 229168,
+    "sharePct": 0.5332332611882986,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Parramatta"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "126",
+    "name": "Sydney - Ryde",
+    "n": 673,
+    "total": 103351,
+    "sharePct": 0.6511789919787907,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Ryde"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "127",
+    "name": "Sydney - South West",
+    "n": 1388,
+    "total": 140608,
+    "sharePct": 0.9871415566681838,
+    "group": 0,
+    "labelLines": [
+      "Sydney – South West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "128",
+    "name": "Sydney - Sutherland",
+    "n": 381,
+    "total": 72502,
+    "sharePct": 0.525502744751869,
+    "group": 0,
+    "labelLines": [
+      "Sydney – Sutherland"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "201",
+    "name": "Ballarat",
+    "n": 989,
+    "total": 70192,
+    "sharePct": 1.4089924777752452,
+    "group": 0,
+    "labelLines": [
+      "Ballarat"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "202",
+    "name": "Bendigo",
+    "n": 633,
+    "total": 69726,
+    "sharePct": 0.9078392565183718,
+    "group": 0,
+    "labelLines": [
+      "Bendigo"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "203",
+    "name": "Geelong",
+    "n": 885,
+    "total": 134572,
+    "sharePct": 0.6576405195731653,
+    "group": 0,
+    "labelLines": [
+      "Geelong"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "204",
+    "name": "Hume",
+    "n": 1094,
+    "total": 77944,
+    "sharePct": 1.4035717951349687,
+    "group": 0,
+    "labelLines": [
+      "Hume"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "205",
+    "name": "Latrobe - Gippsland",
+    "n": 1841,
+    "total": 113091,
+    "sharePct": 1.6278925820799177,
+    "group": 0,
+    "labelLines": [
+      "Latrobe – Gippsland"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "206",
+    "name": "Melbourne - Inner",
+    "n": 3353,
+    "total": 778703,
+    "sharePct": 0.43058778507338485,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – Inner"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "207",
+    "name": "Melbourne - Inner East",
+    "n": 785,
+    "total": 154349,
+    "sharePct": 0.508587681164115,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – Inner East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "208",
+    "name": "Melbourne - Inner South",
+    "n": 1876,
+    "total": 172105,
+    "sharePct": 1.0900322477557305,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – Inner South"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "209",
+    "name": "Melbourne - North East",
+    "n": 1399,
+    "total": 173204,
+    "sharePct": 0.8077180665573545,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – North East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "210",
+    "name": "Melbourne - North West",
+    "n": 2234,
+    "total": 163696,
+    "sharePct": 1.3647248558303195,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "211",
+    "name": "Melbourne - Outer East",
+    "n": 2182,
+    "total": 194328,
+    "sharePct": 1.1228438516322918,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – Outer East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "212",
+    "name": "Melbourne - South East",
+    "n": 3833,
+    "total": 354435,
+    "sharePct": 1.08143947409257,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – South East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "213",
+    "name": "Melbourne - West",
+    "n": 1904,
+    "total": 275280,
+    "sharePct": 0.6916594013368207,
+    "group": 0,
+    "labelLines": [
+      "Melbourne – West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "214",
+    "name": "Mornington Peninsula",
+    "n": 778,
+    "total": 110525,
+    "sharePct": 0.7039131418231169,
+    "group": 0,
+    "labelLines": [
+      "Mornington Peninsula"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "215",
+    "name": "North West",
+    "n": 353,
+    "total": 67092,
+    "sharePct": 0.5261432063435283,
+    "group": 0,
+    "labelLines": [
+      "North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "216",
+    "name": "Shepparton",
+    "n": 1691,
+    "total": 58982,
+    "sharePct": 2.8669763656708827,
+    "group": 0,
+    "labelLines": [
+      "Shepparton"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "217",
+    "name": "Warrnambool and South West",
+    "n": 1961,
+    "total": 57849,
+    "sharePct": 3.3898598074296875,
+    "group": 0,
+    "labelLines": [
+      "Warrnambool and South",
+      "West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "301",
+    "name": "Brisbane - East",
+    "n": 483,
+    "total": 91716,
+    "sharePct": 0.526625670548214,
+    "group": 0,
+    "labelLines": [
+      "Brisbane – East"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "302",
+    "name": "Brisbane - North",
+    "n": 958,
+    "total": 123796,
+    "sharePct": 0.7738537594106434,
+    "group": 0,
+    "labelLines": [
+      "Brisbane – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "303",
+    "name": "Brisbane - South",
+    "n": 559,
+    "total": 174508,
+    "sharePct": 0.3203291539642882,
+    "group": 0,
+    "labelLines": [
+      "Brisbane – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "304",
+    "name": "Brisbane - West",
+    "n": 240,
+    "total": 63658,
+    "sharePct": 0.37701467215432466,
+    "group": 0,
+    "labelLines": [
+      "Brisbane – West"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "305",
+    "name": "Brisbane Inner City",
+    "n": 699,
+    "total": 364268,
+    "sharePct": 0.19189168414464078,
+    "group": 0,
+    "labelLines": [
+      "Brisbane Inner City"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "306",
+    "name": "Cairns",
+    "n": 456,
+    "total": 107657,
+    "sharePct": 0.42356744103959804,
+    "group": 0,
+    "labelLines": [
+      "Cairns"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "307",
+    "name": "Darling Downs - Maranoa",
+    "n": 198,
+    "total": 56908,
+    "sharePct": 0.3479299922682224,
+    "group": 0,
+    "labelLines": [
+      "Darling Downs – Maranoa"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "308",
+    "name": "Central Queensland",
+    "n": 316,
+    "total": 102519,
+    "sharePct": 0.30823554658160923,
+    "group": 0,
+    "labelLines": [
+      "Central Queensland"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "309",
+    "name": "Gold Coast",
+    "n": 1469,
+    "total": 278824,
+    "sharePct": 0.5268556508765386,
+    "group": 0,
+    "labelLines": [
+      "Gold Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "310",
+    "name": "Ipswich",
+    "n": 804,
+    "total": 129477,
+    "sharePct": 0.6209597071294515,
+    "group": 0,
+    "labelLines": [
+      "Ipswich"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "311",
+    "name": "Logan - Beaudesert",
+    "n": 642,
+    "total": 108438,
+    "sharePct": 0.592043379627068,
+    "group": 0,
+    "labelLines": [
+      "Logan – Beaudesert"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "312",
+    "name": "Mackay - Isaac - Whitsunday",
+    "n": 224,
+    "total": 92309,
+    "sharePct": 0.24266322893759007,
+    "group": 0,
+    "labelLines": [
+      "Mackay – Isaac –",
+      "Whitsunday"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "313",
+    "name": "Moreton Bay - North",
+    "n": 339,
+    "total": 77457,
+    "sharePct": 0.4376621867616871,
+    "group": 0,
+    "labelLines": [
+      "Moreton Bay – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "314",
+    "name": "Moreton Bay - South",
+    "n": 252,
+    "total": 60959,
+    "sharePct": 0.41339260814645906,
+    "group": 0,
+    "labelLines": [
+      "Moreton Bay – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "315",
+    "name": "Queensland - Outback",
+    "n": 116,
+    "total": 39086,
+    "sharePct": 0.2967814562759044,
+    "group": 0,
+    "labelLines": [
+      "Queensland – Outback"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "316",
+    "name": "Sunshine Coast",
+    "n": 1098,
+    "total": 159186,
+    "sharePct": 0.6897591496739663,
+    "group": 0,
+    "labelLines": [
+      "Sunshine Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "317",
+    "name": "Toowoomba",
+    "n": 453,
+    "total": 73684,
+    "sharePct": 0.6147874708213452,
+    "group": 0,
+    "labelLines": [
+      "Toowoomba"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "318",
+    "name": "Townsville",
+    "n": 396,
+    "total": 103852,
+    "sharePct": 0.38131186688749374,
+    "group": 0,
+    "labelLines": [
+      "Townsville"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "319",
+    "name": "Wide Bay",
+    "n": 602,
+    "total": 103607,
+    "sharePct": 0.5810418214985474,
+    "group": 0,
+    "labelLines": [
+      "Wide Bay"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "401",
+    "name": "Adelaide - Central and Hills",
+    "n": 1511,
+    "total": 240643,
+    "sharePct": 0.6279010816853181,
+    "group": 0,
+    "labelLines": [
+      "Adelaide – Central and",
+      "Hills"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "402",
+    "name": "Adelaide - North",
+    "n": 910,
+    "total": 144925,
+    "sharePct": 0.6279109884422978,
+    "group": 0,
+    "labelLines": [
+      "Adelaide – North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "403",
+    "name": "Adelaide - South",
+    "n": 664,
+    "total": 114700,
+    "sharePct": 0.5789014821272886,
+    "group": 0,
+    "labelLines": [
+      "Adelaide – South"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "404",
+    "name": "Adelaide - West",
+    "n": 1525,
+    "total": 136162,
+    "sharePct": 1.1199894243621569,
+    "group": 0,
+    "labelLines": [
+      "Adelaide – West"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "405",
+    "name": "Barossa - Yorke - Mid North",
+    "n": 365,
+    "total": 42717,
+    "sharePct": 0.8544607533300559,
+    "group": 0,
+    "labelLines": [
+      "Barossa – Yorke – Mid",
+      "North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "406",
+    "name": "South Australia - Outback",
+    "n": 120,
+    "total": 41111,
+    "sharePct": 0.29189268079102915,
+    "group": 0,
+    "labelLines": [
+      "South Australia –",
+      "Outback"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "407",
+    "name": "South Australia - South East",
+    "n": 766,
+    "total": 74892,
+    "sharePct": 1.0228061742242163,
+    "group": 0,
+    "labelLines": [
+      "South Australia – South",
+      "East"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "501",
+    "name": "Bunbury",
+    "n": 469,
+    "total": 78895,
+    "sharePct": 0.5944609924583306,
+    "group": 0,
+    "labelLines": [
+      "Bunbury"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "502",
+    "name": "Mandurah",
+    "n": 198,
+    "total": 30240,
+    "sharePct": 0.6547619047619048,
+    "group": 0,
+    "labelLines": [
+      "Mandurah"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "503",
+    "name": "Perth - Inner",
+    "n": 497,
+    "total": 261272,
+    "sharePct": 0.19022321565265318,
+    "group": 0,
+    "labelLines": [
+      "Perth – Inner"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "504",
+    "name": "Perth - North East",
+    "n": 751,
+    "total": 100464,
+    "sharePct": 0.7475314540531932,
+    "group": 0,
+    "labelLines": [
+      "Perth – North East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "505",
+    "name": "Perth - North West",
+    "n": 819,
+    "total": 179841,
+    "sharePct": 0.45540227200693945,
+    "group": 0,
+    "labelLines": [
+      "Perth – North West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "506",
+    "name": "Perth - South East",
+    "n": 1137,
+    "total": 223150,
+    "sharePct": 0.5095227425498543,
+    "group": 0,
+    "labelLines": [
+      "Perth – South East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "507",
+    "name": "Perth - South West",
+    "n": 702,
+    "total": 177166,
+    "sharePct": 0.39623855593059615,
+    "group": 0,
+    "labelLines": [
+      "Perth – South West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "509",
+    "name": "Western Australia - Wheat Belt",
+    "n": 227,
+    "total": 59284,
+    "sharePct": 0.382902638148573,
+    "group": 0,
+    "labelLines": [
+      "Western Australia –",
+      "Wheat Belt"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "510",
+    "name": "Western Australia - Outback (North)",
+    "n": 70,
+    "total": 70762,
+    "sharePct": 0.09892315084367316,
+    "group": 0,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (North)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "511",
+    "name": "Western Australia - Outback (South)",
+    "n": 119,
+    "total": 65776,
+    "sharePct": 0.18091705181221113,
+    "group": 0,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (South)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "601",
+    "name": "Hobart",
+    "n": 1311,
+    "total": 117521,
+    "sharePct": 1.1155453067962322,
+    "group": 0,
+    "labelLines": [
+      "Hobart"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "602",
+    "name": "Launceston and North East",
+    "n": 571,
+    "total": 63886,
+    "sharePct": 0.8937795448142003,
+    "group": 0,
+    "labelLines": [
+      "Launceston and North",
+      "East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "603",
+    "name": "South East",
+    "n": 97,
+    "total": 11415,
+    "sharePct": 0.8497590889180902,
+    "group": 0,
+    "labelLines": [
+      "South East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "604",
+    "name": "West and North West",
+    "n": 910,
+    "total": 47513,
+    "sharePct": 1.9152652958137772,
+    "group": 0,
+    "labelLines": [
+      "West and North West"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "701",
+    "name": "Darwin",
+    "n": 160,
+    "total": 72253,
+    "sharePct": 0.22144409228682546,
+    "group": 0,
+    "labelLines": [
+      "Darwin"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "702",
+    "name": "Northern Territory - Outback",
+    "n": 44,
+    "total": 35981,
+    "sharePct": 0.12228676245796392,
+    "group": 0,
+    "labelLines": [
+      "Northern Territory –",
+      "Outback"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "801",
+    "name": "Australian Capital Territory",
+    "n": 690,
+    "total": 266483,
+    "sharePct": 0.25892833689203437,
+    "group": 0,
+    "labelLines": [
+      "Australian Capital",
+      "Territory"
+    ],
+    "state": "ACT"
+  },
+  {
+    "id": "101",
+    "name": "Capital Region",
+    "n": 139,
+    "total": 83771,
+    "sharePct": 0.16592854329063758,
+    "group": 1,
+    "labelLines": [
+      "Capital Region"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "102",
+    "name": "Central Coast",
+    "n": 146,
+    "total": 116787,
+    "sharePct": 0.1250139142199046,
+    "group": 1,
+    "labelLines": [
+      "Central Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "103",
+    "name": "Central West",
+    "n": 73,
+    "total": 91918,
+    "sharePct": 0.07941861224134554,
+    "group": 1,
+    "labelLines": [
+      "Central West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "104",
+    "name": "Coffs Harbour - Grafton",
+    "n": 85,
+    "total": 54999,
+    "sharePct": 0.15454826451390025,
+    "group": 1,
+    "labelLines": [
+      "Coffs Harbour – Grafton"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "105",
+    "name": "Far West and Orana",
+    "n": 17,
+    "total": 49323,
+    "sharePct": 0.03446667883137684,
+    "group": 1,
+    "labelLines": [
+      "Far West and Orana"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "106",
+    "name": "Hunter Valley exc Newcastle",
+    "n": 69,
+    "total": 116800,
+    "sharePct": 0.059075342465753425,
+    "group": 1,
+    "labelLines": [
+      "Hunter Valley exc",
+      "Newcastle"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "107",
+    "name": "Illawarra",
+    "n": 131,
+    "total": 113940,
+    "sharePct": 0.11497279269791119,
+    "group": 1,
+    "labelLines": [
+      "Illawarra"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "108",
+    "name": "Mid North Coast",
+    "n": 52,
+    "total": 77135,
+    "sharePct": 0.06741427367602255,
+    "group": 1,
+    "labelLines": [
+      "Mid North Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "109",
+    "name": "Murray",
+    "n": 86,
+    "total": 53408,
+    "sharePct": 0.1610245656081486,
+    "group": 1,
+    "labelLines": [
+      "Murray"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "110",
+    "name": "New England and North West",
+    "n": 100,
+    "total": 77640,
+    "sharePct": 0.1287995878413189,
+    "group": 1,
+    "labelLines": [
+      "New England and North",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "111",
+    "name": "Newcastle and Lake Macquarie",
+    "n": 97,
+    "total": 179684,
+    "sharePct": 0.05398366020346831,
+    "group": 1,
+    "labelLines": [
+      "Newcastle and Lake",
+      "Macquarie"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "112",
+    "name": "Richmond - Tweed",
+    "n": 143,
+    "total": 99420,
+    "sharePct": 0.14383423858378594,
+    "group": 1,
+    "labelLines": [
+      "Richmond – Tweed"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "113",
+    "name": "Riverina",
+    "n": 62,
+    "total": 74963,
+    "sharePct": 0.0827074690180489,
+    "group": 1,
+    "labelLines": [
+      "Riverina"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "114",
+    "name": "Southern Highlands and Shoalhaven",
+    "n": 56,
+    "total": 60308,
+    "sharePct": 0.09285666909862705,
+    "group": 1,
+    "labelLines": [
+      "Southern Highlands and",
+      "Shoalhaven"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "115",
+    "name": "Sydney - Baulkham Hills and Hawkesbury",
+    "n": 72,
+    "total": 90246,
+    "sharePct": 0.07978192939299249,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Baulkham Hills",
+      "and Hawkesbury"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "116",
+    "name": "Sydney - Blacktown",
+    "n": 240,
+    "total": 121594,
+    "sharePct": 0.1973781601065842,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Blacktown"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "117",
+    "name": "Sydney - City and Inner South",
+    "n": 250,
+    "total": 618551,
+    "sharePct": 0.040417039177044416,
+    "group": 1,
+    "labelLines": [
+      "Sydney – City and Inner",
+      "South"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "118",
+    "name": "Sydney - Eastern Suburbs",
+    "n": 15,
+    "total": 98077,
+    "sharePct": 0.015294105651681843,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Eastern Suburbs"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "119",
+    "name": "Sydney - Inner South West",
+    "n": 504,
+    "total": 155561,
+    "sharePct": 0.3239886603968861,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Inner South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "120",
+    "name": "Sydney - Inner West",
+    "n": 43,
+    "total": 107140,
+    "sharePct": 0.040134403584095577,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Inner West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "121",
+    "name": "Sydney - North Sydney and Hornsby",
+    "n": 72,
+    "total": 231668,
+    "sharePct": 0.031078957818947803,
+    "group": 1,
+    "labelLines": [
+      "Sydney – North Sydney",
+      "and Hornsby"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "122",
+    "name": "Sydney - Northern Beaches",
+    "n": 157,
+    "total": 98335,
+    "sharePct": 0.15965831087608684,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Northern",
+      "Beaches"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "123",
+    "name": "Sydney - Outer South West",
+    "n": 175,
+    "total": 89499,
+    "sharePct": 0.19553291098224562,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Outer South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "124",
+    "name": "Sydney - Outer West and Blue Mountains",
+    "n": 166,
+    "total": 113163,
+    "sharePct": 0.1466910562639732,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Outer West and",
+      "Blue Mountains"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "125",
+    "name": "Sydney - Parramatta",
+    "n": 339,
+    "total": 229168,
+    "sharePct": 0.14792641206451163,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Parramatta"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "126",
+    "name": "Sydney - Ryde",
+    "n": 29,
+    "total": 103351,
+    "sharePct": 0.02805971882226587,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Ryde"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "127",
+    "name": "Sydney - South West",
+    "n": 472,
+    "total": 140608,
+    "sharePct": 0.33568502503413744,
+    "group": 1,
+    "labelLines": [
+      "Sydney – South West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "128",
+    "name": "Sydney - Sutherland",
+    "n": 123,
+    "total": 72502,
+    "sharePct": 0.16965049240020966,
+    "group": 1,
+    "labelLines": [
+      "Sydney – Sutherland"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "201",
+    "name": "Ballarat",
+    "n": 79,
+    "total": 70192,
+    "sharePct": 0.11254843856849783,
+    "group": 1,
+    "labelLines": [
+      "Ballarat"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "202",
+    "name": "Bendigo",
+    "n": 82,
+    "total": 69726,
+    "sharePct": 0.11760318962797235,
+    "group": 1,
+    "labelLines": [
+      "Bendigo"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "203",
+    "name": "Geelong",
+    "n": 272,
+    "total": 134572,
+    "sharePct": 0.202122283981809,
+    "group": 1,
+    "labelLines": [
+      "Geelong"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "204",
+    "name": "Hume",
+    "n": 111,
+    "total": 77944,
+    "sharePct": 0.14240993533819152,
+    "group": 1,
+    "labelLines": [
+      "Hume"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "205",
+    "name": "Latrobe - Gippsland",
+    "n": 145,
+    "total": 113091,
+    "sharePct": 0.12821533101661495,
+    "group": 1,
+    "labelLines": [
+      "Latrobe – Gippsland"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "206",
+    "name": "Melbourne - Inner",
+    "n": 103,
+    "total": 778703,
+    "sharePct": 0.013227122535806334,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – Inner"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "207",
+    "name": "Melbourne - Inner East",
+    "n": 53,
+    "total": 154349,
+    "sharePct": 0.03433776700853261,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – Inner East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "208",
+    "name": "Melbourne - Inner South",
+    "n": 387,
+    "total": 172105,
+    "sharePct": 0.2248627291479039,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – Inner South"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "209",
+    "name": "Melbourne - North East",
+    "n": 417,
+    "total": 173204,
+    "sharePct": 0.24075656451352165,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – North East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "210",
+    "name": "Melbourne - North West",
+    "n": 808,
+    "total": 163696,
+    "sharePct": 0.49359788876942623,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "211",
+    "name": "Melbourne - Outer East",
+    "n": 718,
+    "total": 194328,
+    "sharePct": 0.36947840764068995,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – Outer East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "212",
+    "name": "Melbourne - South East",
+    "n": 921,
+    "total": 354435,
+    "sharePct": 0.25985018409581445,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – South East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "213",
+    "name": "Melbourne - West",
+    "n": 633,
+    "total": 275280,
+    "sharePct": 0.22994768962510898,
+    "group": 1,
+    "labelLines": [
+      "Melbourne – West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "214",
+    "name": "Mornington Peninsula",
+    "n": 241,
+    "total": 110525,
+    "sharePct": 0.21805021488351053,
+    "group": 1,
+    "labelLines": [
+      "Mornington Peninsula"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "215",
+    "name": "North West",
+    "n": 76,
+    "total": 67092,
+    "sharePct": 0.11327729088415907,
+    "group": 1,
+    "labelLines": [
+      "North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "216",
+    "name": "Shepparton",
+    "n": 109,
+    "total": 58982,
+    "sharePct": 0.1848021430266861,
+    "group": 1,
+    "labelLines": [
+      "Shepparton"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "217",
+    "name": "Warrnambool and South West",
+    "n": 55,
+    "total": 57849,
+    "sharePct": 0.09507510933637574,
+    "group": 1,
+    "labelLines": [
+      "Warrnambool and South",
+      "West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "301",
+    "name": "Brisbane - East",
+    "n": 210,
+    "total": 91716,
+    "sharePct": 0.22896768284704958,
+    "group": 1,
+    "labelLines": [
+      "Brisbane – East"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "302",
+    "name": "Brisbane - North",
+    "n": 234,
+    "total": 123796,
+    "sharePct": 0.18902064687065817,
+    "group": 1,
+    "labelLines": [
+      "Brisbane – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "303",
+    "name": "Brisbane - South",
+    "n": 161,
+    "total": 174508,
+    "sharePct": 0.09225938065876636,
+    "group": 1,
+    "labelLines": [
+      "Brisbane – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "304",
+    "name": "Brisbane - West",
+    "n": 32,
+    "total": 63658,
+    "sharePct": 0.05026862295390996,
+    "group": 1,
+    "labelLines": [
+      "Brisbane – West"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "305",
+    "name": "Brisbane Inner City",
+    "n": 55,
+    "total": 364268,
+    "sharePct": 0.015098773430551132,
+    "group": 1,
+    "labelLines": [
+      "Brisbane Inner City"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "306",
+    "name": "Cairns",
+    "n": 159,
+    "total": 107657,
+    "sharePct": 0.14769127878354402,
+    "group": 1,
+    "labelLines": [
+      "Cairns"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "307",
+    "name": "Darling Downs - Maranoa",
+    "n": 44,
+    "total": 56908,
+    "sharePct": 0.07731777605960498,
+    "group": 1,
+    "labelLines": [
+      "Darling Downs – Maranoa"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "308",
+    "name": "Central Queensland",
+    "n": 90,
+    "total": 102519,
+    "sharePct": 0.08778860503906594,
+    "group": 1,
+    "labelLines": [
+      "Central Queensland"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "309",
+    "name": "Gold Coast",
+    "n": 473,
+    "total": 278824,
+    "sharePct": 0.16964106389693856,
+    "group": 1,
+    "labelLines": [
+      "Gold Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "310",
+    "name": "Ipswich",
+    "n": 443,
+    "total": 129477,
+    "sharePct": 0.342145709276551,
+    "group": 1,
+    "labelLines": [
+      "Ipswich"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "311",
+    "name": "Logan - Beaudesert",
+    "n": 283,
+    "total": 108438,
+    "sharePct": 0.26097862372968883,
+    "group": 1,
+    "labelLines": [
+      "Logan – Beaudesert"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "312",
+    "name": "Mackay - Isaac - Whitsunday",
+    "n": 64,
+    "total": 92309,
+    "sharePct": 0.06933235112502573,
+    "group": 1,
+    "labelLines": [
+      "Mackay – Isaac –",
+      "Whitsunday"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "313",
+    "name": "Moreton Bay - North",
+    "n": 151,
+    "total": 77457,
+    "sharePct": 0.19494687374930608,
+    "group": 1,
+    "labelLines": [
+      "Moreton Bay – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "314",
+    "name": "Moreton Bay - South",
+    "n": 144,
+    "total": 60959,
+    "sharePct": 0.23622434751226234,
+    "group": 1,
+    "labelLines": [
+      "Moreton Bay – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "315",
+    "name": "Queensland - Outback",
+    "n": 12,
+    "total": 39086,
+    "sharePct": 0.03070152995957632,
+    "group": 1,
+    "labelLines": [
+      "Queensland – Outback"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "316",
+    "name": "Sunshine Coast",
+    "n": 401,
+    "total": 159186,
+    "sharePct": 0.2519065746987801,
+    "group": 1,
+    "labelLines": [
+      "Sunshine Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "317",
+    "name": "Toowoomba",
+    "n": 117,
+    "total": 73684,
+    "sharePct": 0.1587861679604799,
+    "group": 1,
+    "labelLines": [
+      "Toowoomba"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "318",
+    "name": "Townsville",
+    "n": 97,
+    "total": 103852,
+    "sharePct": 0.09340214921234063,
+    "group": 1,
+    "labelLines": [
+      "Townsville"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "319",
+    "name": "Wide Bay",
+    "n": 154,
+    "total": 103607,
+    "sharePct": 0.1486386054996284,
+    "group": 1,
+    "labelLines": [
+      "Wide Bay"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "401",
+    "name": "Adelaide - Central and Hills",
+    "n": 135,
+    "total": 240643,
+    "sharePct": 0.05609969955494239,
+    "group": 1,
+    "labelLines": [
+      "Adelaide – Central and",
+      "Hills"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "402",
+    "name": "Adelaide - North",
+    "n": 264,
+    "total": 144925,
+    "sharePct": 0.18216318785578747,
+    "group": 1,
+    "labelLines": [
+      "Adelaide – North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "403",
+    "name": "Adelaide - South",
+    "n": 252,
+    "total": 114700,
+    "sharePct": 0.21970357454228423,
+    "group": 1,
+    "labelLines": [
+      "Adelaide – South"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "404",
+    "name": "Adelaide - West",
+    "n": 681,
+    "total": 136162,
+    "sharePct": 0.5001395396659861,
+    "group": 1,
+    "labelLines": [
+      "Adelaide – West"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "405",
+    "name": "Barossa - Yorke - Mid North",
+    "n": 45,
+    "total": 42717,
+    "sharePct": 0.1053444764379521,
+    "group": 1,
+    "labelLines": [
+      "Barossa – Yorke – Mid",
+      "North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "406",
+    "name": "South Australia - Outback",
+    "n": 29,
+    "total": 41111,
+    "sharePct": 0.07054073119116538,
+    "group": 1,
+    "labelLines": [
+      "South Australia –",
+      "Outback"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "407",
+    "name": "South Australia - South East",
+    "n": 119,
+    "total": 74892,
+    "sharePct": 0.15889547615232602,
+    "group": 1,
+    "labelLines": [
+      "South Australia – South",
+      "East"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "501",
+    "name": "Bunbury",
+    "n": 96,
+    "total": 78895,
+    "sharePct": 0.12168071487419989,
+    "group": 1,
+    "labelLines": [
+      "Bunbury"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "502",
+    "name": "Mandurah",
+    "n": 24,
+    "total": 30240,
+    "sharePct": 0.07936507936507936,
+    "group": 1,
+    "labelLines": [
+      "Mandurah"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "503",
+    "name": "Perth - Inner",
+    "n": 22,
+    "total": 261272,
+    "sharePct": 0.008420343550016841,
+    "group": 1,
+    "labelLines": [
+      "Perth – Inner"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "504",
+    "name": "Perth - North East",
+    "n": 296,
+    "total": 100464,
+    "sharePct": 0.2946329033285555,
+    "group": 1,
+    "labelLines": [
+      "Perth – North East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "505",
+    "name": "Perth - North West",
+    "n": 389,
+    "total": 179841,
+    "sharePct": 0.2163021780350421,
+    "group": 1,
+    "labelLines": [
+      "Perth – North West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "506",
+    "name": "Perth - South East",
+    "n": 438,
+    "total": 223150,
+    "sharePct": 0.19628052879229219,
+    "group": 1,
+    "labelLines": [
+      "Perth – South East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "507",
+    "name": "Perth - South West",
+    "n": 227,
+    "total": 177166,
+    "sharePct": 0.1281284219319734,
+    "group": 1,
+    "labelLines": [
+      "Perth – South West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "509",
+    "name": "Western Australia - Wheat Belt",
+    "n": 67,
+    "total": 59284,
+    "sharePct": 0.11301531610552595,
+    "group": 1,
+    "labelLines": [
+      "Western Australia –",
+      "Wheat Belt"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "510",
+    "name": "Western Australia - Outback (North)",
+    "n": 3,
+    "total": 70762,
+    "sharePct": 0.004239563607585993,
+    "group": 1,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (North)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "511",
+    "name": "Western Australia - Outback (South)",
+    "n": 19,
+    "total": 65776,
+    "sharePct": 0.02888591583556312,
+    "group": 1,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (South)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "601",
+    "name": "Hobart",
+    "n": 76,
+    "total": 117521,
+    "sharePct": 0.06466929314760766,
+    "group": 1,
+    "labelLines": [
+      "Hobart"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "602",
+    "name": "Launceston and North East",
+    "n": 70,
+    "total": 63886,
+    "sharePct": 0.10957017186864103,
+    "group": 1,
+    "labelLines": [
+      "Launceston and North",
+      "East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "603",
+    "name": "South East",
+    "n": 12,
+    "total": 11415,
+    "sharePct": 0.10512483574244415,
+    "group": 1,
+    "labelLines": [
+      "South East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "604",
+    "name": "West and North West",
+    "n": 50,
+    "total": 47513,
+    "sharePct": 0.10523435691284491,
+    "group": 1,
+    "labelLines": [
+      "West and North West"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "701",
+    "name": "Darwin",
+    "n": 42,
+    "total": 72253,
+    "sharePct": 0.058129074225291684,
+    "group": 1,
+    "labelLines": [
+      "Darwin"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "702",
+    "name": "Northern Territory - Outback",
+    "n": 19,
+    "total": 35981,
+    "sharePct": 0.052805647425029884,
+    "group": 1,
+    "labelLines": [
+      "Northern Territory –",
+      "Outback"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "801",
+    "name": "Australian Capital Territory",
+    "n": 125,
+    "total": 266483,
+    "sharePct": 0.046907307407977245,
+    "group": 1,
+    "labelLines": [
+      "Australian Capital",
+      "Territory"
+    ],
+    "state": "ACT"
+  },
+  {
+    "id": "101",
+    "name": "Capital Region",
+    "n": 28,
+    "total": 83771,
+    "sharePct": 0.03342445476358167,
+    "group": 2,
+    "labelLines": [
+      "Capital Region"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "102",
+    "name": "Central Coast",
+    "n": 301,
+    "total": 116787,
+    "sharePct": 0.25773416561774853,
+    "group": 2,
+    "labelLines": [
+      "Central Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "103",
+    "name": "Central West",
+    "n": 17,
+    "total": 91918,
+    "sharePct": 0.01849474531647773,
+    "group": 2,
+    "labelLines": [
+      "Central West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "104",
+    "name": "Coffs Harbour - Grafton",
+    "n": 7,
+    "total": 54999,
+    "sharePct": 0.012727504136438843,
+    "group": 2,
+    "labelLines": [
+      "Coffs Harbour – Grafton"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "105",
+    "name": "Far West and Orana",
+    "n": 4,
+    "total": 49323,
+    "sharePct": 0.008109806783853373,
+    "group": 2,
+    "labelLines": [
+      "Far West and Orana"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "106",
+    "name": "Hunter Valley exc Newcastle",
+    "n": 53,
+    "total": 116800,
+    "sharePct": 0.045376712328767124,
+    "group": 2,
+    "labelLines": [
+      "Hunter Valley exc",
+      "Newcastle"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "107",
+    "name": "Illawarra",
+    "n": 22,
+    "total": 113940,
+    "sharePct": 0.01930840793400035,
+    "group": 2,
+    "labelLines": [
+      "Illawarra"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "108",
+    "name": "Mid North Coast",
+    "n": 13,
+    "total": 77135,
+    "sharePct": 0.01685356841900564,
+    "group": 2,
+    "labelLines": [
+      "Mid North Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "109",
+    "name": "Murray",
+    "n": 10,
+    "total": 53408,
+    "sharePct": 0.01872378669862193,
+    "group": 2,
+    "labelLines": [
+      "Murray"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "110",
+    "name": "New England and North West",
+    "n": 7,
+    "total": 77640,
+    "sharePct": 0.009015971148892323,
+    "group": 2,
+    "labelLines": [
+      "New England and North",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "111",
+    "name": "Newcastle and Lake Macquarie",
+    "n": 62,
+    "total": 179684,
+    "sharePct": 0.03450501992386634,
+    "group": 2,
+    "labelLines": [
+      "Newcastle and Lake",
+      "Macquarie"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "112",
+    "name": "Richmond - Tweed",
+    "n": 67,
+    "total": 99420,
+    "sharePct": 0.06739086702876684,
+    "group": 2,
+    "labelLines": [
+      "Richmond – Tweed"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "113",
+    "name": "Riverina",
+    "n": 0,
+    "total": 74963,
+    "sharePct": 0,
+    "group": 2,
+    "labelLines": [
+      "Riverina"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "114",
+    "name": "Southern Highlands and Shoalhaven",
+    "n": 56,
+    "total": 60308,
+    "sharePct": 0.09285666909862705,
+    "group": 2,
+    "labelLines": [
+      "Southern Highlands and",
+      "Shoalhaven"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "115",
+    "name": "Sydney - Baulkham Hills and Hawkesbury",
+    "n": 34,
+    "total": 90246,
+    "sharePct": 0.03767479999113534,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Baulkham Hills",
+      "and Hawkesbury"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "116",
+    "name": "Sydney - Blacktown",
+    "n": 103,
+    "total": 121594,
+    "sharePct": 0.08470812704574239,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Blacktown"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "117",
+    "name": "Sydney - City and Inner South",
+    "n": 132,
+    "total": 618551,
+    "sharePct": 0.021340196685479453,
+    "group": 2,
+    "labelLines": [
+      "Sydney – City and Inner",
+      "South"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "118",
+    "name": "Sydney - Eastern Suburbs",
+    "n": 3,
+    "total": 98077,
+    "sharePct": 0.003058821130336368,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Eastern Suburbs"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "119",
+    "name": "Sydney - Inner South West",
+    "n": 85,
+    "total": 155561,
+    "sharePct": 0.0546409447097923,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Inner South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "120",
+    "name": "Sydney - Inner West",
+    "n": 13,
+    "total": 107140,
+    "sharePct": 0.012133656897517267,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Inner West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "121",
+    "name": "Sydney - North Sydney and Hornsby",
+    "n": 203,
+    "total": 231668,
+    "sharePct": 0.08762539496175561,
+    "group": 2,
+    "labelLines": [
+      "Sydney – North Sydney",
+      "and Hornsby"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "122",
+    "name": "Sydney - Northern Beaches",
+    "n": 204,
+    "total": 98335,
+    "sharePct": 0.2074541109472721,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Northern",
+      "Beaches"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "123",
+    "name": "Sydney - Outer South West",
+    "n": 318,
+    "total": 89499,
+    "sharePct": 0.3553112325277377,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Outer South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "124",
+    "name": "Sydney - Outer West and Blue Mountains",
+    "n": 66,
+    "total": 113163,
+    "sharePct": 0.05832295008085682,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Outer West and",
+      "Blue Mountains"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "125",
+    "name": "Sydney - Parramatta",
+    "n": 346,
+    "total": 229168,
+    "sharePct": 0.15098093974725965,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Parramatta"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "126",
+    "name": "Sydney - Ryde",
+    "n": 230,
+    "total": 103351,
+    "sharePct": 0.22254259755590172,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Ryde"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "127",
+    "name": "Sydney - South West",
+    "n": 203,
+    "total": 140608,
+    "sharePct": 0.14437300864815655,
+    "group": 2,
+    "labelLines": [
+      "Sydney – South West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "128",
+    "name": "Sydney - Sutherland",
+    "n": 65,
+    "total": 72502,
+    "sharePct": 0.08965269923588315,
+    "group": 2,
+    "labelLines": [
+      "Sydney – Sutherland"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "201",
+    "name": "Ballarat",
+    "n": 13,
+    "total": 70192,
+    "sharePct": 0.01852062913152496,
+    "group": 2,
+    "labelLines": [
+      "Ballarat"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "202",
+    "name": "Bendigo",
+    "n": 9,
+    "total": 69726,
+    "sharePct": 0.012907667154289648,
+    "group": 2,
+    "labelLines": [
+      "Bendigo"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "203",
+    "name": "Geelong",
+    "n": 22,
+    "total": 134572,
+    "sharePct": 0.016348125910293377,
+    "group": 2,
+    "labelLines": [
+      "Geelong"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "204",
+    "name": "Hume",
+    "n": 20,
+    "total": 77944,
+    "sharePct": 0.025659447808683157,
+    "group": 2,
+    "labelLines": [
+      "Hume"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "205",
+    "name": "Latrobe - Gippsland",
+    "n": 15,
+    "total": 113091,
+    "sharePct": 0.01326365493275327,
+    "group": 2,
+    "labelLines": [
+      "Latrobe – Gippsland"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "206",
+    "name": "Melbourne - Inner",
+    "n": 135,
+    "total": 778703,
+    "sharePct": 0.01733651982848403,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – Inner"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "207",
+    "name": "Melbourne - Inner East",
+    "n": 29,
+    "total": 154349,
+    "sharePct": 0.018788589495234827,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – Inner East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "208",
+    "name": "Melbourne - Inner South",
+    "n": 372,
+    "total": 172105,
+    "sharePct": 0.2161471194910084,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – Inner South"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "209",
+    "name": "Melbourne - North East",
+    "n": 120,
+    "total": 173204,
+    "sharePct": 0.06928246460820767,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – North East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "210",
+    "name": "Melbourne - North West",
+    "n": 108,
+    "total": 163696,
+    "sharePct": 0.06597595542957678,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "211",
+    "name": "Melbourne - Outer East",
+    "n": 460,
+    "total": 194328,
+    "sharePct": 0.23671318595364538,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – Outer East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "212",
+    "name": "Melbourne - South East",
+    "n": 763,
+    "total": 354435,
+    "sharePct": 0.21527219377318832,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – South East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "213",
+    "name": "Melbourne - West",
+    "n": 125,
+    "total": 275280,
+    "sharePct": 0.045408311537343794,
+    "group": 2,
+    "labelLines": [
+      "Melbourne – West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "214",
+    "name": "Mornington Peninsula",
+    "n": 33,
+    "total": 110525,
+    "sharePct": 0.029857498303551232,
+    "group": 2,
+    "labelLines": [
+      "Mornington Peninsula"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "215",
+    "name": "North West",
+    "n": 13,
+    "total": 67092,
+    "sharePct": 0.019376378703869317,
+    "group": 2,
+    "labelLines": [
+      "North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "216",
+    "name": "Shepparton",
+    "n": 79,
+    "total": 58982,
+    "sharePct": 0.13393916788172663,
+    "group": 2,
+    "labelLines": [
+      "Shepparton"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "217",
+    "name": "Warrnambool and South West",
+    "n": 8,
+    "total": 57849,
+    "sharePct": 0.013829106812563743,
+    "group": 2,
+    "labelLines": [
+      "Warrnambool and South",
+      "West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "301",
+    "name": "Brisbane - East",
+    "n": 41,
+    "total": 91716,
+    "sharePct": 0.04470321427013826,
+    "group": 2,
+    "labelLines": [
+      "Brisbane – East"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "302",
+    "name": "Brisbane - North",
+    "n": 51,
+    "total": 123796,
+    "sharePct": 0.041196807651297296,
+    "group": 2,
+    "labelLines": [
+      "Brisbane – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "303",
+    "name": "Brisbane - South",
+    "n": 41,
+    "total": 174508,
+    "sharePct": 0.023494624888257272,
+    "group": 2,
+    "labelLines": [
+      "Brisbane – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "304",
+    "name": "Brisbane - West",
+    "n": 9,
+    "total": 63658,
+    "sharePct": 0.014138050205787176,
+    "group": 2,
+    "labelLines": [
+      "Brisbane – West"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "305",
+    "name": "Brisbane Inner City",
+    "n": 17,
+    "total": 364268,
+    "sharePct": 0.004666893605806714,
+    "group": 2,
+    "labelLines": [
+      "Brisbane Inner City"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "306",
+    "name": "Cairns",
+    "n": 15,
+    "total": 107657,
+    "sharePct": 0.013933139507881512,
+    "group": 2,
+    "labelLines": [
+      "Cairns"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "307",
+    "name": "Darling Downs - Maranoa",
+    "n": 6,
+    "total": 56908,
+    "sharePct": 0.010543333099037043,
+    "group": 2,
+    "labelLines": [
+      "Darling Downs – Maranoa"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "308",
+    "name": "Central Queensland",
+    "n": 8,
+    "total": 102519,
+    "sharePct": 0.007803431559028083,
+    "group": 2,
+    "labelLines": [
+      "Central Queensland"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "309",
+    "name": "Gold Coast",
+    "n": 195,
+    "total": 278824,
+    "sharePct": 0.06993659082431929,
+    "group": 2,
+    "labelLines": [
+      "Gold Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "310",
+    "name": "Ipswich",
+    "n": 156,
+    "total": 129477,
+    "sharePct": 0.12048471929377418,
+    "group": 2,
+    "labelLines": [
+      "Ipswich"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "311",
+    "name": "Logan - Beaudesert",
+    "n": 54,
+    "total": 108438,
+    "sharePct": 0.0497980412770431,
+    "group": 2,
+    "labelLines": [
+      "Logan – Beaudesert"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "312",
+    "name": "Mackay - Isaac - Whitsunday",
+    "n": 0,
+    "total": 92309,
+    "sharePct": 0,
+    "group": 2,
+    "labelLines": [
+      "Mackay – Isaac –",
+      "Whitsunday"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "313",
+    "name": "Moreton Bay - North",
+    "n": 62,
+    "total": 77457,
+    "sharePct": 0.08004441173812567,
+    "group": 2,
+    "labelLines": [
+      "Moreton Bay – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "314",
+    "name": "Moreton Bay - South",
+    "n": 14,
+    "total": 60959,
+    "sharePct": 0.022966256008136617,
+    "group": 2,
+    "labelLines": [
+      "Moreton Bay – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "315",
+    "name": "Queensland - Outback",
+    "n": 4,
+    "total": 39086,
+    "sharePct": 0.010233843319858773,
+    "group": 2,
+    "labelLines": [
+      "Queensland – Outback"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "316",
+    "name": "Sunshine Coast",
+    "n": 95,
+    "total": 159186,
+    "sharePct": 0.05967861495357632,
+    "group": 2,
+    "labelLines": [
+      "Sunshine Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "317",
+    "name": "Toowoomba",
+    "n": 3,
+    "total": 73684,
+    "sharePct": 0.004071440204114869,
+    "group": 2,
+    "labelLines": [
+      "Toowoomba"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "318",
+    "name": "Townsville",
+    "n": 10,
+    "total": 103852,
+    "sharePct": 0.009629087547663983,
+    "group": 2,
+    "labelLines": [
+      "Townsville"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "319",
+    "name": "Wide Bay",
+    "n": 13,
+    "total": 103607,
+    "sharePct": 0.01254741474996863,
+    "group": 2,
+    "labelLines": [
+      "Wide Bay"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "401",
+    "name": "Adelaide - Central and Hills",
+    "n": 195,
+    "total": 240643,
+    "sharePct": 0.081032899357139,
+    "group": 2,
+    "labelLines": [
+      "Adelaide – Central and",
+      "Hills"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "402",
+    "name": "Adelaide - North",
+    "n": 7,
+    "total": 144925,
+    "sharePct": 0.004830084526479214,
+    "group": 2,
+    "labelLines": [
+      "Adelaide – North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "403",
+    "name": "Adelaide - South",
+    "n": 43,
+    "total": 114700,
+    "sharePct": 0.037489102005231034,
+    "group": 2,
+    "labelLines": [
+      "Adelaide – South"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "404",
+    "name": "Adelaide - West",
+    "n": 113,
+    "total": 136162,
+    "sharePct": 0.08298938029699916,
+    "group": 2,
+    "labelLines": [
+      "Adelaide – West"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "405",
+    "name": "Barossa - Yorke - Mid North",
+    "n": 0,
+    "total": 42717,
+    "sharePct": 0,
+    "group": 2,
+    "labelLines": [
+      "Barossa – Yorke – Mid",
+      "North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "406",
+    "name": "South Australia - Outback",
+    "n": 0,
+    "total": 41111,
+    "sharePct": 0,
+    "group": 2,
+    "labelLines": [
+      "South Australia –",
+      "Outback"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "407",
+    "name": "South Australia - South East",
+    "n": 6,
+    "total": 74892,
+    "sharePct": 0.00801153661272232,
+    "group": 2,
+    "labelLines": [
+      "South Australia – South",
+      "East"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "501",
+    "name": "Bunbury",
+    "n": 29,
+    "total": 78895,
+    "sharePct": 0.03675771595158121,
+    "group": 2,
+    "labelLines": [
+      "Bunbury"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "502",
+    "name": "Mandurah",
+    "n": 0,
+    "total": 30240,
+    "sharePct": 0,
+    "group": 2,
+    "labelLines": [
+      "Mandurah"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "503",
+    "name": "Perth - Inner",
+    "n": 15,
+    "total": 261272,
+    "sharePct": 0.005741143329556937,
+    "group": 2,
+    "labelLines": [
+      "Perth – Inner"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "504",
+    "name": "Perth - North East",
+    "n": 36,
+    "total": 100464,
+    "sharePct": 0.0358337314859054,
+    "group": 2,
+    "labelLines": [
+      "Perth – North East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "505",
+    "name": "Perth - North West",
+    "n": 69,
+    "total": 179841,
+    "sharePct": 0.03836722438153702,
+    "group": 2,
+    "labelLines": [
+      "Perth – North West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "506",
+    "name": "Perth - South East",
+    "n": 56,
+    "total": 223150,
+    "sharePct": 0.025095227425498544,
+    "group": 2,
+    "labelLines": [
+      "Perth – South East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "507",
+    "name": "Perth - South West",
+    "n": 86,
+    "total": 177166,
+    "sharePct": 0.04854204531343486,
+    "group": 2,
+    "labelLines": [
+      "Perth – South West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "509",
+    "name": "Western Australia - Wheat Belt",
+    "n": 6,
+    "total": 59284,
+    "sharePct": 0.010120774576614262,
+    "group": 2,
+    "labelLines": [
+      "Western Australia –",
+      "Wheat Belt"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "510",
+    "name": "Western Australia - Outback (North)",
+    "n": 6,
+    "total": 70762,
+    "sharePct": 0.008479127215171986,
+    "group": 2,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (North)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "511",
+    "name": "Western Australia - Outback (South)",
+    "n": 5,
+    "total": 65776,
+    "sharePct": 0.007601556798832401,
+    "group": 2,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (South)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "601",
+    "name": "Hobart",
+    "n": 14,
+    "total": 117521,
+    "sharePct": 0.011912764527190886,
+    "group": 2,
+    "labelLines": [
+      "Hobart"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "602",
+    "name": "Launceston and North East",
+    "n": 16,
+    "total": 63886,
+    "sharePct": 0.02504461071283223,
+    "group": 2,
+    "labelLines": [
+      "Launceston and North",
+      "East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "603",
+    "name": "South East",
+    "n": 8,
+    "total": 11415,
+    "sharePct": 0.0700832238282961,
+    "group": 2,
+    "labelLines": [
+      "South East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "604",
+    "name": "West and North West",
+    "n": 8,
+    "total": 47513,
+    "sharePct": 0.016837497106055185,
+    "group": 2,
+    "labelLines": [
+      "West and North West"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "701",
+    "name": "Darwin",
+    "n": 8,
+    "total": 72253,
+    "sharePct": 0.011072204614341273,
+    "group": 2,
+    "labelLines": [
+      "Darwin"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "702",
+    "name": "Northern Territory - Outback",
+    "n": 0,
+    "total": 35981,
+    "sharePct": 0,
+    "group": 2,
+    "labelLines": [
+      "Northern Territory –",
+      "Outback"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "801",
+    "name": "Australian Capital Territory",
+    "n": 7,
+    "total": 266483,
+    "sharePct": 0.0026268092148467254,
+    "group": 2,
+    "labelLines": [
+      "Australian Capital",
+      "Territory"
+    ],
+    "state": "ACT"
+  },
+  {
+    "id": "101",
+    "name": "Capital Region",
+    "n": 47,
+    "total": 83771,
+    "sharePct": 0.05610533478172638,
+    "group": 3,
+    "labelLines": [
+      "Capital Region"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "102",
+    "name": "Central Coast",
+    "n": 102,
+    "total": 116787,
+    "sharePct": 0.08733848801664569,
+    "group": 3,
+    "labelLines": [
+      "Central Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "103",
+    "name": "Central West",
+    "n": 40,
+    "total": 91918,
+    "sharePct": 0.04351704780347701,
+    "group": 3,
+    "labelLines": [
+      "Central West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "104",
+    "name": "Coffs Harbour - Grafton",
+    "n": 18,
+    "total": 54999,
+    "sharePct": 0.032727867779414166,
+    "group": 3,
+    "labelLines": [
+      "Coffs Harbour – Grafton"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "105",
+    "name": "Far West and Orana",
+    "n": 10,
+    "total": 49323,
+    "sharePct": 0.020274516959633438,
+    "group": 3,
+    "labelLines": [
+      "Far West and Orana"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "106",
+    "name": "Hunter Valley exc Newcastle",
+    "n": 27,
+    "total": 116800,
+    "sharePct": 0.023116438356164382,
+    "group": 3,
+    "labelLines": [
+      "Hunter Valley exc",
+      "Newcastle"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "107",
+    "name": "Illawarra",
+    "n": 185,
+    "total": 113940,
+    "sharePct": 0.16236615762682113,
+    "group": 3,
+    "labelLines": [
+      "Illawarra"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "108",
+    "name": "Mid North Coast",
+    "n": 42,
+    "total": 77135,
+    "sharePct": 0.05444999027678745,
+    "group": 3,
+    "labelLines": [
+      "Mid North Coast"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "109",
+    "name": "Murray",
+    "n": 18,
+    "total": 53408,
+    "sharePct": 0.03370281605751947,
+    "group": 3,
+    "labelLines": [
+      "Murray"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "110",
+    "name": "New England and North West",
+    "n": 13,
+    "total": 77640,
+    "sharePct": 0.016743946419371457,
+    "group": 3,
+    "labelLines": [
+      "New England and North",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "111",
+    "name": "Newcastle and Lake Macquarie",
+    "n": 138,
+    "total": 179684,
+    "sharePct": 0.07680149595957347,
+    "group": 3,
+    "labelLines": [
+      "Newcastle and Lake",
+      "Macquarie"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "112",
+    "name": "Richmond - Tweed",
+    "n": 111,
+    "total": 99420,
+    "sharePct": 0.11164755582377792,
+    "group": 3,
+    "labelLines": [
+      "Richmond – Tweed"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "113",
+    "name": "Riverina",
+    "n": 24,
+    "total": 74963,
+    "sharePct": 0.032015794458599575,
+    "group": 3,
+    "labelLines": [
+      "Riverina"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "114",
+    "name": "Southern Highlands and Shoalhaven",
+    "n": 22,
+    "total": 60308,
+    "sharePct": 0.03647940571731777,
+    "group": 3,
+    "labelLines": [
+      "Southern Highlands and",
+      "Shoalhaven"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "115",
+    "name": "Sydney - Baulkham Hills and Hawkesbury",
+    "n": 86,
+    "total": 90246,
+    "sharePct": 0.09529508233051881,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Baulkham Hills",
+      "and Hawkesbury"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "116",
+    "name": "Sydney - Blacktown",
+    "n": 93,
+    "total": 121594,
+    "sharePct": 0.07648403704130138,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Blacktown"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "117",
+    "name": "Sydney - City and Inner South",
+    "n": 782,
+    "total": 618551,
+    "sharePct": 0.12642449854579493,
+    "group": 3,
+    "labelLines": [
+      "Sydney – City and Inner",
+      "South"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "118",
+    "name": "Sydney - Eastern Suburbs",
+    "n": 99,
+    "total": 98077,
+    "sharePct": 0.10094109730110015,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Eastern Suburbs"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "119",
+    "name": "Sydney - Inner South West",
+    "n": 305,
+    "total": 155561,
+    "sharePct": 0.19606456631160768,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Inner South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "120",
+    "name": "Sydney - Inner West",
+    "n": 134,
+    "total": 107140,
+    "sharePct": 0.12507000186671643,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Inner West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "121",
+    "name": "Sydney - North Sydney and Hornsby",
+    "n": 115,
+    "total": 231668,
+    "sharePct": 0.04964000207193052,
+    "group": 3,
+    "labelLines": [
+      "Sydney – North Sydney",
+      "and Hornsby"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "122",
+    "name": "Sydney - Northern Beaches",
+    "n": 165,
+    "total": 98335,
+    "sharePct": 0.16779376620735242,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Northern",
+      "Beaches"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "123",
+    "name": "Sydney - Outer South West",
+    "n": 52,
+    "total": 89499,
+    "sharePct": 0.0581012078347244,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Outer South",
+      "West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "124",
+    "name": "Sydney - Outer West and Blue Mountains",
+    "n": 68,
+    "total": 113163,
+    "sharePct": 0.06009031220451914,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Outer West and",
+      "Blue Mountains"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "125",
+    "name": "Sydney - Parramatta",
+    "n": 173,
+    "total": 229168,
+    "sharePct": 0.07549046987362983,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Parramatta"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "126",
+    "name": "Sydney - Ryde",
+    "n": 40,
+    "total": 103351,
+    "sharePct": 0.038703060444504646,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Ryde"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "127",
+    "name": "Sydney - South West",
+    "n": 207,
+    "total": 140608,
+    "sharePct": 0.1472177969959035,
+    "group": 3,
+    "labelLines": [
+      "Sydney – South West"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "128",
+    "name": "Sydney - Sutherland",
+    "n": 81,
+    "total": 72502,
+    "sharePct": 0.11172105597086977,
+    "group": 3,
+    "labelLines": [
+      "Sydney – Sutherland"
+    ],
+    "state": "NSW"
+  },
+  {
+    "id": "201",
+    "name": "Ballarat",
+    "n": 46,
+    "total": 70192,
+    "sharePct": 0.0655345338500114,
+    "group": 3,
+    "labelLines": [
+      "Ballarat"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "202",
+    "name": "Bendigo",
+    "n": 64,
+    "total": 69726,
+    "sharePct": 0.09178785531939306,
+    "group": 3,
+    "labelLines": [
+      "Bendigo"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "203",
+    "name": "Geelong",
+    "n": 153,
+    "total": 134572,
+    "sharePct": 0.11369378473976757,
+    "group": 3,
+    "labelLines": [
+      "Geelong"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "204",
+    "name": "Hume",
+    "n": 30,
+    "total": 77944,
+    "sharePct": 0.03848917171302474,
+    "group": 3,
+    "labelLines": [
+      "Hume"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "205",
+    "name": "Latrobe - Gippsland",
+    "n": 26,
+    "total": 113091,
+    "sharePct": 0.022990335216772333,
+    "group": 3,
+    "labelLines": [
+      "Latrobe – Gippsland"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "206",
+    "name": "Melbourne - Inner",
+    "n": 820,
+    "total": 778703,
+    "sharePct": 0.10530330562486596,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – Inner"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "207",
+    "name": "Melbourne - Inner East",
+    "n": 133,
+    "total": 154349,
+    "sharePct": 0.08616835871952523,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – Inner East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "208",
+    "name": "Melbourne - Inner South",
+    "n": 244,
+    "total": 172105,
+    "sharePct": 0.14177391708550013,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – Inner South"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "209",
+    "name": "Melbourne - North East",
+    "n": 399,
+    "total": 173204,
+    "sharePct": 0.23036419482229045,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – North East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "210",
+    "name": "Melbourne - North West",
+    "n": 204,
+    "total": 163696,
+    "sharePct": 0.12462124914475613,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "211",
+    "name": "Melbourne - Outer East",
+    "n": 258,
+    "total": 194328,
+    "sharePct": 0.13276522168704458,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – Outer East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "212",
+    "name": "Melbourne - South East",
+    "n": 382,
+    "total": 354435,
+    "sharePct": 0.10777716647622272,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – South East"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "213",
+    "name": "Melbourne - West",
+    "n": 503,
+    "total": 275280,
+    "sharePct": 0.18272304562627142,
+    "group": 3,
+    "labelLines": [
+      "Melbourne – West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "214",
+    "name": "Mornington Peninsula",
+    "n": 85,
+    "total": 110525,
+    "sharePct": 0.07690567744854106,
+    "group": 3,
+    "labelLines": [
+      "Mornington Peninsula"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "215",
+    "name": "North West",
+    "n": 22,
+    "total": 67092,
+    "sharePct": 0.03279079472962499,
+    "group": 3,
+    "labelLines": [
+      "North West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "216",
+    "name": "Shepparton",
+    "n": 13,
+    "total": 58982,
+    "sharePct": 0.022040622562815772,
+    "group": 3,
+    "labelLines": [
+      "Shepparton"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "217",
+    "name": "Warrnambool and South West",
+    "n": 26,
+    "total": 57849,
+    "sharePct": 0.04494459714083217,
+    "group": 3,
+    "labelLines": [
+      "Warrnambool and South",
+      "West"
+    ],
+    "state": "VIC"
+  },
+  {
+    "id": "301",
+    "name": "Brisbane - East",
+    "n": 90,
+    "total": 91716,
+    "sharePct": 0.09812900693444981,
+    "group": 3,
+    "labelLines": [
+      "Brisbane – East"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "302",
+    "name": "Brisbane - North",
+    "n": 163,
+    "total": 123796,
+    "sharePct": 0.13166822837571487,
+    "group": 3,
+    "labelLines": [
+      "Brisbane – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "303",
+    "name": "Brisbane - South",
+    "n": 160,
+    "total": 174508,
+    "sharePct": 0.09168634102734545,
+    "group": 3,
+    "labelLines": [
+      "Brisbane – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "304",
+    "name": "Brisbane - West",
+    "n": 36,
+    "total": 63658,
+    "sharePct": 0.056552200823148706,
+    "group": 3,
+    "labelLines": [
+      "Brisbane – West"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "305",
+    "name": "Brisbane Inner City",
+    "n": 191,
+    "total": 364268,
+    "sharePct": 0.052433922277004844,
+    "group": 3,
+    "labelLines": [
+      "Brisbane Inner City"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "306",
+    "name": "Cairns",
+    "n": 41,
+    "total": 107657,
+    "sharePct": 0.038083914654876136,
+    "group": 3,
+    "labelLines": [
+      "Cairns"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "307",
+    "name": "Darling Downs - Maranoa",
+    "n": 19,
+    "total": 56908,
+    "sharePct": 0.03338722148028397,
+    "group": 3,
+    "labelLines": [
+      "Darling Downs – Maranoa"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "308",
+    "name": "Central Queensland",
+    "n": 34,
+    "total": 102519,
+    "sharePct": 0.03316458412586935,
+    "group": 3,
+    "labelLines": [
+      "Central Queensland"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "309",
+    "name": "Gold Coast",
+    "n": 359,
+    "total": 278824,
+    "sharePct": 0.12875505695349038,
+    "group": 3,
+    "labelLines": [
+      "Gold Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "310",
+    "name": "Ipswich",
+    "n": 86,
+    "total": 129477,
+    "sharePct": 0.06642106320041397,
+    "group": 3,
+    "labelLines": [
+      "Ipswich"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "311",
+    "name": "Logan - Beaudesert",
+    "n": 116,
+    "total": 108438,
+    "sharePct": 0.10697357015068518,
+    "group": 3,
+    "labelLines": [
+      "Logan – Beaudesert"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "312",
+    "name": "Mackay - Isaac - Whitsunday",
+    "n": 27,
+    "total": 92309,
+    "sharePct": 0.029249585630870233,
+    "group": 3,
+    "labelLines": [
+      "Mackay – Isaac –",
+      "Whitsunday"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "313",
+    "name": "Moreton Bay - North",
+    "n": 29,
+    "total": 77457,
+    "sharePct": 0.03744012807105878,
+    "group": 3,
+    "labelLines": [
+      "Moreton Bay – North"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "314",
+    "name": "Moreton Bay - South",
+    "n": 60,
+    "total": 60959,
+    "sharePct": 0.09842681146344265,
+    "group": 3,
+    "labelLines": [
+      "Moreton Bay – South"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "315",
+    "name": "Queensland - Outback",
+    "n": 10,
+    "total": 39086,
+    "sharePct": 0.025584608299646934,
+    "group": 3,
+    "labelLines": [
+      "Queensland – Outback"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "316",
+    "name": "Sunshine Coast",
+    "n": 94,
+    "total": 159186,
+    "sharePct": 0.05905041900669657,
+    "group": 3,
+    "labelLines": [
+      "Sunshine Coast"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "317",
+    "name": "Toowoomba",
+    "n": 19,
+    "total": 73684,
+    "sharePct": 0.02578578795939417,
+    "group": 3,
+    "labelLines": [
+      "Toowoomba"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "318",
+    "name": "Townsville",
+    "n": 24,
+    "total": 103852,
+    "sharePct": 0.02310981011439356,
+    "group": 3,
+    "labelLines": [
+      "Townsville"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "319",
+    "name": "Wide Bay",
+    "n": 70,
+    "total": 103607,
+    "sharePct": 0.06756300249983109,
+    "group": 3,
+    "labelLines": [
+      "Wide Bay"
+    ],
+    "state": "QLD"
+  },
+  {
+    "id": "401",
+    "name": "Adelaide - Central and Hills",
+    "n": 162,
+    "total": 240643,
+    "sharePct": 0.06731963946593086,
+    "group": 3,
+    "labelLines": [
+      "Adelaide – Central and",
+      "Hills"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "402",
+    "name": "Adelaide - North",
+    "n": 113,
+    "total": 144925,
+    "sharePct": 0.07797136449887873,
+    "group": 3,
+    "labelLines": [
+      "Adelaide – North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "403",
+    "name": "Adelaide - South",
+    "n": 70,
+    "total": 114700,
+    "sharePct": 0.06102877070619006,
+    "group": 3,
+    "labelLines": [
+      "Adelaide – South"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "404",
+    "name": "Adelaide - West",
+    "n": 142,
+    "total": 136162,
+    "sharePct": 0.10428753984224673,
+    "group": 3,
+    "labelLines": [
+      "Adelaide – West"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "405",
+    "name": "Barossa - Yorke - Mid North",
+    "n": 18,
+    "total": 42717,
+    "sharePct": 0.04213779057518084,
+    "group": 3,
+    "labelLines": [
+      "Barossa – Yorke – Mid",
+      "North"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "406",
+    "name": "South Australia - Outback",
+    "n": 0,
+    "total": 41111,
+    "sharePct": 0,
+    "group": 3,
+    "labelLines": [
+      "South Australia –",
+      "Outback"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "407",
+    "name": "South Australia - South East",
+    "n": 19,
+    "total": 74892,
+    "sharePct": 0.025369865940287346,
+    "group": 3,
+    "labelLines": [
+      "South Australia – South",
+      "East"
+    ],
+    "state": "SA"
+  },
+  {
+    "id": "501",
+    "name": "Bunbury",
+    "n": 14,
+    "total": 78895,
+    "sharePct": 0.017745104252487483,
+    "group": 3,
+    "labelLines": [
+      "Bunbury"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "502",
+    "name": "Mandurah",
+    "n": 12,
+    "total": 30240,
+    "sharePct": 0.03968253968253968,
+    "group": 3,
+    "labelLines": [
+      "Mandurah"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "503",
+    "name": "Perth - Inner",
+    "n": 95,
+    "total": 261272,
+    "sharePct": 0.036360574420527265,
+    "group": 3,
+    "labelLines": [
+      "Perth – Inner"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "504",
+    "name": "Perth - North East",
+    "n": 127,
+    "total": 100464,
+    "sharePct": 0.12641344163083293,
+    "group": 3,
+    "labelLines": [
+      "Perth – North East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "505",
+    "name": "Perth - North West",
+    "n": 208,
+    "total": 179841,
+    "sharePct": 0.11565771987477827,
+    "group": 3,
+    "labelLines": [
+      "Perth – North West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "506",
+    "name": "Perth - South East",
+    "n": 120,
+    "total": 223150,
+    "sharePct": 0.053775487340354026,
+    "group": 3,
+    "labelLines": [
+      "Perth – South East"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "507",
+    "name": "Perth - South West",
+    "n": 90,
+    "total": 177166,
+    "sharePct": 0.05079981486289695,
+    "group": 3,
+    "labelLines": [
+      "Perth – South West"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "509",
+    "name": "Western Australia - Wheat Belt",
+    "n": 14,
+    "total": 59284,
+    "sharePct": 0.023615140678766616,
+    "group": 3,
+    "labelLines": [
+      "Western Australia –",
+      "Wheat Belt"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "510",
+    "name": "Western Australia - Outback (North)",
+    "n": 8,
+    "total": 70762,
+    "sharePct": 0.011305502953562646,
+    "group": 3,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (North)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "511",
+    "name": "Western Australia - Outback (South)",
+    "n": 10,
+    "total": 65776,
+    "sharePct": 0.015203113597664802,
+    "group": 3,
+    "labelLines": [
+      "Western Australia –",
+      "Outback (South)"
+    ],
+    "state": "WA"
+  },
+  {
+    "id": "601",
+    "name": "Hobart",
+    "n": 72,
+    "total": 117521,
+    "sharePct": 0.06126564613983884,
+    "group": 3,
+    "labelLines": [
+      "Hobart"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "602",
+    "name": "Launceston and North East",
+    "n": 26,
+    "total": 63886,
+    "sharePct": 0.04069749240835238,
+    "group": 3,
+    "labelLines": [
+      "Launceston and North",
+      "East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "603",
+    "name": "South East",
+    "n": 3,
+    "total": 11415,
+    "sharePct": 0.026281208935611037,
+    "group": 3,
+    "labelLines": [
+      "South East"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "604",
+    "name": "West and North West",
+    "n": 27,
+    "total": 47513,
+    "sharePct": 0.05682655273293624,
+    "group": 3,
+    "labelLines": [
+      "West and North West"
+    ],
+    "state": "TAS"
+  },
+  {
+    "id": "701",
+    "name": "Darwin",
+    "n": 40,
+    "total": 72253,
+    "sharePct": 0.055361023071706365,
+    "group": 3,
+    "labelLines": [
+      "Darwin"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "702",
+    "name": "Northern Territory - Outback",
+    "n": 4,
+    "total": 35981,
+    "sharePct": 0.011116978405269448,
+    "group": 3,
+    "labelLines": [
+      "Northern Territory –",
+      "Outback"
+    ],
+    "state": "NT"
+  },
+  {
+    "id": "801",
+    "name": "Australian Capital Territory",
+    "n": 74,
+    "total": 266483,
+    "sharePct": 0.027769125985522527,
+    "group": 3,
+    "labelLines": [
+      "Australian Capital",
+      "Territory"
+    ],
+    "state": "ACT"
+  }
+]

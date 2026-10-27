@@ -1,0 +1,236 @@
+[
+  {
+    "id": "root",
+    "parent": null,
+    "group": -1,
+    "value": 0
+  },
+  {
+    "id": "g0",
+    "parent": "root",
+    "group": 0,
+    "value": 0,
+    "groupName": "Food & dairy"
+  },
+  {
+    "id": "g0b0",
+    "parent": "g0",
+    "group": 0,
+    "band": 0,
+    "value": 2184,
+    "groupName": "Food & dairy",
+    "bandName": "Non-employing",
+    "shortLabel": "Non-employing"
+  },
+  {
+    "id": "g0b1",
+    "parent": "g0",
+    "group": 0,
+    "band": 1,
+    "value": 1922,
+    "groupName": "Food & dairy",
+    "bandName": "1–4 employees",
+    "shortLabel": "1–4"
+  },
+  {
+    "id": "g0b2",
+    "parent": "g0",
+    "group": 0,
+    "band": 2,
+    "value": 1933,
+    "groupName": "Food & dairy",
+    "bandName": "5–19 employees",
+    "shortLabel": "5–19"
+  },
+  {
+    "id": "g0b3",
+    "parent": "g0",
+    "group": 0,
+    "band": 3,
+    "value": 898,
+    "groupName": "Food & dairy",
+    "bandName": "20–199 employees",
+    "shortLabel": "20–199"
+  },
+  {
+    "id": "g0b4",
+    "parent": "g0",
+    "group": 0,
+    "band": 4,
+    "value": 31,
+    "groupName": "Food & dairy",
+    "bandName": "200+ employees",
+    "shortLabel": "200+"
+  },
+  {
+    "id": "g1",
+    "parent": "root",
+    "group": 1,
+    "value": 0,
+    "groupName": "Furniture, tableware & appliances"
+  },
+  {
+    "id": "g1b0",
+    "parent": "g1",
+    "group": 1,
+    "band": 0,
+    "value": 2538,
+    "groupName": "Furniture, tableware & appliances",
+    "bandName": "Non-employing",
+    "shortLabel": "Non-employing"
+  },
+  {
+    "id": "g1b1",
+    "parent": "g1",
+    "group": 1,
+    "band": 1,
+    "value": 1500,
+    "groupName": "Furniture, tableware & appliances",
+    "bandName": "1–4 employees",
+    "shortLabel": "1–4"
+  },
+  {
+    "id": "g1b2",
+    "parent": "g1",
+    "group": 1,
+    "band": 2,
+    "value": 774,
+    "groupName": "Furniture, tableware & appliances",
+    "bandName": "5–19 employees",
+    "shortLabel": "5–19"
+  },
+  {
+    "id": "g1b3",
+    "parent": "g1",
+    "group": 1,
+    "band": 3,
+    "value": 175,
+    "groupName": "Furniture, tableware & appliances",
+    "bandName": "20–199 employees",
+    "shortLabel": "20–199"
+  },
+  {
+    "id": "g1b4",
+    "parent": "g1",
+    "group": 1,
+    "band": 4,
+    "value": 6,
+    "groupName": "Furniture, tableware & appliances",
+    "bandName": "200+ employees",
+    "shortLabel": "200+"
+  },
+  {
+    "id": "g2",
+    "parent": "root",
+    "group": 2,
+    "value": 0,
+    "groupName": "Toiletries & cleaning"
+  },
+  {
+    "id": "g2b0",
+    "parent": "g2",
+    "group": 2,
+    "band": 0,
+    "value": 851,
+    "groupName": "Toiletries & cleaning",
+    "bandName": "Non-employing",
+    "shortLabel": "Non-employing"
+  },
+  {
+    "id": "g2b1",
+    "parent": "g2",
+    "group": 2,
+    "band": 1,
+    "value": 353,
+    "groupName": "Toiletries & cleaning",
+    "bandName": "1–4 employees",
+    "shortLabel": "1–4"
+  },
+  {
+    "id": "g2b2",
+    "parent": "g2",
+    "group": 2,
+    "band": 2,
+    "value": 154,
+    "groupName": "Toiletries & cleaning",
+    "bandName": "5–19 employees",
+    "shortLabel": "5–19"
+  },
+  {
+    "id": "g2b3",
+    "parent": "g2",
+    "group": 2,
+    "band": 3,
+    "value": 73,
+    "groupName": "Toiletries & cleaning",
+    "bandName": "20–199 employees",
+    "shortLabel": "20–199"
+  },
+  {
+    "id": "g2b4",
+    "parent": "g2",
+    "group": 2,
+    "band": 4,
+    "value": 6,
+    "groupName": "Toiletries & cleaning",
+    "bandName": "200+ employees",
+    "shortLabel": "200+"
+  },
+  {
+    "id": "g3",
+    "parent": "root",
+    "group": 3,
+    "value": 0,
+    "groupName": "Clothing"
+  },
+  {
+    "id": "g3b0",
+    "parent": "g3",
+    "group": 3,
+    "band": 0,
+    "value": 1611,
+    "groupName": "Clothing",
+    "bandName": "Non-employing",
+    "shortLabel": "Non-employing"
+  },
+  {
+    "id": "g3b1",
+    "parent": "g3",
+    "group": 3,
+    "band": 1,
+    "value": 596,
+    "groupName": "Clothing",
+    "bandName": "1–4 employees",
+    "shortLabel": "1–4"
+  },
+  {
+    "id": "g3b2",
+    "parent": "g3",
+    "group": 3,
+    "band": 2,
+    "value": 241,
+    "groupName": "Clothing",
+    "bandName": "5–19 employees",
+    "shortLabel": "5–19"
+  },
+  {
+    "id": "g3b3",
+    "parent": "g3",
+    "group": 3,
+    "band": 3,
+    "value": 67,
+    "groupName": "Clothing",
+    "bandName": "20–199 employees",
+    "shortLabel": "20–199"
+  },
+  {
+    "id": "g3b4",
+    "parent": "g3",
+    "group": 3,
+    "band": 4,
+    "value": 3,
+    "groupName": "Clothing",
+    "bandName": "200+ employees",
+    "shortLabel": "200+"
+  }
+]
