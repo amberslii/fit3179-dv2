@@ -91,9 +91,12 @@
     <div class="jobs-switcher"><div class="jobs-switcher-heading"><strong>Choose a group to explore local jobs ↓</strong><span>The same percentage bands for all four groups</span></div><div class="jobs-category-picker" aria-label="Choose a group for the employment map"></div></div>
     <div class="section-content" id="jobs-map-panel">
       <div class="figure-heading"><span class="chart-kind">MAP 2 · CHOROPLETH MAP</span><div class="map-controls"><button type="button" data-map-view="national" aria-pressed="true">All Australia</button><button type="button" data-map-view="regional" aria-pressed="false">Zoom to selected area</button></div></div>
-      <p class="jobs-scope" aria-live="polite"></p><div class="choropleth"></div>
-      <div class="jobs-scale-heading">Light → dark: share of all local employment</div><div class="map-scale" aria-label="Employment-share bands used for all four groups"></div>
-      <div class="region-reading"><label>Explore an area <select class="region-select" aria-label="Choose an employment-map area"></select></label><span class="region-value" aria-live="polite"></span></div><div class="jobs-selection-note" aria-live="polite"></div><div class="comparison-examples"></div>
+      <p class="jobs-scope" aria-live="polite"></p>
+      <div class="jobs-map-layout">
+        <div class="jobs-map-visual"><div class="choropleth"></div><div class="jobs-scale-heading">Light → dark: share of all local employment</div><div class="map-scale" aria-label="Employment-share bands used for all four groups"></div></div>
+        <aside class="jobs-insight" aria-labelledby="jobs-insight-title"><p class="jobs-insight-label">JOBS IN CONTEXT</p><h4 id="jobs-insight-title">More jobs. A smaller local share.</h4><div class="jobs-insight-copy" aria-live="polite"></div><div class="comparison-examples"></div></aside>
+      </div>
+      <div class="region-reading"><label>Explore an area <select class="region-select" aria-label="Choose an employment-map area"></select></label><span class="region-value" aria-live="polite"></span></div><div class="jobs-selection-note" aria-live="polite"></div>
     </div>
     <footer class="section-note">Counted by workplace. Colour shows the share, not the number of people.<details><summary>Sources &amp; scope</summary><p>ABS 2021 Census TableBuilder: employment, income and education. Employed people aged 15 and over, by main place of work, across 88 mapped Statistical Areas Level 4 (SA4s). The numerator is employment in the selected industries from Chapter 2. The denominator is all employment in that area, not the total of the four groups.</p><p>Food: bakery, confectionery, ice cream, cheese and other dairy. Home: wooden and metal furniture, mattresses and whiteware; tableware is excluded. Care: cleaning compounds, cosmetics and toiletries. Clothing: knitted products and clothing; knitting includes fabric. These are related industries; their jobs cannot all be attributed to the specific products in Chapter 1.</p><p>Counts sum 16 mutually exclusive INDP industry-code cells. ABS perturbs published counts for confidentiality: small counts and small differences need care, and a published zero does not prove there are no jobs. Special records such as “no fixed place of work” are not mapped. These 2021 figures are not the regional breakdown of Chapter 2's 2025 figures. Boundaries: ABS ASGS 2021 SA4, simplified for display.</p><a href="https://www.abs.gov.au/statistics/microdata-tablebuilder/available-microdata-tablebuilder/census-population-and-housing" target="_blank" rel="noopener noreferrer">ABS Census TableBuilder ↗</a><p class="vega-spec-links"><a href="vis/ch3_regional_employment_choropleth.vg.json">Vega specification</a> · <a href="data/processed/chapter3/regional-employment.json">Chart data</a></p></details></footer>
   </section>
@@ -125,7 +128,17 @@
 
   <section class="checkout-section" id="checkout-attributes" aria-labelledby="checkout-attributes-title">
     <header class="checkout-heading"><span>4.2</span><div><h3 id="checkout-attributes-title">What matters when buying Australian-made?</h3><p>Attributes rated important by consumers · 2026</p></div></header>
-    <div class="checkout-content checkout-radar-content"><figure class="checkout-chart"><div class="checkout-viz" id="checkout-radar" role="img" aria-label="Radar chart of six important purchase attributes, all rated important by 91 to 95% of respondents"></div><figcaption>Each axis runs from 0% at the centre to 100% at the edge.</figcaption></figure><p class="checkout-takeaway"><span class="checkout-highlight" aria-hidden="true"></span><strong>Local jobs matter alongside value and quality.</strong></p></div>
+    <div class="checkout-content checkout-radar-content">
+      <div class="checkout-radar-layout">
+        <figure class="checkout-chart"><div class="checkout-viz" id="checkout-radar" role="img" aria-label="Radar chart of six important purchase attributes, all rated important by 91 to 95% of respondents"></div><figcaption>Each axis runs from 0% at the centre to 100% at the edge.</figcaption></figure>
+        <aside class="checkout-insight" aria-labelledby="checkout-insight-title">
+          <p class="checkout-insight-label">BEHIND THE CHOICE</p>
+          <h4 id="checkout-insight-title">Local jobs matter alongside value and quality.</h4>
+          <p>More than <strong>90%</strong> rate each of these six factors important. Supporting local jobs matters to <strong>94%</strong> of respondents, alongside value and quality at <strong>95%</strong>.</p>
+          <p class="checkout-insight-note">These are shoppers’ priorities, not ratings of how Australian-made products perform.</p>
+        </aside>
+      </div>
+    </div>
     <footer class="checkout-source"><span>Roy Morgan Research · 2026</span><details><summary>Sources &amp; scope</summary><p>Percentages describe what respondents consider important when buying Australian-made products. They do not measure product quality or performance. Each attribute is rated independently; these are not shares of a total.</p><p>All six published values are above 90%. The axes follow value, product attributes, and support for jobs and Australia; their connecting line shows one survey profile, not a time sequence. The filled point highlights local jobs. Exact item bases and uncertainty estimates are not published, so small differences should not be treated as a clear ranking.</p><p><a href="https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf" target="_blank" rel="noopener noreferrer">2026 research, p. 3 ↗</a> · <a href="data/processed/chapter4/attributes-2026.json">Chart data</a> · <a href="vis/ch4_purchase_attributes_radar.vg.json">Vega specification</a></p></details></footer>
   </section>
 
