@@ -1,0 +1,100 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Shared zero-to-100% source-share axis for the Chapter 1 row chart.",
+  "width": 250,
+  "height": 52,
+  "padding": 0,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "config": {
+    "text": {
+      "font": "Segoe UI, Arial, sans-serif",
+      "fontSize": 12,
+      "fill": "#243440"
+    }
+  },
+  "data": [
+    {
+      "name": "ticks",
+      "values": [
+        {
+          "p": -1
+        },
+        {
+          "p": 0
+        },
+        {
+          "p": 1
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "name": "productionTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 4
+          },
+          "y": {
+            "value": 15
+          },
+          "text": {
+            "signal": "width < 275 ? '← Production' : '← Australian production'"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "importsTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-4"
+          },
+          "y": {
+            "value": 15
+          },
+          "align": {
+            "value": "right"
+          },
+          "text": {
+            "value": "Imports →"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "axisValues",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2+datum.p*(width/2-4)"
+          },
+          "y": {
+            "value": 39
+          },
+          "align": {
+            "signal": "datum.p < 0 ? 'left' : datum.p > 0 ? 'right' : 'center'"
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "signal": "format(abs(datum.p), '.0%')"
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    }
+  ]
+}

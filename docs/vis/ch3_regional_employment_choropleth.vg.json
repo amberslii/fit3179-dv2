@@ -1,0 +1,589 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "SA4 choropleth of 2021 employment in the selected related industries divided by all local employment. Four category switches share identical percentage-point thresholds. Zero is separated from small positive counts.",
+  "width": 600,
+  "height": 430,
+  "padding": 0,
+  "autosize": "none",
+  "background": "#faf9f4",
+  "config": {
+    "text": {
+      "font": "Arial",
+      "fontSize": 12,
+      "fill": "#243440"
+    },
+    "style": {
+      "guide-label": {
+        "font": "Arial"
+      },
+      "guide-title": {
+        "font": "Arial"
+      }
+    }
+  },
+  "signals": [
+    {
+      "name": "group",
+      "value": 0
+    },
+    {
+      "name": "selectedRegion",
+      "value": "216"
+    },
+    {
+      "name": "mapView",
+      "value": "national"
+    },
+    {
+      "name": "jobColors",
+      "value": [
+        [
+          "#e0e3df",
+          "rgb(221, 228, 247)",
+          "rgb(192, 201, 232)",
+          "rgb(159, 172, 216)",
+          "rgb(122, 140, 197)",
+          "rgb(81, 108, 178)",
+          "rgb(22, 76, 157)"
+        ],
+        [
+          "#e0e3df",
+          "rgb(214, 234, 230)",
+          "rgb(184, 211, 207)",
+          "rgb(149, 186, 180)",
+          "rgb(111, 158, 152)",
+          "rgb(70, 130, 123)",
+          "rgb(17, 101, 94)"
+        ],
+        [
+          "#e0e3df",
+          "rgb(248, 225, 232)",
+          "rgb(233, 196, 208)",
+          "rgb(217, 165, 181)",
+          "rgb(198, 130, 153)",
+          "rgb(176, 93, 123)",
+          "rgb(153, 52, 94)"
+        ],
+        [
+          "#e0e3df",
+          "rgb(245, 234, 200)",
+          "rgb(226, 209, 168)",
+          "rgb(204, 181, 132)",
+          "rgb(180, 151, 93)",
+          "rgb(153, 121, 52)",
+          "rgb(125, 90, 0)"
+        ]
+      ]
+    },
+    {
+      "name": "chosen",
+      "update": "data('selected')[0]"
+    },
+    {
+      "name": "bounds",
+      "update": "geoBounds(null,chosen)"
+    },
+    {
+      "name": "cx",
+      "update": "(bounds[0][0]+bounds[1][0])/2"
+    },
+    {
+      "name": "cy",
+      "update": "(bounds[0][1]+bounds[1][1])/2"
+    },
+    {
+      "name": "dx",
+      "update": "max(1.3,(bounds[1][0]-bounds[0][0])*.85)"
+    },
+    {
+      "name": "dy",
+      "update": "max(1,(bounds[1][1]-bounds[0][1])*.85)"
+    },
+    {
+      "name": "fitGeo",
+      "update": "mapView==='national'?{type:'FeatureCollection',features:data('states')}:{type:'MultiPoint',coordinates:[[cx-dx,cy-dy],[cx+dx,cy+dy]]}"
+    },
+    {
+      "name": "chosenPoint",
+      "update": "geoCentroid('map',chosen)"
+    },
+    {
+      "name": "nationalBounds",
+      "update": "geoBounds('map',{type:'FeatureCollection',features:data('states')})"
+    },
+    {
+      "name": "calloutWidth",
+      "update": "min(width<560?166:188,width-38)"
+    },
+    {
+      "name": "calloutHeight",
+      "update": "46+length(chosen.labelLines)*16"
+    },
+    {
+      "name": "calloutX",
+      "update": "clamp(mapView==='national'&&width>=560?(chosenPoint[0]>=width/2?nationalBounds[1][0]+20:nationalBounds[0][0]-calloutWidth-20):(chosenPoint[0]>=width/2?chosenPoint[0]-calloutWidth-24:chosenPoint[0]+24),12,width-calloutWidth-12)"
+    },
+    {
+      "name": "calloutY",
+      "update": "clamp(chosenPoint[1]-calloutHeight/2,14,height-calloutHeight-14)"
+    },
+    {
+      "name": "leaderX",
+      "update": "chosenPoint[0]<calloutX?calloutX:calloutX+calloutWidth"
+    },
+    {
+      "name": "leaderY",
+      "update": "calloutY+calloutHeight/2"
+    },
+    {
+      "name": "leaderPath",
+      "update": "'M'+chosenPoint[0]+','+chosenPoint[1]+'L'+(leaderX+(chosenPoint[0]<calloutX?-12:12))+','+leaderY+'L'+leaderX+','+leaderY"
+    }
+  ],
+  "data": [
+    {
+      "name": "states",
+      "url": "data/processed/chapter3/states.json"
+    },
+    {
+      "name": "geography",
+      "url": "data/processed/chapter3/sa4.json"
+    },
+    {
+      "name": "employment",
+      "url": "data/processed/chapter3/regional-employment.json"
+    },
+    {
+      "name": "groupEmployment",
+      "source": "employment",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.group===group"
+        }
+      ]
+    },
+    {
+      "name": "regions",
+      "source": "geography",
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "groupEmployment",
+          "key": "id",
+          "fields": [
+            "properties.id"
+          ],
+          "values": [
+            "n",
+            "total",
+            "sharePct",
+            "name",
+            "labelLines",
+            "state"
+          ],
+          "as": [
+            "n",
+            "total",
+            "sharePct",
+            "name",
+            "labelLines",
+            "state"
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "bin",
+          "expr": "datum.sharePct===0?0:datum.sharePct<.05?1:datum.sharePct<.1?2:datum.sharePct<.25?3:datum.sharePct<.5?4:datum.sharePct<1?5:6"
+        }
+      ]
+    },
+    {
+      "name": "selected",
+      "source": "regions",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.properties.id===selectedRegion"
+        }
+      ]
+    },
+    {
+      "name": "regionPaths",
+      "source": "regions",
+      "transform": [
+        {
+          "type": "geopath",
+          "projection": "map"
+        }
+      ]
+    },
+    {
+      "name": "land",
+      "source": "states",
+      "transform": [
+        {
+          "type": "geopath",
+          "projection": "map"
+        }
+      ]
+    },
+    {
+      "name": "selectedPath",
+      "source": "selected",
+      "transform": [
+        {
+          "type": "geopath",
+          "projection": "map"
+        }
+      ]
+    }
+  ],
+  "scales": [],
+  "marks": [
+    {
+      "type": "group",
+      "name": "mapClip",
+      "clip": true,
+      "encode": {
+        "update": {
+          "width": {
+            "signal": "width"
+          },
+          "height": {
+            "signal": "height"
+          }
+        }
+      },
+      "marks": [
+        {
+          "type": "path",
+          "name": "mapLand",
+          "from": {
+            "data": "land"
+          },
+          "encode": {
+            "update": {
+              "path": {
+                "field": "path"
+              },
+              "fill": {
+                "value": "#eeefe8"
+              },
+              "stroke": {
+                "value": "#d9ded9"
+              },
+              "strokeWidth": {
+                "value": 0.7
+              }
+            }
+          }
+        },
+        {
+          "type": "path",
+          "name": "regionShapes",
+          "from": {
+            "data": "regionPaths"
+          },
+          "encode": {
+            "update": {
+              "path": {
+                "field": "path"
+              },
+              "fill": {
+                "signal": "jobColors[group][datum.bin]"
+              },
+              "stroke": {
+                "value": "#faf9f4"
+              },
+              "strokeWidth": {
+                "value": 0.65
+              },
+              "cursor": {
+                "value": "pointer"
+              },
+              "tooltip": {
+                "signal": "datum.name+': '+format(datum.n,',')+' people / '+format(datum.total,',')+' employed = '+format(datum.sharePct,'.2f')+'%' "
+              },
+              "description": {
+                "signal": "datum.name+': '+format(datum.n,',')+' people / '+format(datum.total,',')+' employed = '+format(datum.sharePct,'.2f')+'%' "
+              }
+            }
+          }
+        },
+        {
+          "type": "path",
+          "name": "regionalStateBorders",
+          "from": {
+            "data": "land"
+          },
+          "encode": {
+            "update": {
+              "path": {
+                "field": "path"
+              },
+              "fill": {
+                "value": null
+              },
+              "stroke": {
+                "value": "#41515d"
+              },
+              "strokeWidth": {
+                "value": 0.8
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "path",
+          "name": "selectedRegionOutline",
+          "from": {
+            "data": "selectedPath"
+          },
+          "encode": {
+            "update": {
+              "path": {
+                "field": "path"
+              },
+              "fill": {
+                "value": null
+              },
+              "stroke": {
+                "value": "#243440"
+              },
+              "strokeWidth": {
+                "signal": "mapView==='national'?.9:1.5"
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "path",
+          "name": "selectionLeaderHalo",
+          "encode": {
+            "update": {
+              "path": {
+                "signal": "leaderPath"
+              },
+              "fill": {
+                "value": null
+              },
+              "stroke": {
+                "value": "#faf9f4"
+              },
+              "strokeWidth": {
+                "value": 3
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "path",
+          "name": "selectionLeader",
+          "encode": {
+            "update": {
+              "path": {
+                "signal": "leaderPath"
+              },
+              "fill": {
+                "value": null
+              },
+              "stroke": {
+                "value": "#41515d"
+              },
+              "strokeWidth": {
+                "value": 1
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "symbol",
+          "name": "selectedMarkerHalo",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "chosenPoint[0]"
+              },
+              "y": {
+                "signal": "chosenPoint[1]"
+              },
+              "size": {
+                "value": 28.274
+              },
+              "fill": {
+                "value": null
+              },
+              "stroke": {
+                "value": "#faf9f4"
+              },
+              "strokeWidth": {
+                "value": 3
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "symbol",
+          "name": "selectedMarker",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "chosenPoint[0]"
+              },
+              "y": {
+                "signal": "chosenPoint[1]"
+              },
+              "size": {
+                "value": 28.274
+              },
+              "fill": {
+                "value": null
+              },
+              "stroke": {
+                "value": "#243440"
+              },
+              "strokeWidth": {
+                "value": 1
+              }
+            }
+          },
+          "interactive": false
+        }
+      ]
+    },
+    {
+      "type": "rect",
+      "name": "regionCallout",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "calloutX"
+          },
+          "y": {
+            "signal": "calloutY"
+          },
+          "width": {
+            "signal": "calloutWidth"
+          },
+          "height": {
+            "signal": "calloutHeight"
+          },
+          "fill": {
+            "value": "#faf9f4"
+          },
+          "stroke": {
+            "value": "#41515d"
+          },
+          "strokeWidth": {
+            "value": 0.7
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "regionCalloutHeading",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "calloutX+8"
+          },
+          "y": {
+            "signal": "calloutY+16"
+          },
+          "text": {
+            "signal": "'Selected area · '+chosen.state"
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "fontSize": {
+            "value": 11
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "regionCalloutName",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "calloutX+8"
+          },
+          "y": {
+            "signal": "calloutY+34"
+          },
+          "text": {
+            "signal": "chosen.labelLines"
+          },
+          "fill": {
+            "value": "#243440"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "lineHeight": {
+            "value": 16
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "regionCalloutShare",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "calloutX+8"
+          },
+          "y": {
+            "signal": "calloutY+calloutHeight-10"
+          },
+          "text": {
+            "signal": "chosen.sharePct===0?'0%':chosen.sharePct<.01?'<0.01%':format(chosen.sharePct,'.2f')+'%'"
+          },
+          "fill": {
+            "value": "#243440"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "fontWeight": {
+            "value": 700
+          }
+        }
+      }
+    }
+  ],
+  "projections": [
+    {
+      "name": "map",
+      "type": "conicEqualArea",
+      "parallels": [
+        -18,
+        -36
+      ],
+      "rotate": [
+        -134,
+        0
+      ],
+      "center": [
+        0,
+        -27
+      ],
+      "fit": {
+        "signal": "fitGeo"
+      },
+      "extent": {
+        "signal": "[[18,30],[width-18,height-28]]"
+      }
+    }
+  ]
+}

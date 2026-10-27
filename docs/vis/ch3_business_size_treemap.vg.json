@@ -1,0 +1,293 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Hierarchical treemap: root → four editorial groups → five employee-size bands. All leaf areas use one businesses-per-pixel ratio, with zero layout padding. Group boundaries do not reserve area.",
+  "width": 1100,
+  "height": 350,
+  "padding": 0,
+  "autosize": "none",
+  "background": "#faf9f4",
+  "config": {
+    "text": {
+      "font": "Arial",
+      "fontSize": 12,
+      "fill": "#243440"
+    },
+    "style": {
+      "guide-label": {
+        "font": "Arial"
+      },
+      "guide-title": {
+        "font": "Arial"
+      }
+    }
+  },
+  "signals": [
+    {
+      "name": "treeView",
+      "value": -1
+    },
+    {
+      "name": "selectedGroup",
+      "value": 0
+    },
+    {
+      "name": "selectedBand",
+      "value": 0
+    },
+    {
+      "name": "washes",
+      "value": [
+        "rgb(161, 186, 226)",
+        "rgb(166, 219, 214)",
+        "rgb(243, 191, 212)",
+        "rgb(247, 229, 168)"
+      ]
+    }
+  ],
+  "data": [
+    {
+      "name": "rawTree",
+      "url": "data/processed/chapter3/business-size-tree.json"
+    },
+    {
+      "name": "tree",
+      "source": "rawTree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.group===-1||treeView<0||datum.group===treeView"
+        },
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "value",
+          "method": "squarify",
+          "sort": {
+            "field": "value",
+            "order": "descending"
+          },
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "padding": 0,
+          "round": false
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth===2"
+        },
+        {
+          "type": "formula",
+          "as": "tileWidth",
+          "expr": "datum.x1-datum.x0"
+        },
+        {
+          "type": "formula",
+          "as": "tileHeight",
+          "expr": "datum.y1-datum.y0"
+        }
+      ]
+    },
+    {
+      "name": "parents",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.depth===1"
+        }
+      ]
+    }
+  ],
+  "scales": [],
+  "marks": [
+    {
+      "type": "rect",
+      "name": "treeLeaves",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "signal": "washes[datum.group]"
+          },
+          "stroke": {
+            "value": "#faf9f4"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "datum.groupName+' · '+datum.bandName+': '+format(datum.value,',')+' businesses'"
+          },
+          "description": {
+            "signal": "datum.groupName+' · '+datum.bandName+': '+format(datum.value,',')+' businesses'"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "treeBandLabels",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0+7"
+          },
+          "y": {
+            "signal": "(datum.y0+datum.y1)/2-5"
+          },
+          "text": {
+            "signal": "datum.tileWidth>143&&datum.tileHeight>43?datum.bandName:datum.tileWidth>38&&datum.tileHeight>28?(datum.band===0?(datum.tileWidth>98?'Non-employing':'0 staff'):datum.shortLabel):''"
+          },
+          "fill": {
+            "value": "#243440"
+          },
+          "fontSize": {
+            "signal": "datum.tileWidth>143?13:11"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "limit": {
+            "signal": "max(0,datum.tileWidth-14)"
+          }
+        }
+      },
+      "interactive": false
+    },
+    {
+      "type": "text",
+      "name": "treeNumberLabels",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0+7"
+          },
+          "y": {
+            "signal": "(datum.y0+datum.y1)/2+16"
+          },
+          "text": {
+            "signal": "datum.tileWidth>143&&datum.tileHeight>58?format(datum.value,',')+' businesses':''"
+          },
+          "fill": {
+            "value": "#243440"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "limit": {
+            "signal": "max(0,datum.tileWidth-14)"
+          }
+        }
+      },
+      "interactive": false
+    },
+    {
+      "type": "rect",
+      "name": "treeGroupBorders",
+      "from": {
+        "data": "parents"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "value": "#41515d"
+          },
+          "strokeWidth": {
+            "value": 1.4
+          }
+        }
+      },
+      "interactive": false
+    },
+    {
+      "type": "rect",
+      "name": "treeSelection",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.x0+1.5"
+          },
+          "y": {
+            "signal": "datum.y0+1.5"
+          },
+          "x2": {
+            "signal": "datum.x1-1.5"
+          },
+          "y2": {
+            "signal": "datum.y1-1.5"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "value": "#243440"
+          },
+          "strokeWidth": {
+            "value": 2.3
+          },
+          "opacity": {
+            "signal": "datum.group===selectedGroup&&datum.band===selectedBand?1:0"
+          }
+        }
+      },
+      "interactive": false
+    }
+  ]
+}

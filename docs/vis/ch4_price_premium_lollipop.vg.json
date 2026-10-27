@@ -1,0 +1,487 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Eight published willingness-to-pay categories in premium order, 2023 report. Dot position and stem length show respondents, not the size of the premium. Values total 99.4% and are not normalised.",
+  "width": 720,
+  "height": 505,
+  "padding": 0,
+  "autosize": "none",
+  "background": "#faf9f4",
+  "config": {
+    "text": {
+      "font": "Arial",
+      "fill": "#243440",
+      "fontSize": 13
+    }
+  },
+  "data": [
+    {
+      "name": "bands",
+      "values": [
+        {
+          "id": "RM23_03",
+          "order": 0,
+          "label": "Up to 5% more",
+          "lines": [
+            "Up to 5% more"
+          ],
+          "percent": 25.0,
+          "color": "#b9a8d3",
+          "priceExample": "Up to A$105",
+          "detail": "25% selected “Up to 5% more”."
+        },
+        {
+          "id": "RM23_04",
+          "order": 1,
+          "label": "6–10% more",
+          "lines": [
+            "6–10% more"
+          ],
+          "percent": 31.0,
+          "color": "#7156a4",
+          "priceExample": "A$106–110",
+          "detail": "31% selected “6–10% more”."
+        },
+        {
+          "id": "RM23_05",
+          "order": 2,
+          "label": "11–20% more",
+          "lines": [
+            "11–20% more"
+          ],
+          "percent": 12.0,
+          "color": "#b9a8d3",
+          "priceExample": "A$111–120",
+          "detail": "12% selected “11–20% more”."
+        },
+        {
+          "id": "RM23_06",
+          "order": 3,
+          "label": "21–30% more",
+          "lines": [
+            "21–30% more"
+          ],
+          "percent": 3.0,
+          "color": "#b9a8d3",
+          "priceExample": "A$121–130",
+          "detail": "3% selected “21–30% more”."
+        },
+        {
+          "id": "RM23_07",
+          "order": 4,
+          "label": "31–50% more",
+          "lines": [
+            "31–50% more"
+          ],
+          "percent": 1.4,
+          "color": "#b9a8d3",
+          "priceExample": "A$131–150",
+          "detail": "1.4% selected “31–50% more”."
+        },
+        {
+          "id": "RM23_08",
+          "order": 5,
+          "label": "Over 50% more",
+          "lines": [
+            "Over 50% more"
+          ],
+          "percent": 1.0,
+          "color": "#b9a8d3",
+          "priceExample": "More than A$150",
+          "detail": "1% selected “Over 50% more”."
+        },
+        {
+          "id": "RM23_09",
+          "order": 6,
+          "label": "Not willing to pay more",
+          "lines": [
+            "Not willing to",
+            "pay more"
+          ],
+          "percent": 17.0,
+          "color": "#596773",
+          "priceExample": "No extra premium",
+          "detail": "17% selected “Not willing to pay more”."
+        },
+        {
+          "id": "RM23_10",
+          "order": 7,
+          "label": "Not sure",
+          "lines": [
+            "Not sure"
+          ],
+          "percent": 9.0,
+          "color": "#596773",
+          "priceExample": "No price specified",
+          "detail": "9% selected “Not sure”."
+        }
+      ]
+    },
+    {
+      "name": "ticks",
+      "values": [
+        {
+          "value": 0
+        },
+        {
+          "value": 10
+        },
+        {
+          "value": 20
+        },
+        {
+          "value": 30
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "name": "response_targets",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 0
+          },
+          "width": {
+            "signal": "width"
+          },
+          "y": {
+            "signal": "36+datum.order*48+(datum.order>=6?16:0)-20"
+          },
+          "height": {
+            "value": 40
+          },
+          "fill": {
+            "signal": "datum.id===selectedBand?'#f0eaf5':'transparent'"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "bands"
+      }
+    },
+    {
+      "type": "rule",
+      "name": "grid",
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "share",
+            "field": "value"
+          },
+          "y": {
+            "value": 15
+          },
+          "y2": {
+            "value": 415
+          },
+          "stroke": {
+            "value": "#ccd1d1"
+          },
+          "strokeDash": {
+            "value": [
+              2,
+              4
+            ]
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "rule",
+      "name": "zero",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "left"
+          },
+          "y": {
+            "value": 15
+          },
+          "y2": {
+            "value": 415
+          },
+          "stroke": {
+            "value": "#596773"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "name": "response_separator",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 0
+          },
+          "x2": {
+            "signal": "width"
+          },
+          "y": {
+            "value": 308
+          },
+          "stroke": {
+            "value": "#ccd1d1"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "band_labels",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 4
+          },
+          "y": {
+            "signal": "36+datum.order*48+(datum.order>=6?16:0)"
+          },
+          "text": {
+            "field": "lines"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "signal": "width<500?11:13"
+          },
+          "lineHeight": {
+            "value": 14
+          },
+          "fontWeight": {
+            "signal": "datum.id===selectedBand?700:400"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "bands"
+      }
+    },
+    {
+      "type": "rule",
+      "name": "premium_stems",
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "share",
+            "value": 0
+          },
+          "x2": {
+            "scale": "share",
+            "field": "percent"
+          },
+          "y": {
+            "signal": "36+datum.order*48+(datum.order>=6?16:0)"
+          },
+          "stroke": {
+            "field": "color"
+          },
+          "strokeWidth": {
+            "value": 2.5
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "bands"
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "premium_points",
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "share",
+            "field": "percent"
+          },
+          "y": {
+            "signal": "36+datum.order*48+(datum.order>=6?16:0)"
+          },
+          "size": {
+            "signal": "datum.id===selectedBand?150:100"
+          },
+          "fill": {
+            "field": "color"
+          },
+          "stroke": {
+            "signal": "datum.id===selectedBand?'#243440':datum.color"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "description": {
+            "signal": "datum.label+': '+datum.percent+'% of respondents; 2023 report'"
+          },
+          "tooltip": {
+            "signal": "{'Response':datum.label,'Respondents':datum.percent+'%','Report year':2023}"
+          }
+        }
+      },
+      "from": {
+        "data": "bands"
+      }
+    },
+    {
+      "type": "text",
+      "name": "published_values",
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "share",
+            "field": "percent",
+            "offset": 13
+          },
+          "y": {
+            "signal": "36+datum.order*48+(datum.order>=6?16:0)"
+          },
+          "text": {
+            "signal": "datum.percent+'%'"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "bands"
+      }
+    },
+    {
+      "type": "text",
+      "name": "tick_labels",
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "share",
+            "field": "value"
+          },
+          "y": {
+            "value": 442
+          },
+          "text": {
+            "signal": "datum.value+'%'"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "text",
+      "name": "axis_title",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "(left+width-43)/2"
+          },
+          "y": {
+            "value": 477
+          },
+          "text": {
+            "value": "Respondents (%)"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      }
+    }
+  ],
+  "signals": [
+    {
+      "name": "selectedBand",
+      "value": "RM23_04"
+    },
+    {
+      "name": "left",
+      "update": "width<500?126:178"
+    }
+  ],
+  "scales": [
+    {
+      "name": "share",
+      "type": "linear",
+      "domain": [
+        0,
+        35
+      ],
+      "range": [
+        {
+          "signal": "left"
+        },
+        {
+          "signal": "width-43"
+        }
+      ],
+      "zero": true,
+      "nice": false
+    }
+  ]
+}

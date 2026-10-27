@@ -1,0 +1,361 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Isotype employment overview, June 2025. One whole icon is approximately 1,000 people. Icon count is rounded; the original estimate is shown in the page label.",
+  "width": 180,
+  "height": 229,
+  "padding": 0,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "config": {
+    "text": {
+      "font": "Segoe UI, Arial, sans-serif",
+      "fontSize": 12,
+      "fill": "#243440"
+    }
+  },
+  "signals": [
+    {
+      "name": "columns",
+      "value": 8
+    },
+    {
+      "name": "iconUrl",
+      "value": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232c67c9%22%20stroke-width%3D%222.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%225%22%20r%3D%221%22/%3E%3Cpath%20d%3D%22m9%2020%203-6%203%206%22/%3E%3Cpath%20d%3D%22m6%208%206%202%206-2%22/%3E%3Cpath%20d%3D%22M12%2010v4%22/%3E%3C/svg%3E"
+    },
+    {
+      "name": "personCount",
+      "value": 93843
+    },
+    {
+      "name": "groupName",
+      "value": "Food & dairy"
+    },
+    {
+      "name": "rows",
+      "update": "ceil(length(data(\"people\"))/columns)"
+    }
+  ],
+  "data": [
+    {
+      "name": "people",
+      "values": [
+        {
+          "index": 0
+        },
+        {
+          "index": 1
+        },
+        {
+          "index": 2
+        },
+        {
+          "index": 3
+        },
+        {
+          "index": 4
+        },
+        {
+          "index": 5
+        },
+        {
+          "index": 6
+        },
+        {
+          "index": 7
+        },
+        {
+          "index": 8
+        },
+        {
+          "index": 9
+        },
+        {
+          "index": 10
+        },
+        {
+          "index": 11
+        },
+        {
+          "index": 12
+        },
+        {
+          "index": 13
+        },
+        {
+          "index": 14
+        },
+        {
+          "index": 15
+        },
+        {
+          "index": 16
+        },
+        {
+          "index": 17
+        },
+        {
+          "index": 18
+        },
+        {
+          "index": 19
+        },
+        {
+          "index": 20
+        },
+        {
+          "index": 21
+        },
+        {
+          "index": 22
+        },
+        {
+          "index": 23
+        },
+        {
+          "index": 24
+        },
+        {
+          "index": 25
+        },
+        {
+          "index": 26
+        },
+        {
+          "index": 27
+        },
+        {
+          "index": 28
+        },
+        {
+          "index": 29
+        },
+        {
+          "index": 30
+        },
+        {
+          "index": 31
+        },
+        {
+          "index": 32
+        },
+        {
+          "index": 33
+        },
+        {
+          "index": 34
+        },
+        {
+          "index": 35
+        },
+        {
+          "index": 36
+        },
+        {
+          "index": 37
+        },
+        {
+          "index": 38
+        },
+        {
+          "index": 39
+        },
+        {
+          "index": 40
+        },
+        {
+          "index": 41
+        },
+        {
+          "index": 42
+        },
+        {
+          "index": 43
+        },
+        {
+          "index": 44
+        },
+        {
+          "index": 45
+        },
+        {
+          "index": 46
+        },
+        {
+          "index": 47
+        },
+        {
+          "index": 48
+        },
+        {
+          "index": 49
+        },
+        {
+          "index": 50
+        },
+        {
+          "index": 51
+        },
+        {
+          "index": 52
+        },
+        {
+          "index": 53
+        },
+        {
+          "index": 54
+        },
+        {
+          "index": 55
+        },
+        {
+          "index": 56
+        },
+        {
+          "index": 57
+        },
+        {
+          "index": 58
+        },
+        {
+          "index": 59
+        },
+        {
+          "index": 60
+        },
+        {
+          "index": 61
+        },
+        {
+          "index": 62
+        },
+        {
+          "index": 63
+        },
+        {
+          "index": 64
+        },
+        {
+          "index": 65
+        },
+        {
+          "index": 66
+        },
+        {
+          "index": 67
+        },
+        {
+          "index": 68
+        },
+        {
+          "index": 69
+        },
+        {
+          "index": 70
+        },
+        {
+          "index": 71
+        },
+        {
+          "index": 72
+        },
+        {
+          "index": 73
+        },
+        {
+          "index": 74
+        },
+        {
+          "index": 75
+        },
+        {
+          "index": 76
+        },
+        {
+          "index": 77
+        },
+        {
+          "index": 78
+        },
+        {
+          "index": 79
+        },
+        {
+          "index": 80
+        },
+        {
+          "index": 81
+        },
+        {
+          "index": 82
+        },
+        {
+          "index": 83
+        },
+        {
+          "index": 84
+        },
+        {
+          "index": 85
+        },
+        {
+          "index": 86
+        },
+        {
+          "index": 87
+        },
+        {
+          "index": 88
+        },
+        {
+          "index": 89
+        },
+        {
+          "index": 90
+        },
+        {
+          "index": 91
+        },
+        {
+          "index": 92
+        },
+        {
+          "index": 93
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "image",
+      "name": "personMarks",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "(width-(columns*16-2))/2 + (datum.index % columns)*16"
+          },
+          "y": {
+            "signal": "height-7-rows*18+floor(datum.index/columns)*18"
+          },
+          "width": {
+            "value": 14
+          },
+          "height": {
+            "value": 18
+          },
+          "url": {
+            "signal": "iconUrl"
+          },
+          "tooltip": {
+            "signal": "groupName + ': ' + format(personCount, ',.0f') + ' people employed. Each icon ≈ 1,000.'"
+          }
+        }
+      },
+      "from": {
+        "data": "people"
+      }
+    }
+  ]
+}

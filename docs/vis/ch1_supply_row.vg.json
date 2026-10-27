@@ -1,0 +1,168 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Reusable Chapter 1 source-share row. Each row has its own production-plus-imports denominator. Negative position is a layout convention, not a negative amount.",
+  "width": 230,
+  "height": 60,
+  "padding": 0,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "config": {
+    "text": {
+      "font": "Segoe UI, Arial, sans-serif",
+      "fontSize": 12,
+      "fill": "#243440"
+    }
+  },
+  "signals": [
+    {
+      "name": "production",
+      "value": 20126
+    },
+    {
+      "name": "imports",
+      "value": 2289
+    },
+    {
+      "name": "groupColor",
+      "value": "#2c67c9"
+    },
+    {
+      "name": "importColor",
+      "value": "#7ea1db"
+    },
+    {
+      "name": "isGroup",
+      "value": true
+    },
+    {
+      "name": "label",
+      "value": "Food & dairy"
+    },
+    {
+      "name": "share",
+      "update": "production / (production + imports)"
+    },
+    {
+      "name": "barY",
+      "update": "isGroup ? 28 : 25"
+    },
+    {
+      "name": "barHeight",
+      "update": "isGroup ? 24 : 14"
+    },
+    {
+      "name": "half",
+      "update": "(width - 8) / 2"
+    }
+  ],
+  "data": [
+    {
+      "name": "sources",
+      "values": [
+        {
+          "source": "production"
+        },
+        {
+          "source": "imports"
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rule",
+      "name": "centreGuide",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2"
+          },
+          "y": {
+            "value": 4
+          },
+          "y2": {
+            "signal": "height-4"
+          },
+          "stroke": {
+            "value": "#dde0dc"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "name": "supplyBars",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "datum.source === 'production' ? width/2 - half*share : width/2"
+          },
+          "y": {
+            "signal": "barY"
+          },
+          "width": {
+            "signal": "half * (datum.source === 'production' ? share : 1-share)"
+          },
+          "height": {
+            "signal": "barHeight"
+          },
+          "fill": {
+            "signal": "datum.source === 'production' ? groupColor : importColor"
+          },
+          "tooltip": {
+            "signal": "label + ': ' + (datum.source === 'production' ? 'Australian production A$' + format(production, ',.0f') : 'Imports A$' + format(imports, ',.0f')) + ' million; ' + format(datum.source === 'production' ? share : 1-share, '.1%')"
+          }
+        }
+      },
+      "from": {
+        "data": "sources"
+      }
+    },
+    {
+      "type": "rule",
+      "name": "zeroDivider",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2"
+          },
+          "y": {
+            "signal": "barY-2"
+          },
+          "y2": {
+            "signal": "barY+barHeight+2"
+          },
+          "stroke": {
+            "value": "#243440"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "shareLabels",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2 + (datum.source === 'production' ? -7 : 7)"
+          },
+          "y": {
+            "signal": "isGroup ? 18 : 16"
+          },
+          "align": {
+            "signal": "datum.source === 'production' ? 'right' : 'left'"
+          },
+          "text": {
+            "signal": "format(datum.source === 'production' ? share : 1-share, '.1%')"
+          }
+        }
+      },
+      "from": {
+        "data": "sources"
+      }
+    }
+  ]
+}

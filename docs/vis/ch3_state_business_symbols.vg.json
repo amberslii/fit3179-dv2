@@ -1,0 +1,587 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Proportional-symbol map of business counts. Circle AREA, not radius, is proportional to businesses. One fixed scale across all four groups.",
+  "width": 600,
+  "height": 426,
+  "padding": 0,
+  "autosize": "none",
+  "background": "#faf9f4",
+  "config": {
+    "text": {
+      "font": "Arial",
+      "fontSize": 12,
+      "fill": "#243440"
+    },
+    "style": {
+      "guide-label": {
+        "font": "Arial"
+      },
+      "guide-title": {
+        "font": "Arial"
+      }
+    }
+  },
+  "signals": [
+    {
+      "name": "group",
+      "value": 0
+    },
+    {
+      "name": "selectedState",
+      "value": "NSW"
+    },
+    {
+      "name": "groupColors",
+      "value": [
+        "#2c67c9",
+        "#36b4af",
+        "#e971aa",
+        "#f3cb43"
+      ]
+    },
+    {
+      "name": "maxRadius",
+      "update": "min(25,max(7,(width-120)*.045))"
+    }
+  ],
+  "data": [
+    {
+      "name": "states",
+      "url": "data/processed/chapter3/states.json"
+    },
+    {
+      "name": "counts",
+      "url": "data/processed/chapter3/state-businesses.json"
+    },
+    {
+      "name": "land",
+      "source": "states",
+      "transform": [
+        {
+          "type": "geopath",
+          "projection": "map"
+        }
+      ]
+    },
+    {
+      "name": "points",
+      "source": "counts",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.group===group"
+        },
+        {
+          "type": "geopoint",
+          "projection": "map",
+          "fields": [
+            "lon",
+            "lat"
+          ],
+          "as": [
+            "x",
+            "y"
+          ]
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": "n",
+            "order": "descending"
+          }
+        }
+      ]
+    },
+    {
+      "name": "eastLabels",
+      "source": "points",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.east>=0"
+        },
+        {
+          "type": "collect",
+          "sort": {
+            "field": "y"
+          }
+        },
+        {
+          "type": "window",
+          "ops": [
+            "row_number"
+          ],
+          "as": [
+            "order"
+          ],
+          "sort": {
+            "field": "y"
+          }
+        },
+        {
+          "type": "formula",
+          "as": "offset",
+          "expr": "max(16,datum.y-15)-(datum.order-1)*41"
+        },
+        {
+          "type": "window",
+          "ops": [
+            "max"
+          ],
+          "fields": [
+            "offset"
+          ],
+          "as": [
+            "base"
+          ],
+          "sort": {
+            "field": "order"
+          },
+          "frame": [
+            null,
+            0
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "rawY",
+          "expr": "datum.base+(datum.order-1)*41"
+        },
+        {
+          "type": "joinaggregate",
+          "ops": [
+            "max"
+          ],
+          "fields": [
+            "rawY"
+          ],
+          "as": [
+            "lastY"
+          ]
+        },
+        {
+          "type": "formula",
+          "as": "ly",
+          "expr": "datum.rawY-max(0,datum.lastY+36-322)"
+        },
+        {
+          "type": "formula",
+          "as": "lx",
+          "expr": "width-78"
+        }
+      ]
+    },
+    {
+      "name": "westLabels",
+      "source": "points",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.east<0"
+        },
+        {
+          "type": "formula",
+          "as": "lx",
+          "expr": "width<360?0:datum.id==='WA'?0:datum.id==='NT'?max(50,datum.x-35):datum.x-45"
+        },
+        {
+          "type": "formula",
+          "as": "ly",
+          "expr": "width<360?(datum.id==='NT'?max(16,datum.y-51):datum.id==='WA'?max(72,datum.y+18):max(128,datum.y+28)):(datum.id==='WA'?datum.y+18:datum.id==='NT'?datum.y-51:datum.y+28)"
+        }
+      ]
+    },
+    {
+      "name": "labels",
+      "source": [
+        "eastLabels",
+        "westLabels"
+      ],
+      "transform": [
+        {
+          "type": "formula",
+          "as": "anchorX",
+          "expr": "datum.lx+(datum.id==='WA'?48:datum.east<0?35:0)"
+        },
+        {
+          "type": "formula",
+          "as": "anchorY",
+          "expr": "datum.ly+(datum.id==='NT'?33:9)"
+        }
+      ]
+    },
+    {
+      "name": "sizeLegend",
+      "values": [
+        {
+          "n": 100,
+          "i": 1
+        },
+        {
+          "n": 1000,
+          "i": 2
+        },
+        {
+          "n": 2000,
+          "i": 3
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "area",
+      "type": "linear",
+      "domain": [
+        0,
+        2346
+      ],
+      "range": [
+        0,
+        {
+          "signal": "PI*maxRadius*maxRadius"
+        }
+      ],
+      "zero": true
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "name": "stateLand",
+      "from": {
+        "data": "land"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "field": "path"
+          },
+          "fill": {
+            "value": "#e1e5df"
+          },
+          "stroke": {
+            "value": null
+          },
+          "strokeWidth": {
+            "value": 0
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "statePoints",
+      "from": {
+        "data": "points"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "size": {
+            "scale": "area",
+            "field": "n"
+          },
+          "shape": {
+            "value": "circle"
+          },
+          "fill": {
+            "signal": "groupColors[group]"
+          },
+          "fillOpacity": {
+            "value": 0.57
+          },
+          "stroke": {
+            "value": "#243440"
+          },
+          "strokeWidth": {
+            "signal": "datum.id===selectedState?2:1"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "datum.name+': '+format(datum.n,',')+' businesses'"
+          },
+          "description": {
+            "signal": "datum.name+': '+format(datum.n,',')+' businesses'"
+          }
+        }
+      }
+    },
+    {
+      "type": "path",
+      "name": "stateBorders",
+      "from": {
+        "data": "land"
+      },
+      "encode": {
+        "update": {
+          "path": {
+            "field": "path"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "value": "#41515d"
+          },
+          "strokeWidth": {
+            "value": 0.85
+          }
+        }
+      },
+      "interactive": false
+    },
+    {
+      "type": "rule",
+      "name": "stateLeaders",
+      "from": {
+        "data": "labels"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "x"
+          },
+          "y": {
+            "field": "y"
+          },
+          "x2": {
+            "field": "anchorX"
+          },
+          "y2": {
+            "field": "anchorY"
+          },
+          "stroke": {
+            "value": "#596773"
+          },
+          "strokeWidth": {
+            "value": 0.7
+          }
+        }
+      },
+      "interactive": false
+    },
+    {
+      "type": "text",
+      "name": "stateLabels",
+      "from": {
+        "data": "labels"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "lx"
+          },
+          "y": {
+            "signal": "datum.ly+7"
+          },
+          "text": {
+            "field": "id"
+          },
+          "fill": {
+            "value": "#243440"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "datum.name+': '+format(datum.n,',')+' businesses. Select to update both charts.'"
+          },
+          "description": {
+            "signal": "datum.name+': '+format(datum.n,',')+' businesses. Select to update both charts.'"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "stateCounts",
+      "from": {
+        "data": "labels"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "lx"
+          },
+          "y": {
+            "signal": "datum.ly+23"
+          },
+          "text": {
+            "signal": "format(datum.n,',')"
+          },
+          "fill": {
+            "value": "#243440"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "cursor": {
+            "value": "pointer"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "name": "stateSelectionUnderline",
+      "from": {
+        "data": "labels"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "field": "lx"
+          },
+          "x2": {
+            "signal": "datum.lx+58"
+          },
+          "y": {
+            "signal": "datum.ly+37"
+          },
+          "stroke": {
+            "value": "#243440"
+          },
+          "strokeWidth": {
+            "value": 1.5
+          },
+          "opacity": {
+            "signal": "datum.id===selectedState?1:0"
+          }
+        }
+      },
+      "interactive": false
+    },
+    {
+      "type": "text",
+      "name": "sizeTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2"
+          },
+          "y": {
+            "value": 342
+          },
+          "text": {
+            "value": "Circle area = businesses · Shared scale"
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "signal": "width<360?10:11"
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "referenceCircles",
+      "from": {
+        "data": "sizeLegend"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width*datum.i/4"
+          },
+          "y": {
+            "value": 373
+          },
+          "size": {
+            "scale": "area",
+            "field": "n"
+          },
+          "fill": {
+            "signal": "groupColors[group]"
+          },
+          "fillOpacity": {
+            "value": 0.57
+          },
+          "stroke": {
+            "value": "#41515d"
+          },
+          "strokeWidth": {
+            "value": 0.7
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "referenceLabels",
+      "from": {
+        "data": "sizeLegend"
+      },
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width*datum.i/4"
+          },
+          "y": {
+            "value": 418
+          },
+          "text": {
+            "signal": "format(datum.n,',')"
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "value": 11
+          }
+        }
+      }
+    }
+  ],
+  "projections": [
+    {
+      "name": "map",
+      "type": "conicEqualArea",
+      "parallels": [
+        -18,
+        -36
+      ],
+      "rotate": [
+        -134,
+        0
+      ],
+      "center": [
+        0,
+        -27
+      ],
+      "fit": {
+        "signal": "data('states')"
+      },
+      "extent": {
+        "signal": "[[38,16],[width-84,298]]"
+      }
+    }
+  ]
+}
