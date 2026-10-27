@@ -1,0 +1,1101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Five documented product locations. Fixed-size category-coloured points; selection is an outline. Inset A shows Heathmont and Ferntree Gully. Its exact viewport is inverted to a geographic footprint on the main map.",
+  "width": 650,
+  "height": 500,
+  "padding": 0,
+  "autosize": "none",
+  "background": "#faf9f4",
+  "config": {
+    "text": {
+      "font": "Arial",
+      "fontSize": 12,
+      "fill": "#243440"
+    },
+    "style": {
+      "guide-label": {
+        "font": "Arial"
+      },
+      "guide-title": {
+        "font": "Arial"
+      }
+    }
+  },
+  "signals": [
+    {
+      "name": "selectedProduct",
+      "value": "P14"
+    },
+    {
+      "name": "groupColors",
+      "value": [
+        "#2c67c9",
+        "#36b4af",
+        "#e971aa",
+        "#f3cb43"
+      ]
+    },
+    {
+      "name": "compact",
+      "update": "width<480"
+    },
+    {
+      "name": "iw",
+      "update": "compact?width-24:min(280,width*.45)"
+    },
+    {
+      "name": "ih",
+      "update": "compact?214:220"
+    },
+    {
+      "name": "bodyWidth",
+      "update": "iw-2"
+    },
+    {
+      "name": "bodyHeight",
+      "update": "ih-33"
+    },
+    {
+      "name": "corner0",
+      "update": "invert('inset',[0,0])"
+    },
+    {
+      "name": "corner1",
+      "update": "invert('inset',[bodyWidth,0])"
+    },
+    {
+      "name": "corner2",
+      "update": "invert('inset',[bodyWidth,bodyHeight])"
+    },
+    {
+      "name": "corner3",
+      "update": "invert('inset',[0,bodyHeight])"
+    },
+    {
+      "name": "footprint",
+      "update": "{type:'LineString',coordinates:[corner0,corner1,corner2,corner3,corner0]}"
+    },
+    {
+      "name": "locatorBounds",
+      "update": "geoBounds('map',footprint)"
+    },
+    {
+      "name": "connector",
+      "update": "'M'+(12+iw)+','+(12+ih-8)+(compact?'L'+(width-5)+','+(12+ih+4)+'L'+(width-5)+','+(locatorBounds[0][1]-18):'')+'L'+locatorBounds[1][0]+','+locatorBounds[0][1]"
+    },
+    {
+      "name": "tagX",
+      "update": "min(width-145,locatorBounds[1][0]+12)"
+    },
+    {
+      "name": "tagY",
+      "update": "locatorBounds[1][1]+14"
+    },
+    {
+      "name": "scaleOrigin",
+      "update": "invert('inset',[14,bodyHeight-12])"
+    },
+    {
+      "name": "scaleLongitudeStep",
+      "update": "5/(6371*cos(scaleOrigin[1]*PI/180))*180/PI"
+    },
+    {
+      "name": "scaleEnd",
+      "update": "scale('inset',[scaleOrigin[0]+scaleLongitudeStep,scaleOrigin[1]])[0]"
+    }
+  ],
+  "data": [
+    {
+      "name": "states",
+      "url": "data/processed/chapter3/states.json"
+    },
+    {
+      "name": "sa4",
+      "url": "data/processed/chapter3/sa4.json"
+    },
+    {
+      "name": "products",
+      "url": "data/processed/chapter3/products.json"
+    },
+    {
+      "name": "land",
+      "source": "states",
+      "transform": [
+        {
+          "type": "geopath",
+          "projection": "map"
+        }
+      ]
+    },
+    {
+      "name": "mainProducts",
+      "source": "products",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.number<=3"
+        },
+        {
+          "type": "geopoint",
+          "projection": "map",
+          "fields": [
+            "lon",
+            "lat"
+          ],
+          "as": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "insetProducts",
+      "source": "products",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.number>=4"
+        },
+        {
+          "type": "geopoint",
+          "projection": "inset",
+          "fields": [
+            "lon",
+            "lat"
+          ],
+          "as": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mainInsetProducts",
+      "source": "products",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "datum.number>=4"
+        },
+        {
+          "type": "geopoint",
+          "projection": "map",
+          "fields": [
+            "lon",
+            "lat"
+          ],
+          "as": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "insetLand",
+      "source": "sa4",
+      "transform": [
+        {
+          "type": "geopath",
+          "projection": "inset"
+        }
+      ]
+    },
+    {
+      "name": "locator",
+      "values": [
+        {}
+      ],
+      "transform": [
+        {
+          "type": "formula",
+          "as": "geo",
+          "expr": "footprint"
+        },
+        {
+          "type": "geopath",
+          "field": "geo",
+          "projection": "map"
+        }
+      ]
+    },
+    {
+      "name": "stateLabels",
+      "values": [
+        {
+          "name": "QLD",
+          "lon": 147,
+          "lat": -25.2
+        },
+        {
+          "name": "NSW",
+          "lon": 146.8,
+          "lat": -32.1
+        },
+        {
+          "name": "SA",
+          "lon": 137.7,
+          "lat": -32.5
+        },
+        {
+          "name": "VIC",
+          "lon": 145.6,
+          "lat": -36.9
+        }
+      ],
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "width>=400||datum.name!=='VIC'"
+        },
+        {
+          "type": "geopoint",
+          "projection": "map",
+          "fields": [
+            "lon",
+            "lat"
+          ],
+          "as": [
+            "x",
+            "y"
+          ]
+        }
+      ]
+    }
+  ],
+  "scales": [],
+  "marks": [
+    {
+      "type": "group",
+      "name": "productMapClip",
+      "clip": true,
+      "encode": {
+        "update": {
+          "width": {
+            "signal": "width"
+          },
+          "height": {
+            "signal": "height"
+          }
+        }
+      },
+      "marks": [
+        {
+          "type": "path",
+          "name": "productLand",
+          "from": {
+            "data": "land"
+          },
+          "encode": {
+            "update": {
+              "path": {
+                "field": "path"
+              },
+              "fill": {
+                "value": "#eeefe8"
+              },
+              "stroke": {
+                "value": "#41515d"
+              },
+              "strokeWidth": {
+                "value": 0.65
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": "productStates",
+          "from": {
+            "data": "stateLabels"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "field": "x"
+              },
+              "y": {
+                "field": "y"
+              },
+              "text": {
+                "field": "name"
+              },
+              "fill": {
+                "value": "#596773"
+              },
+              "align": {
+                "value": "center"
+              }
+            }
+          }
+        },
+        {
+          "type": "symbol",
+          "name": "productMainPoints",
+          "from": {
+            "data": "mainProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "field": "x"
+              },
+              "y": {
+                "field": "y"
+              },
+              "size": {
+                "signal": "PI*pow(datum.id===selectedProduct?11:9,2)"
+              },
+              "fill": {
+                "signal": "groupColors[datum.group]"
+              },
+              "stroke": {
+                "value": "#243440"
+              },
+              "strokeWidth": {
+                "signal": "datum.id===selectedProduct?2:0"
+              },
+              "cursor": {
+                "value": "pointer"
+              },
+              "tooltip": {
+                "signal": "datum.number+' · '+datum.place+' · '+datum.brand+'. Select to view product.'"
+              },
+              "description": {
+                "signal": "datum.number+' · '+datum.place+' · '+datum.brand+'. Select to view product.'"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": "productMainNumbers",
+          "from": {
+            "data": "mainProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "field": "x"
+              },
+              "y": {
+                "signal": "datum.y+4"
+              },
+              "text": {
+                "field": "number"
+              },
+              "fill": {
+                "value": "#243440"
+              },
+              "align": {
+                "value": "center"
+              },
+              "fontSize": {
+                "value": 11
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "text",
+          "name": "productMainPlaceHalo",
+          "from": {
+            "data": "mainProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "datum.x+(datum.labelSide==='left'?-14:14)"
+              },
+              "y": {
+                "signal": "datum.y+datum.labelOffset"
+              },
+              "text": {
+                "field": "place"
+              },
+              "fill": {
+                "value": "#243440"
+              },
+              "align": {
+                "signal": "datum.labelSide==='left'?'right':'left'"
+              },
+              "fontSize": {
+                "value": 12
+              },
+              "stroke": {
+                "value": "#faf9f4"
+              },
+              "strokeWidth": {
+                "value": 3
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "text",
+          "name": "productMainPlace",
+          "from": {
+            "data": "mainProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "datum.x+(datum.labelSide==='left'?-14:14)"
+              },
+              "y": {
+                "signal": "datum.y+datum.labelOffset"
+              },
+              "text": {
+                "field": "place"
+              },
+              "fill": {
+                "value": "#243440"
+              },
+              "align": {
+                "signal": "datum.labelSide==='left'?'right':'left'"
+              },
+              "fontSize": {
+                "value": 12
+              },
+              "cursor": {
+                "value": "pointer"
+              },
+              "tooltip": {
+                "signal": "datum.place+' · '+datum.brand"
+              },
+              "description": {
+                "signal": "datum.place+' · '+datum.brand"
+              }
+            }
+          }
+        },
+        {
+          "type": "path",
+          "name": "insetSourceArea",
+          "from": {
+            "data": "locator"
+          },
+          "encode": {
+            "update": {
+              "path": {
+                "signal": "datum.path+'Z'"
+              },
+              "fill": {
+                "value": "#faf9f4"
+              },
+              "fillOpacity": {
+                "value": 0.3
+              },
+              "stroke": {
+                "value": "#243440"
+              },
+              "strokeWidth": {
+                "value": 1.8
+              },
+              "tooltip": {
+                "value": "A: exact geographic extent shown in the inset"
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "symbol",
+          "name": "productLocatorDots",
+          "from": {
+            "data": "mainInsetProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "field": "x"
+              },
+              "y": {
+                "field": "y"
+              },
+              "size": {
+                "value": 12.566
+              },
+              "fill": {
+                "signal": "groupColors[datum.group]"
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "path",
+          "name": "insetConnector",
+          "encode": {
+            "update": {
+              "path": {
+                "signal": "connector"
+              },
+              "fill": {
+                "value": null
+              },
+              "stroke": {
+                "value": "#41515d"
+              },
+              "strokeWidth": {
+                "value": 1.2
+              },
+              "strokeDash": {
+                "value": [
+                  5,
+                  3
+                ]
+              }
+            }
+          },
+          "interactive": false
+        },
+        {
+          "type": "rule",
+          "name": "sourceTagLeader",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "locatorBounds[1][0]"
+              },
+              "y": {
+                "signal": "locatorBounds[1][1]"
+              },
+              "x2": {
+                "signal": "tagX"
+              },
+              "y2": {
+                "signal": "tagY"
+              },
+              "stroke": {
+                "value": "#41515d"
+              }
+            }
+          }
+        },
+        {
+          "type": "rect",
+          "name": "sourceTagBackground",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "tagX-1"
+              },
+              "y": {
+                "signal": "tagY-11"
+              },
+              "width": {
+                "value": 144
+              },
+              "height": {
+                "value": 21
+              },
+              "fill": {
+                "value": "#faf9f4"
+              }
+            }
+          }
+        },
+        {
+          "type": "rect",
+          "name": "sourceTagBadge",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "tagX"
+              },
+              "y": {
+                "signal": "tagY-9"
+              },
+              "width": {
+                "value": 18
+              },
+              "height": {
+                "value": 18
+              },
+              "fill": {
+                "value": "#243440"
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": "sourceTagA",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "tagX+9"
+              },
+              "y": {
+                "signal": "tagY+4"
+              },
+              "text": {
+                "value": "A"
+              },
+              "fill": {
+                "value": "#faf9f4"
+              },
+              "align": {
+                "value": "center"
+              },
+              "fontWeight": {
+                "value": 600
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": "sourceTagText",
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "tagX+23"
+              },
+              "y": {
+                "signal": "tagY+4"
+              },
+              "text": {
+                "value": "Eastern Melbourne"
+              },
+              "fill": {
+                "value": "#596773"
+              },
+              "fontSize": {
+                "value": 11
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "rect",
+      "name": "insetFrame",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 12
+          },
+          "y": {
+            "value": 12
+          },
+          "width": {
+            "signal": "iw"
+          },
+          "height": {
+            "signal": "ih"
+          },
+          "fill": {
+            "value": "#faf9f4"
+          },
+          "stroke": {
+            "value": "#41515d"
+          },
+          "strokeWidth": {
+            "value": 1.2
+          }
+        }
+      }
+    },
+    {
+      "type": "group",
+      "name": "melbourneInset",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 13
+          },
+          "y": {
+            "value": 44
+          },
+          "width": {
+            "signal": "bodyWidth"
+          },
+          "height": {
+            "signal": "bodyHeight"
+          }
+        }
+      },
+      "marks": [
+        {
+          "type": "path",
+          "name": "insetLandShapes",
+          "from": {
+            "data": "insetLand"
+          },
+          "encode": {
+            "update": {
+              "path": {
+                "field": "path"
+              },
+              "fill": {
+                "value": "#eeefe8"
+              },
+              "stroke": {
+                "value": "#d9ded9"
+              },
+              "strokeWidth": {
+                "value": 0.8
+              }
+            }
+          },
+          "clip": true
+        },
+        {
+          "type": "symbol",
+          "name": "productInsetPoints",
+          "from": {
+            "data": "insetProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "field": "x"
+              },
+              "y": {
+                "field": "y"
+              },
+              "size": {
+                "signal": "PI*pow(datum.id===selectedProduct?11:9,2)"
+              },
+              "fill": {
+                "signal": "groupColors[datum.group]"
+              },
+              "stroke": {
+                "value": "#243440"
+              },
+              "strokeWidth": {
+                "signal": "datum.id===selectedProduct?2:0"
+              },
+              "cursor": {
+                "value": "pointer"
+              },
+              "tooltip": {
+                "signal": "datum.number+' · '+datum.place+' · '+datum.brand+'. Select to view product.'"
+              },
+              "description": {
+                "signal": "datum.number+' · '+datum.place+' · '+datum.brand+'. Select to view product.'"
+              }
+            }
+          },
+          "clip": true
+        },
+        {
+          "type": "text",
+          "name": "productInsetNumbers",
+          "from": {
+            "data": "insetProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "field": "x"
+              },
+              "y": {
+                "signal": "datum.y+4"
+              },
+              "text": {
+                "field": "number"
+              },
+              "fill": {
+                "value": "#243440"
+              },
+              "align": {
+                "value": "center"
+              },
+              "fontSize": {
+                "value": 11
+              }
+            }
+          },
+          "interactive": false,
+          "clip": true
+        },
+        {
+          "type": "text",
+          "name": "productInsetPlaceHalo",
+          "from": {
+            "data": "insetProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "datum.x+(datum.labelSide==='left'?-14:14)"
+              },
+              "y": {
+                "signal": "datum.y+datum.labelOffset"
+              },
+              "text": {
+                "field": "place"
+              },
+              "fill": {
+                "value": "#243440"
+              },
+              "align": {
+                "signal": "datum.labelSide==='left'?'right':'left'"
+              },
+              "fontSize": {
+                "value": 12
+              },
+              "stroke": {
+                "value": "#faf9f4"
+              },
+              "strokeWidth": {
+                "value": 3
+              }
+            }
+          },
+          "interactive": false,
+          "clip": true
+        },
+        {
+          "type": "text",
+          "name": "productInsetPlace",
+          "from": {
+            "data": "insetProducts"
+          },
+          "encode": {
+            "update": {
+              "x": {
+                "signal": "datum.x+(datum.labelSide==='left'?-14:14)"
+              },
+              "y": {
+                "signal": "datum.y+datum.labelOffset"
+              },
+              "text": {
+                "field": "place"
+              },
+              "fill": {
+                "value": "#243440"
+              },
+              "align": {
+                "signal": "datum.labelSide==='left'?'right':'left'"
+              },
+              "fontSize": {
+                "value": 12
+              },
+              "cursor": {
+                "value": "pointer"
+              },
+              "tooltip": {
+                "signal": "datum.place+' · '+datum.brand"
+              },
+              "description": {
+                "signal": "datum.place+' · '+datum.brand"
+              }
+            }
+          },
+          "clip": true
+        }
+      ]
+    },
+    {
+      "type": "rect",
+      "name": "insetBadge",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 20
+          },
+          "y": {
+            "value": 19
+          },
+          "width": {
+            "value": 18
+          },
+          "height": {
+            "value": 18
+          },
+          "fill": {
+            "value": "#243440"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "insetA",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 29
+          },
+          "y": {
+            "value": 32
+          },
+          "text": {
+            "value": "A"
+          },
+          "fill": {
+            "value": "#faf9f4"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontWeight": {
+            "value": 600
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "insetTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 45
+          },
+          "y": {
+            "value": 32
+          },
+          "text": {
+            "value": "Eastern Melbourne · inset"
+          },
+          "fill": {
+            "value": "#243440"
+          },
+          "fontWeight": {
+            "value": 600
+          },
+          "fontSize": {
+            "value": 11
+          }
+        }
+      }
+    },
+    {
+      "type": "path",
+      "name": "insetNorthArrow",
+      "encode": {
+        "update": {
+          "path": {
+            "signal": "'M'+(iw-2)+',79V57m-3,5l3,-5l3,5'"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "value": "#41515d"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "insetNorthLabel",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "iw-2"
+          },
+          "y": {
+            "value": 53
+          },
+          "text": {
+            "value": "N"
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "value": 11
+          }
+        }
+      }
+    },
+    {
+      "type": "path",
+      "name": "insetDistanceKey",
+      "encode": {
+        "update": {
+          "path": {
+            "signal": "'M27,'+(12+ih-17)+'V'+(12+ih-13)+'H'+(13+scaleEnd)+'V'+(12+ih-17)"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "value": "#243440"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "insetDistanceLabel",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 27
+          },
+          "y": {
+            "signal": "12+ih-21"
+          },
+          "text": {
+            "value": "Approx. 5 km"
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "fontSize": {
+            "value": 11
+          }
+        }
+      }
+    }
+  ],
+  "projections": [
+    {
+      "name": "map",
+      "type": "conicEqualArea",
+      "parallels": [
+        -18,
+        -36
+      ],
+      "rotate": [
+        -134,
+        0
+      ],
+      "center": [
+        0,
+        -27
+      ],
+      "fit": {
+        "signal": "{type:'MultiPoint',coordinates:[[137,-40.5],[155,-24.5]]}"
+      },
+      "extent": {
+        "signal": "[[16,compact?12+ih+24:20],[width-24,height-28]]"
+      }
+    },
+    {
+      "name": "inset",
+      "type": "mercator",
+      "fit": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            145.12,
+            -37.96
+          ],
+          [
+            145.4,
+            -37.75
+          ]
+        ]
+      },
+      "extent": {
+        "signal": "[[19,16],[iw-21,ih-65]]"
+      }
+    }
+  ]
+}

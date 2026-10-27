@@ -1,0 +1,62 @@
+[
+  {
+    "key": "good_value",
+    "order": 0,
+    "label": "Good value",
+    "percent": 95.0,
+    "line1": "Good value",
+    "line2": "",
+    "source_page": 3,
+    "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+  },
+  {
+    "key": "high_quality",
+    "order": 1,
+    "label": "High quality",
+    "percent": 95.0,
+    "line1": "High quality",
+    "line2": "",
+    "source_page": 3,
+    "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+  },
+  {
+    "key": "reliable",
+    "order": 2,
+    "label": "Reliable",
+    "percent": 95.0,
+    "line1": "Reliable",
+    "line2": "",
+    "source_page": 3,
+    "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+  },
+  {
+    "key": "safe",
+    "order": 3,
+    "label": "Safe",
+    "percent": 94.0,
+    "line1": "Safe",
+    "line2": "",
+    "source_page": 3,
+    "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+  },
+  {
+    "key": "local_jobs",
+    "order": 4,
+    "label": "Supports local jobs",
+    "percent": 94.0,
+    "line1": "Supports",
+    "line2": "local jobs",
+    "source_page": 3,
+    "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+  },
+  {
+    "key": "australia",
+    "order": 5,
+    "label": "Supports Australia",
+    "percent": 91.0,
+    "line1": "Supports",
+    "line2": "Australia",
+    "source_page": 3,
+    "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+  }
+]

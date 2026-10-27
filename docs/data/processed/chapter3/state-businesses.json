@@ -1,0 +1,290 @@
+[
+  {
+    "id": "NSW",
+    "name": "New South Wales",
+    "group": 0,
+    "n": 2346,
+    "lon": 147.0157072624636,
+    "lat": -32.175516386356435,
+    "east": 1
+  },
+  {
+    "id": "VIC",
+    "name": "Victoria",
+    "group": 0,
+    "n": 1864,
+    "lon": 144.30388586601333,
+    "lat": -36.84916754853856,
+    "east": 3
+  },
+  {
+    "id": "QLD",
+    "name": "Queensland",
+    "group": 0,
+    "n": 1276,
+    "lon": 144.53340337097268,
+    "lat": -22.573784388348333,
+    "east": 0
+  },
+  {
+    "id": "WA",
+    "name": "Western Australia",
+    "group": 0,
+    "n": 637,
+    "lon": 122.18365446154677,
+    "lat": -25.475269983090616,
+    "east": -1
+  },
+  {
+    "id": "SA",
+    "name": "South Australia",
+    "group": 0,
+    "n": 526,
+    "lon": 135.8245316895282,
+    "lat": -30.080966488987443,
+    "east": -1
+  },
+  {
+    "id": "TAS",
+    "name": "Tasmania",
+    "group": 0,
+    "n": 182,
+    "lon": 146.5795545355784,
+    "lat": -42.01022311680697,
+    "east": 4
+  },
+  {
+    "id": "NT",
+    "name": "Northern Territory",
+    "group": 0,
+    "n": 45,
+    "lon": 133.369862827478,
+    "lat": -19.477493430730775,
+    "east": -1
+  },
+  {
+    "id": "ACT",
+    "name": "Australian Capital Territory",
+    "group": 0,
+    "n": 105,
+    "lon": 149.0020723110851,
+    "lat": -35.493498244852596,
+    "east": 2
+  },
+  {
+    "id": "NSW",
+    "name": "New South Wales",
+    "group": 1,
+    "n": 1518,
+    "lon": 147.0157072624636,
+    "lat": -32.175516386356435,
+    "east": 1
+  },
+  {
+    "id": "VIC",
+    "name": "Victoria",
+    "group": 1,
+    "n": 1631,
+    "lon": 144.30388586601333,
+    "lat": -36.84916754853856,
+    "east": 3
+  },
+  {
+    "id": "QLD",
+    "name": "Queensland",
+    "group": 1,
+    "n": 926,
+    "lon": 144.53340337097268,
+    "lat": -22.573784388348333,
+    "east": 0
+  },
+  {
+    "id": "WA",
+    "name": "Western Australia",
+    "group": 1,
+    "n": 479,
+    "lon": 122.18365446154677,
+    "lat": -25.475269983090616,
+    "east": -1
+  },
+  {
+    "id": "SA",
+    "name": "South Australia",
+    "group": 1,
+    "n": 314,
+    "lon": 135.8245316895282,
+    "lat": -30.080966488987443,
+    "east": -1
+  },
+  {
+    "id": "TAS",
+    "name": "Tasmania",
+    "group": 1,
+    "n": 74,
+    "lon": 146.5795545355784,
+    "lat": -42.01022311680697,
+    "east": 4
+  },
+  {
+    "id": "NT",
+    "name": "Northern Territory",
+    "group": 1,
+    "n": 20,
+    "lon": 133.369862827478,
+    "lat": -19.477493430730775,
+    "east": -1
+  },
+  {
+    "id": "ACT",
+    "name": "Australian Capital Territory",
+    "group": 1,
+    "n": 36,
+    "lon": 149.0020723110851,
+    "lat": -35.493498244852596,
+    "east": 2
+  },
+  {
+    "id": "NSW",
+    "name": "New South Wales",
+    "group": 2,
+    "n": 512,
+    "lon": 147.0157072624636,
+    "lat": -32.175516386356435,
+    "east": 1
+  },
+  {
+    "id": "VIC",
+    "name": "Victoria",
+    "group": 2,
+    "n": 402,
+    "lon": 144.30388586601333,
+    "lat": -36.84916754853856,
+    "east": 3
+  },
+  {
+    "id": "QLD",
+    "name": "Queensland",
+    "group": 2,
+    "n": 260,
+    "lon": 144.53340337097268,
+    "lat": -22.573784388348333,
+    "east": 0
+  },
+  {
+    "id": "WA",
+    "name": "Western Australia",
+    "group": 2,
+    "n": 136,
+    "lon": 122.18365446154677,
+    "lat": -25.475269983090616,
+    "east": -1
+  },
+  {
+    "id": "SA",
+    "name": "South Australia",
+    "group": 2,
+    "n": 94,
+    "lon": 135.8245316895282,
+    "lat": -30.080966488987443,
+    "east": -1
+  },
+  {
+    "id": "TAS",
+    "name": "Tasmania",
+    "group": 2,
+    "n": 22,
+    "lon": 146.5795545355784,
+    "lat": -42.01022311680697,
+    "east": 4
+  },
+  {
+    "id": "NT",
+    "name": "Northern Territory",
+    "group": 2,
+    "n": 6,
+    "lon": 133.369862827478,
+    "lat": -19.477493430730775,
+    "east": -1
+  },
+  {
+    "id": "ACT",
+    "name": "Australian Capital Territory",
+    "group": 2,
+    "n": 9,
+    "lon": 149.0020723110851,
+    "lat": -35.493498244852596,
+    "east": 2
+  },
+  {
+    "id": "NSW",
+    "name": "New South Wales",
+    "group": 3,
+    "n": 982,
+    "lon": 147.0157072624636,
+    "lat": -32.175516386356435,
+    "east": 1
+  },
+  {
+    "id": "VIC",
+    "name": "Victoria",
+    "group": 3,
+    "n": 625,
+    "lon": 144.30388586601333,
+    "lat": -36.84916754853856,
+    "east": 3
+  },
+  {
+    "id": "QLD",
+    "name": "Queensland",
+    "group": 3,
+    "n": 498,
+    "lon": 144.53340337097268,
+    "lat": -22.573784388348333,
+    "east": 0
+  },
+  {
+    "id": "WA",
+    "name": "Western Australia",
+    "group": 3,
+    "n": 205,
+    "lon": 122.18365446154677,
+    "lat": -25.475269983090616,
+    "east": -1
+  },
+  {
+    "id": "SA",
+    "name": "South Australia",
+    "group": 3,
+    "n": 153,
+    "lon": 135.8245316895282,
+    "lat": -30.080966488987443,
+    "east": -1
+  },
+  {
+    "id": "TAS",
+    "name": "Tasmania",
+    "group": 3,
+    "n": 39,
+    "lon": 146.5795545355784,
+    "lat": -42.01022311680697,
+    "east": 4
+  },
+  {
+    "id": "NT",
+    "name": "Northern Territory",
+    "group": 3,
+    "n": 6,
+    "lon": 133.369862827478,
+    "lat": -19.477493430730775,
+    "east": -1
+  },
+  {
+    "id": "ACT",
+    "name": "Australian Capital Territory",
+    "group": 3,
+    "n": 20,
+    "lon": 149.0020723110851,
+    "lat": -35.493498244852596,
+    "east": 2
+  }
+]

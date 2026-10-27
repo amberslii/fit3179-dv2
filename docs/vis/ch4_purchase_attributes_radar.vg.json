@@ -1,0 +1,438 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Radar chart. Six independent survey attributes share a zero-to-100 scale; their points form one closed profile. This is one survey, not six shares of a total.",
+  "width": 720,
+  "height": 520,
+  "padding": 0,
+  "autosize": "none",
+  "background": "#faf9f4",
+  "config": {
+    "text": {
+      "font": "Arial",
+      "fill": "#243440",
+      "fontSize": 13
+    }
+  },
+  "data": [
+    {
+      "name": "attributes",
+      "values": [
+        {
+          "key": "good_value",
+          "order": 0,
+          "label": "Good value",
+          "percent": 95.0,
+          "line1": "Good value",
+          "line2": "",
+          "source_page": 3,
+          "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+        },
+        {
+          "key": "high_quality",
+          "order": 1,
+          "label": "High quality",
+          "percent": 95.0,
+          "line1": "High quality",
+          "line2": "",
+          "source_page": 3,
+          "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+        },
+        {
+          "key": "reliable",
+          "order": 2,
+          "label": "Reliable",
+          "percent": 95.0,
+          "line1": "Reliable",
+          "line2": "",
+          "source_page": 3,
+          "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+        },
+        {
+          "key": "safe",
+          "order": 3,
+          "label": "Safe",
+          "percent": 94.0,
+          "line1": "Safe",
+          "line2": "",
+          "source_page": 3,
+          "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+        },
+        {
+          "key": "local_jobs",
+          "order": 4,
+          "label": "Supports local jobs",
+          "percent": 94.0,
+          "line1": "Supports",
+          "line2": "local jobs",
+          "source_page": 3,
+          "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+        },
+        {
+          "key": "australia",
+          "order": 5,
+          "label": "Supports Australia",
+          "percent": 91.0,
+          "line1": "Supports",
+          "line2": "Australia",
+          "source_page": 3,
+          "source_url": "https://australianmade.com.au/media/byleqtxo/2026-roymorgan-consumer-final.pdf"
+        }
+      ]
+    },
+    {
+      "name": "ticks",
+      "values": [
+        {
+          "value": 25
+        },
+        {
+          "value": 50
+        },
+        {
+          "value": 75
+        },
+        {
+          "value": 100
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "path",
+      "name": "radar_grid",
+      "encode": {
+        "update": {
+          "path": {
+            "signal": "'M '+(cx+sin(0*PI/3)*scale('length',datum.value))+' '+(cy-cos(0*PI/3)*scale('length',datum.value))+' L '+(cx+sin(1*PI/3)*scale('length',datum.value))+' '+(cy-cos(1*PI/3)*scale('length',datum.value))+' L '+(cx+sin(2*PI/3)*scale('length',datum.value))+' '+(cy-cos(2*PI/3)*scale('length',datum.value))+' L '+(cx+sin(3*PI/3)*scale('length',datum.value))+' '+(cy-cos(3*PI/3)*scale('length',datum.value))+' L '+(cx+sin(4*PI/3)*scale('length',datum.value))+' '+(cy-cos(4*PI/3)*scale('length',datum.value))+' L '+(cx+sin(5*PI/3)*scale('length',datum.value))+' '+(cy-cos(5*PI/3)*scale('length',datum.value))+' Z'"
+          },
+          "fill": {
+            "value": null
+          },
+          "stroke": {
+            "value": "#ccd1d1"
+          },
+          "strokeWidth": {
+            "value": 1
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "rule",
+      "name": "radar_axes",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx"
+          },
+          "y": {
+            "signal": "cy"
+          },
+          "x2": {
+            "signal": "cx+sin(datum.order*PI/3)*radius"
+          },
+          "y2": {
+            "signal": "cy-cos(datum.order*PI/3)*radius"
+          },
+          "stroke": {
+            "value": "#ccd1d1"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "attributes"
+      }
+    },
+    {
+      "type": "line",
+      "name": "survey_profile",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx+sin(datum.order*PI/3)*scale('length',datum.percent)"
+          },
+          "y": {
+            "signal": "cy-cos(datum.order*PI/3)*scale('length',datum.percent)"
+          },
+          "interpolate": {
+            "value": "linear-closed"
+          },
+          "stroke": {
+            "value": "#7156a4"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "fill": {
+            "value": "#7156a4"
+          },
+          "fillOpacity": {
+            "value": 0.12
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "attributes"
+      }
+    },
+    {
+      "type": "symbol",
+      "name": "attribute_points",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx+sin(datum.order*PI/3)*scale('length',datum.percent)"
+          },
+          "y": {
+            "signal": "cy-cos(datum.order*PI/3)*scale('length',datum.percent)"
+          },
+          "size": {
+            "signal": "datum.key==='local_jobs'?110:65"
+          },
+          "stroke": {
+            "value": "#7156a4"
+          },
+          "strokeWidth": {
+            "value": 2
+          },
+          "fill": {
+            "signal": "datum.key==='local_jobs'?'#7156a4':'#faf9f4'"
+          },
+          "description": {
+            "signal": "datum.label+': '+datum.percent+'% rated important when buying Australian-made products; 2026 survey'"
+          },
+          "tooltip": {
+            "signal": "{'Attribute':datum.label,'Rated important':datum.percent+'%','Report year':2026}"
+          }
+        }
+      },
+      "from": {
+        "data": "attributes"
+      }
+    },
+    {
+      "type": "text",
+      "name": "grid_labels",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx+.433*scale('length',datum.value)+4"
+          },
+          "y": {
+            "signal": "cy-.75*scale('length',datum.value)-4"
+          },
+          "text": {
+            "signal": "datum.value+'%'"
+          },
+          "align": {
+            "value": "left"
+          },
+          "fontSize": {
+            "signal": "width<500?9:11"
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "text",
+      "name": "zero_label",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx"
+          },
+          "y": {
+            "signal": "cy+14"
+          },
+          "text": {
+            "value": "0"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fill": {
+            "value": "#596773"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "percentage_labels",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx+sin(datum.order*PI/3)*labelRadius"
+          },
+          "y": {
+            "signal": "cy-cos(datum.order*PI/3)*labelRadius"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "text": {
+            "signal": "datum.percent+'%'"
+          },
+          "fontSize": {
+            "signal": "width<500?21:26"
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "signal": "datum.key==='local_jobs'?'#7156a4':'#243440'"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "attributes"
+      }
+    },
+    {
+      "type": "text",
+      "name": "line1_labels",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx+sin(datum.order*PI/3)*labelRadius"
+          },
+          "y": {
+            "signal": "cy-cos(datum.order*PI/3)*labelRadius"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "dy": {
+            "value": 23
+          },
+          "text": {
+            "field": "line1"
+          },
+          "fontSize": {
+            "signal": "width<500?12:14"
+          },
+          "fontWeight": {
+            "signal": "datum.key==='local_jobs'?700:400"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "attributes"
+      }
+    },
+    {
+      "type": "text",
+      "name": "line2_labels",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "cx+sin(datum.order*PI/3)*labelRadius"
+          },
+          "y": {
+            "signal": "cy-cos(datum.order*PI/3)*labelRadius"
+          },
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "dy": {
+            "value": 40
+          },
+          "text": {
+            "field": "line2"
+          },
+          "fontSize": {
+            "signal": "width<500?12:14"
+          },
+          "fontWeight": {
+            "signal": "datum.key==='local_jobs'?700:400"
+          },
+          "aria": {
+            "value": false
+          }
+        }
+      },
+      "from": {
+        "data": "attributes"
+      }
+    }
+  ],
+  "signals": [
+    {
+      "name": "cx",
+      "update": "width/2"
+    },
+    {
+      "name": "cy",
+      "update": "height/2-14"
+    },
+    {
+      "name": "radius",
+      "update": "min(158,width*.23)"
+    },
+    {
+      "name": "labelRadius",
+      "update": "radius+(width<500?35:50)"
+    }
+  ],
+  "scales": [
+    {
+      "name": "length",
+      "type": "linear",
+      "domain": [
+        0,
+        100
+      ],
+      "range": [
+        0,
+        {
+          "signal": "radius"
+        }
+      ],
+      "zero": true,
+      "nice": false
+    }
+  ]
+}

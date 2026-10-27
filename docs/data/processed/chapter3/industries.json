@@ -1,0 +1,266 @@
+[
+  {
+    "code": "117",
+    "name": "Bakery products",
+    "group": 0,
+    "values": [
+      2099,
+      1580,
+      1162,
+      557,
+      451,
+      142,
+      42,
+      102
+    ],
+    "lines": [
+      "Bakery products"
+    ],
+    "narrowLines": [
+      "Bakery",
+      "products"
+    ]
+  },
+  {
+    "code": "1133",
+    "name": "Cheese & other dairy",
+    "group": 0,
+    "values": [
+      64,
+      127,
+      32,
+      18,
+      24,
+      16,
+      0,
+      0
+    ],
+    "lines": [
+      "Cheese & other",
+      "dairy"
+    ],
+    "narrowLines": [
+      "Cheese &",
+      "other dairy"
+    ]
+  },
+  {
+    "code": "1182",
+    "name": "Chocolate & sweets",
+    "group": 0,
+    "values": [
+      121,
+      109,
+      52,
+      39,
+      34,
+      17,
+      3,
+      3
+    ],
+    "lines": [
+      "Chocolate & sweets"
+    ],
+    "narrowLines": [
+      "Chocolate &",
+      "sweets"
+    ]
+  },
+  {
+    "code": "1132",
+    "name": "Ice cream",
+    "group": 0,
+    "values": [
+      62,
+      48,
+      30,
+      23,
+      17,
+      7,
+      0,
+      0
+    ],
+    "lines": [
+      "Ice cream"
+    ],
+    "narrowLines": [
+      "Ice cream"
+    ]
+  },
+  {
+    "code": "2511",
+    "name": "Wooden furniture",
+    "group": 1,
+    "values": [
+      1293,
+      1428,
+      786,
+      417,
+      281,
+      70,
+      17,
+      33
+    ],
+    "lines": [
+      "Wooden furniture"
+    ],
+    "narrowLines": [
+      "Wooden",
+      "furniture"
+    ]
+  },
+  {
+    "code": "2512",
+    "name": "Metal furniture",
+    "group": 1,
+    "values": [
+      165,
+      145,
+      108,
+      42,
+      20,
+      4,
+      3,
+      0
+    ],
+    "lines": [
+      "Metal furniture"
+    ],
+    "narrowLines": [
+      "Metal",
+      "furniture"
+    ]
+  },
+  {
+    "code": "2513",
+    "name": "Mattresses",
+    "group": 1,
+    "values": [
+      23,
+      23,
+      11,
+      8,
+      5,
+      0,
+      0,
+      0
+    ],
+    "lines": [
+      "Mattresses"
+    ],
+    "narrowLines": [
+      "Mattresses"
+    ]
+  },
+  {
+    "code": "2441",
+    "name": "Whiteware appliances",
+    "group": 1,
+    "values": [
+      37,
+      35,
+      21,
+      12,
+      8,
+      0,
+      0,
+      3
+    ],
+    "lines": [
+      "Whiteware",
+      "appliances"
+    ],
+    "narrowLines": [
+      "Whiteware",
+      "appliances"
+    ]
+  },
+  {
+    "code": "1852",
+    "name": "Cosmetics & toiletries",
+    "group": 2,
+    "values": [
+      365,
+      300,
+      184,
+      90,
+      66,
+      11,
+      3,
+      6
+    ],
+    "lines": [
+      "Cosmetics &",
+      "toiletries"
+    ],
+    "narrowLines": [
+      "Cosmetics &",
+      "toiletries"
+    ]
+  },
+  {
+    "code": "1851",
+    "name": "Cleaning compounds",
+    "group": 2,
+    "values": [
+      147,
+      102,
+      76,
+      46,
+      28,
+      11,
+      3,
+      3
+    ],
+    "lines": [
+      "Cleaning compounds"
+    ],
+    "narrowLines": [
+      "Cleaning",
+      "compounds"
+    ]
+  },
+  {
+    "code": "1351",
+    "name": "Clothing",
+    "group": 3,
+    "values": [
+      963,
+      590,
+      486,
+      198,
+      144,
+      36,
+      6,
+      20
+    ],
+    "lines": [
+      "Clothing"
+    ],
+    "narrowLines": [
+      "Clothing"
+    ]
+  },
+  {
+    "code": "1340",
+    "name": "Knitted products",
+    "group": 3,
+    "values": [
+      19,
+      35,
+      12,
+      7,
+      9,
+      3,
+      0,
+      0
+    ],
+    "lines": [
+      "Knitted products"
+    ],
+    "narrowLines": [
+      "Knitted",
+      "products"
+    ]
+  }
+]

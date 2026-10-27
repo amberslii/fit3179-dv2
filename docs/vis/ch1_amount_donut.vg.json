@@ -1,0 +1,140 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Four editorial groups. The selected amount mode defines one shared denominator across all four groups. Click and hover signals coordinate with source-share rows.",
+  "width": 280,
+  "height": 280,
+  "padding": 0,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "config": {
+    "text": {
+      "font": "Segoe UI, Arial, sans-serif",
+      "fontSize": 12,
+      "fill": "#243440"
+    }
+  },
+  "signals": [
+    {
+      "name": "selectedGroup",
+      "value": -1
+    },
+    {
+      "name": "highlightedGroup",
+      "value": -1
+    },
+    {
+      "name": "amountMode",
+      "value": "total value"
+    },
+    {
+      "name": "radius",
+      "update": "min(width,height)/2-12"
+    }
+  ],
+  "data": [
+    {
+      "name": "amounts",
+      "values": [
+        {
+          "g": 0,
+          "name": "Food & dairy",
+          "color": "#2c67c9",
+          "value": 22415
+        },
+        {
+          "g": 1,
+          "name": "Furniture, tableware & appliances",
+          "color": "#36b4af",
+          "value": 14713
+        },
+        {
+          "g": 2,
+          "name": "Toiletries & cleaning",
+          "color": "#e971aa",
+          "value": 11328
+        },
+        {
+          "g": 3,
+          "name": "Clothing",
+          "color": "#f3cb43",
+          "value": 20617
+        }
+      ]
+    },
+    {
+      "name": "segments",
+      "source": "amounts",
+      "transform": [
+        {
+          "type": "pie",
+          "field": "value",
+          "sort": false
+        },
+        {
+          "type": "joinaggregate",
+          "fields": [
+            "value"
+          ],
+          "ops": [
+            "sum"
+          ],
+          "as": [
+            "total"
+          ]
+        }
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "arc",
+      "name": "slices",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width/2 + sin((datum.startAngle+datum.endAngle)/2) * (highlightedGroup===datum.g ? (selectedGroup===datum.g ? 6 : 3) : 0)"
+          },
+          "y": {
+            "signal": "height/2 - cos((datum.startAngle+datum.endAngle)/2) * (highlightedGroup===datum.g ? (selectedGroup===datum.g ? 6 : 3) : 0)"
+          },
+          "startAngle": {
+            "field": "startAngle"
+          },
+          "endAngle": {
+            "field": "endAngle"
+          },
+          "outerRadius": {
+            "signal": "radius"
+          },
+          "innerRadius": {
+            "signal": "radius*.7"
+          },
+          "fill": {
+            "field": "color"
+          },
+          "stroke": {
+            "value": "#faf9f4"
+          },
+          "strokeWidth": {
+            "value": 1.4
+          },
+          "opacity": {
+            "signal": "highlightedGroup < 0 || highlightedGroup===datum.g ? 1 : .62"
+          },
+          "cursor": {
+            "value": "pointer"
+          },
+          "tooltip": {
+            "signal": "datum.name + ': A$' + format(datum.value, ',.0f') + ' million · ' + format(datum.value/datum.total, '.1%') + ' of four-group ' + amountMode"
+          }
+        }
+      },
+      "from": {
+        "data": "segments"
+      }
+    }
+  ]
+}

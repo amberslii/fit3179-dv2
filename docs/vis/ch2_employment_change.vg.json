@@ -1,0 +1,446 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Employment change June 2023 to June 2025. Each independent column starts at zero. Positive values extend upwards; negative values downwards. Four group colours encode category, not direction.",
+  "width": 900,
+  "height": 438,
+  "padding": 0,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "config": {
+    "text": {
+      "font": "Segoe UI, Arial, sans-serif",
+      "fontSize": 12,
+      "fill": "#243440"
+    }
+  },
+  "data": [
+    {
+      "name": "changes",
+      "values": [
+        {
+          "code": "food_dairy",
+          "name": "Food & dairy",
+          "change": 6045,
+          "color": "#2c67c9",
+          "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%232c67c9%22%20stroke-width%3D%221.75%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%202v7c0%201.1.9%202%202%202h4a2%202%200%200%200%202-2V2%22/%3E%3Cpath%20d%3D%22M7%202v20%22/%3E%3Cpath%20d%3D%22M21%2015V2a5%205%200%200%200-5%205v6c0%201.1.9%202%202%202h3Zm0%200v7%22/%3E%3C/svg%3E",
+          "lines": [
+            "Food &",
+            "dairy"
+          ],
+          "shortLines": [
+            "Food &",
+            "dairy"
+          ]
+        },
+        {
+          "code": "furniture_tableware_appliances",
+          "name": "Furniture, tableware & appliances",
+          "change": -859,
+          "color": "#36b4af",
+          "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2336b4af%22%20stroke-width%3D%221.75%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M19%209V6a2%202%200%200%200-2-2H7a2%202%200%200%200-2%202v3%22/%3E%3Cpath%20d%3D%22M3%2016a2%202%200%200%200%202%202h14a2%202%200%200%200%202-2v-5a2%202%200%200%200-4%200v1.5a.5.5%200%200%201-.5.5h-9a.5.5%200%200%201-.5-.5V11a2%202%200%200%200-4%200z%22/%3E%3Cpath%20d%3D%22M5%2018v2%22/%3E%3Cpath%20d%3D%22M19%2018v2%22/%3E%3C/svg%3E",
+          "lines": [
+            "Furniture, tableware",
+            "& appliances*"
+          ],
+          "shortLines": [
+            "Home*"
+          ]
+        },
+        {
+          "code": "toiletries_cleaning",
+          "name": "Toiletries & cleaning",
+          "change": -1180,
+          "color": "#e971aa",
+          "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23e971aa%22%20stroke-width%3D%221.75%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M3%203h.01%22/%3E%3Cpath%20d%3D%22M7%205h.01%22/%3E%3Cpath%20d%3D%22M11%207h.01%22/%3E%3Cpath%20d%3D%22M3%207h.01%22/%3E%3Cpath%20d%3D%22M7%209h.01%22/%3E%3Cpath%20d%3D%22M3%2011h.01%22/%3E%3Crect%20width%3D%224%22%20height%3D%224%22%20x%3D%2215%22%20y%3D%225%22/%3E%3Cpath%20d%3D%22m19%209%202%202v10c0%20.6-.4%201-1%201h-6c-.6%200-1-.4-1-1V11l2-2%22/%3E%3Cpath%20d%3D%22m13%2014%208-2%22/%3E%3Cpath%20d%3D%22m13%2019%208-2%22/%3E%3C/svg%3E",
+          "lines": [
+            "Toiletries",
+            "& cleaning"
+          ],
+          "shortLines": [
+            "Care &",
+            "cleaning"
+          ]
+        },
+        {
+          "code": "clothing",
+          "name": "Clothing",
+          "change": -1768,
+          "color": "#f3cb43",
+          "icon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23f3cb43%22%20stroke-width%3D%221.75%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M20.38%203.46%2016%202a4%204%200%200%201-8%200L3.62%203.46a2%202%200%200%200-1.34%202.23l.58%203.47a1%201%200%200%200%20.99.84H6v10c0%201.1.9%202%202%202h8a2%202%200%200%200%202-2V10h2.15a1%201%200%200%200%20.99-.84l.58-3.47a2%202%200%200%200-1.34-2.23z%22/%3E%3C/svg%3E",
+          "lines": [
+            "Clothing"
+          ],
+          "shortLines": [
+            "Clothing"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ticks",
+      "values": [
+        {
+          "v": -0.5
+        },
+        {
+          "v": 0
+        },
+        {
+          "v": 0.5
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "bottomPad",
+      "value": 118
+    },
+    {
+      "name": "plotBottom",
+      "update": "height-bottomPad"
+    },
+    {
+      "name": "narrow",
+      "update": "width < 550"
+    },
+    {
+      "name": "limit",
+      "value": 8000
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "band",
+      "domain": {
+        "data": "changes",
+        "field": "code"
+      },
+      "range": [
+        64,
+        {
+          "signal": "width-10"
+        }
+      ],
+      "paddingInner": 0.38,
+      "paddingOuter": 0.18
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [
+        {
+          "signal": "-limit"
+        },
+        {
+          "signal": "limit"
+        }
+      ],
+      "range": [
+        {
+          "signal": "plotBottom"
+        },
+        42
+      ],
+      "zero": true
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "name": "plotFrame",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "x2": {
+            "signal": "width-10"
+          },
+          "y": {
+            "value": 42
+          },
+          "y2": {
+            "signal": "plotBottom"
+          },
+          "fill": {
+            "value": "transparent"
+          },
+          "stroke": {
+            "value": "#dde0dc"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "name": "gridLines",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "x2": {
+            "signal": "width-10"
+          },
+          "y": {
+            "signal": "scale('y',datum.v*limit)"
+          },
+          "stroke": {
+            "value": "#dde0dc"
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "text",
+      "name": "yLabels",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 56
+          },
+          "y": {
+            "signal": "scale('y',datum.v*limit)"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "align": {
+            "value": "right"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "signal": "datum.v===0 ? '0' : (datum.v>0 ? '+' : '−') + format(abs(datum.v*limit), ',.0f')"
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "text",
+      "name": "yTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "y": {
+            "value": 18
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "value": "Change in people employed"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "name": "changeBars",
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "code"
+          },
+          "width": {
+            "scale": "x",
+            "band": 1
+          },
+          "y": {
+            "signal": "scale('y',max(0,datum.change))"
+          },
+          "y2": {
+            "signal": "scale('y',min(0,datum.change))"
+          },
+          "fill": {
+            "field": "color"
+          },
+          "tooltip": {
+            "signal": "datum.name + ': ' + (datum.change>0 ? '+' : '−') + format(abs(datum.change), ',.0f') + ' people, June 2023 to June 2025'"
+          }
+        }
+      },
+      "from": {
+        "data": "changes"
+      }
+    },
+    {
+      "type": "text",
+      "name": "changeLabels",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('x',datum.code)+bandwidth('x')/2"
+          },
+          "y": {
+            "signal": "scale('y',datum.change)+(datum.change>0 ? -31 : 9)"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "align": {
+            "value": "center"
+          },
+          "lineHeight": {
+            "value": 15
+          },
+          "text": {
+            "signal": "[datum.change>0 ? 'Increase' : 'Decrease', (datum.change>0 ? '+' : '−')+format(abs(datum.change), ',.0f')]"
+          }
+        }
+      },
+      "from": {
+        "data": "changes"
+      }
+    },
+    {
+      "type": "rule",
+      "name": "zeroLine",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "x2": {
+            "signal": "width-10"
+          },
+          "y": {
+            "scale": "y",
+            "value": 0
+          },
+          "stroke": {
+            "value": "#41515d"
+          },
+          "strokeWidth": {
+            "value": 1.7
+          }
+        }
+      }
+    },
+    {
+      "type": "image",
+      "name": "categoryIcons",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('x',datum.code)+bandwidth('x')/2-12"
+          },
+          "y": {
+            "signal": "plotBottom+8"
+          },
+          "width": {
+            "value": 24
+          },
+          "height": {
+            "value": 24
+          },
+          "url": {
+            "field": "icon"
+          }
+        }
+      },
+      "from": {
+        "data": "changes"
+      }
+    },
+    {
+      "type": "text",
+      "name": "categoryLabels",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('x',datum.code)+bandwidth('x')/2"
+          },
+          "y": {
+            "signal": "plotBottom+40"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "align": {
+            "value": "center"
+          },
+          "lineHeight": {
+            "value": 15
+          },
+          "text": {
+            "signal": "narrow ? datum.shortLines : datum.lines"
+          }
+        }
+      },
+      "from": {
+        "data": "changes"
+      }
+    },
+    {
+      "type": "text",
+      "name": "scopeNote",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "y": {
+            "signal": "height-29"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "signal": "narrow ? '*Selected furniture & whiteware only.' : '*Selected furniture & whiteware industries; tableware excluded.'"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "name": "xTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-10"
+          },
+          "y": {
+            "signal": "height-9"
+          },
+          "align": {
+            "value": "right"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "value": "Related industry groups"
+          }
+        }
+      }
+    }
+  ]
+}

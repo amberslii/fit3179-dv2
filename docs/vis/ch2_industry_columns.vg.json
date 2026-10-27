@@ -1,0 +1,393 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Employment by selected manufacturing industry, June 2025. Expanded view of one editorial product group. Industry totals are not product-exclusive employment.",
+  "width": 600,
+  "height": 325,
+  "padding": 0,
+  "autosize": {
+    "type": "none",
+    "contains": "padding"
+  },
+  "background": "transparent",
+  "config": {
+    "text": {
+      "font": "Segoe UI, Arial, sans-serif",
+      "fontSize": 12,
+      "fill": "#243440"
+    }
+  },
+  "data": [
+    {
+      "name": "industries",
+      "values": [
+        {
+          "code": "117",
+          "name": "Bakery product manufacturing",
+          "values": [
+            62121,
+            64830,
+            68585
+          ],
+          "current": 68585,
+          "lines": [
+            "Bakery",
+            "products"
+          ],
+          "shortLines": [
+            "Bakery"
+          ]
+        },
+        {
+          "code": "1133",
+          "name": "Cheese and other dairy product manufacturing",
+          "values": [
+            12364,
+            12923,
+            11893
+          ],
+          "current": 11893,
+          "lines": [
+            "Cheese &",
+            "other dairy"
+          ],
+          "shortLines": [
+            "Other",
+            "dairy"
+          ]
+        },
+        {
+          "code": "1182",
+          "name": "Confectionery manufacturing",
+          "values": [
+            10548,
+            10285,
+            10253
+          ],
+          "current": 10253,
+          "lines": [
+            "Chocolate",
+            "& sweets"
+          ],
+          "shortLines": [
+            "Choc. &",
+            "sweets"
+          ]
+        },
+        {
+          "code": "1132",
+          "name": "Ice cream manufacturing",
+          "values": [
+            2765,
+            2950,
+            3112
+          ],
+          "current": 3112,
+          "lines": [
+            "Ice cream &",
+            "frozen confections"
+          ],
+          "shortLines": [
+            "Frozen",
+            "desserts"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ticks",
+      "values": [
+        {
+          "v": 0
+        },
+        {
+          "v": 0.5
+        },
+        {
+          "v": 1
+        }
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "name": "bottomPad",
+      "value": 90
+    },
+    {
+      "name": "plotBottom",
+      "update": "height-bottomPad"
+    },
+    {
+      "name": "narrow",
+      "update": "width < 550"
+    },
+    {
+      "name": "limit",
+      "value": 100000
+    },
+    {
+      "name": "groupColor",
+      "value": "#2c67c9"
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "band",
+      "domain": {
+        "data": "industries",
+        "field": "code"
+      },
+      "range": [
+        64,
+        {
+          "signal": "width-10"
+        }
+      ],
+      "paddingInner": 0.38,
+      "paddingOuter": 0.18
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "domain": [
+        {
+          "signal": "0"
+        },
+        {
+          "signal": "limit"
+        }
+      ],
+      "range": [
+        {
+          "signal": "plotBottom"
+        },
+        42
+      ],
+      "zero": true
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "name": "plotFrame",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "x2": {
+            "signal": "width-10"
+          },
+          "y": {
+            "value": 42
+          },
+          "y2": {
+            "signal": "plotBottom"
+          },
+          "fill": {
+            "value": "transparent"
+          },
+          "stroke": {
+            "value": "#dde0dc"
+          }
+        }
+      }
+    },
+    {
+      "type": "rule",
+      "name": "gridLines",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "x2": {
+            "signal": "width-10"
+          },
+          "y": {
+            "signal": "scale('y',datum.v*limit)"
+          },
+          "stroke": {
+            "value": "#dde0dc"
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "text",
+      "name": "yLabels",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 56
+          },
+          "y": {
+            "signal": "scale('y',datum.v*limit)"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "align": {
+            "value": "right"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "signal": "datum.v===0 ? '0' : format(datum.v*limit, ',.0f')"
+          }
+        }
+      },
+      "from": {
+        "data": "ticks"
+      }
+    },
+    {
+      "type": "text",
+      "name": "yTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "value": 64
+          },
+          "y": {
+            "value": 18
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "value": "People employed"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "name": "industryBars",
+      "encode": {
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "code"
+          },
+          "width": {
+            "scale": "x",
+            "band": 1
+          },
+          "y": {
+            "scale": "y",
+            "field": "current"
+          },
+          "y2": {
+            "scale": "y",
+            "value": 0
+          },
+          "fill": {
+            "signal": "groupColor"
+          },
+          "tooltip": {
+            "signal": "datum.name + ': ' + format(datum.current, ',.0f') + ' people · ANZSIC ' + datum.code"
+          }
+        }
+      },
+      "from": {
+        "data": "industries"
+      }
+    },
+    {
+      "type": "text",
+      "name": "industryValues",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('x',datum.code)+bandwidth('x')/2"
+          },
+          "y": {
+            "signal": "scale('y',datum.current)-9"
+          },
+          "text": {
+            "signal": "format(datum.current, ',.0f')"
+          },
+          "align": {
+            "value": "center"
+          },
+          "fontSize": {
+            "value": 12
+          }
+        }
+      },
+      "from": {
+        "data": "industries"
+      }
+    },
+    {
+      "type": "text",
+      "name": "industryNames",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "scale('x',datum.code)+bandwidth('x')/2"
+          },
+          "y": {
+            "signal": "plotBottom+17"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "align": {
+            "value": "center"
+          },
+          "lineHeight": {
+            "value": 15
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "text": {
+            "signal": "narrow ? datum.shortLines : datum.lines"
+          }
+        }
+      },
+      "from": {
+        "data": "industries"
+      }
+    },
+    {
+      "type": "text",
+      "name": "xTitle",
+      "encode": {
+        "update": {
+          "x": {
+            "signal": "width-10"
+          },
+          "y": {
+            "signal": "height-9"
+          },
+          "align": {
+            "value": "right"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fill": {
+            "value": "#586772"
+          },
+          "text": {
+            "value": "Related manufacturing industries"
+          }
+        }
+      }
+    }
+  ]
+}
