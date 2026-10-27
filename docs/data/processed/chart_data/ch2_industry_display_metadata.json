@@ -1,0 +1,43 @@
+{
+  "status": "Category colours confirmed by user; chart idiom remains under discussion",
+  "colour_source": "output/dv2-chapter-01/2026-10-27-v1/source-fragment.html",
+  "colour_meaning": "Editorial product-group identity, inherited from the accepted Chapter 1; not year, employment change, or production/import status",
+  "industry_scope": "Whole related manufacturing industries; these are not employment estimates attributable exclusively to the 18 Chapter 1 product categories",
+  "groups": [
+    {
+      "id": "food_dairy",
+      "chapter1_label": "Food & dairy",
+      "label_zh": "食品与乳制品",
+      "light_colour": "#2c67c9",
+      "dark_colour": "#7fa7ec",
+      "industry_codes": ["117", "1182", "1132", "1133"]
+    },
+    {
+      "id": "furniture_tableware_appliances",
+      "chapter1_label": "Furniture, tableware & appliances",
+      "label_zh": "家具、餐具与家电",
+      "light_colour": "#36b4af",
+      "dark_colour": "#73c5be",
+      "industry_codes": ["2511", "2512", "2513", "2441"],
+      "scope_note": "The Chapter 2 selection currently excludes ANZSIC 1912 because its employment cannot be isolated to plastic tableware. Group totals therefore refer to selected furniture and whiteware industries."
+    },
+    {
+      "id": "toiletries_cleaning",
+      "chapter1_label": "Toiletries & cleaning",
+      "label_zh": "洗护与清洁",
+      "light_colour": "#e971aa",
+      "dark_colour": "#eb93ba",
+      "industry_codes": ["1851", "1852"]
+    },
+    {
+      "id": "clothing",
+      "chapter1_label": "Clothing",
+      "label_zh": "服装",
+      "light_colour": "#f3cb43",
+      "dark_colour": "#e8c550",
+      "industry_codes": ["1340", "1351"]
+    }
+  ],
+  "accessibility": "Use direct group and industry labels alongside colour. Use arrows, dates, shapes or line styles for chronology; retain group colour identity.",
+  "pictogram_status": "Candidate for group-level overview. Prefer whole neutral person icons, one fixed unit, explicit rounding and original numeric labels. Do not equate employment with factory-floor workers."
+}
